@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.graphics.drawable.ColorDrawable
+import androidx.core.content.ContextCompat
 
 class DrugsPrevention : AppCompatActivity() {
     private lateinit var webView1: WebView
@@ -13,6 +15,7 @@ class DrugsPrevention : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drugs_prevention)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
         //to change title of action bar of respective activity
         getSupportActionBar()?.setTitle("PREVENTION");

@@ -2,12 +2,12 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="150dp"
     android:background="@drawable/gradient"
     android:gravity="bottom">
 
     <ImageView
-        android:layout_width="232dp"
+        android:layout_width="256dp"
         android:layout_height="110dp"
         android:layout_gravity="center"
         android:background="@drawable/ircs_logo">

@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.view.View
 import android.view.WindowManager
 import android.widget.Button;
+import android.graphics.drawable.ColorDrawable
+import androidx.core.content.ContextCompat
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

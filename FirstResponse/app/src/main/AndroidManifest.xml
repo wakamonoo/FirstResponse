@@ -12,6 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FirstAidAndDisasterManagementApp">
         <activity
+            android:name=".HelplineActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".Epidemic"
             android:exported="false" />
         <activity
@@ -106,6 +110,12 @@
         </activity>
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizResultActivity"
             android:exported="true" />
     </application>
 

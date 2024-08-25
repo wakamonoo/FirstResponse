@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.graphics.drawable.ColorDrawable
+import androidx.core.content.ContextCompat
 
 class BasicSanitation : AppCompatActivity() {
 
@@ -14,6 +16,7 @@ class BasicSanitation : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_basic_sanitation)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
         getSupportActionBar()?.setTitle("BASIC SANITATION");
 

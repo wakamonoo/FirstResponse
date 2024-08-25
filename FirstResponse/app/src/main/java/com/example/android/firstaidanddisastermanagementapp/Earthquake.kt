@@ -5,12 +5,15 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.graphics.drawable.ColorDrawable
+import androidx.core.content.ContextCompat
 
 class Earthquake : AppCompatActivity() {
     private lateinit var webView1: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_earthquake)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
         //to change title of action bar of respective activity
         getSupportActionBar()?.setTitle("EARTHQUAKE");

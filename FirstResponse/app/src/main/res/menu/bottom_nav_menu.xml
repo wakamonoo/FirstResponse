@@ -7,9 +7,4 @@
     <item android:title="Helpline"
         android:id="@+id/bottomHelpline"
         android:icon="@drawable/ic_baseline_local_phone_24" />
-
-
-
-
-
 </menu>

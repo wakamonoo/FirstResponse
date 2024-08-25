@@ -3,11 +3,14 @@ package com.example.android.firstaidanddisastermanagementapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.graphics.drawable.ColorDrawable
+import androidx.core.content.ContextCompat
 
 class AidsVsHiv : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_aids_vs_hiv)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
         //to change title of action bar of respective activity
         getSupportActionBar()?.setTitle("AIDS VS HIV");

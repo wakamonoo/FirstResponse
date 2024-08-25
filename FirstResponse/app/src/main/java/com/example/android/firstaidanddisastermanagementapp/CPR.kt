@@ -12,6 +12,8 @@ import android.widget.ImageView
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.annotation.RequiresApi
+import android.graphics.drawable.ColorDrawable
+import androidx.core.content.ContextCompat
 
 class CPR : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class CPR : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cpr)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
 
         //to change title of action bar of respective activity
