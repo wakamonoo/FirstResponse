@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.firstaidanddisastermanagementapp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="FirstResponse"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FirstAidAndDisasterManagementApp">
+        <activity
+            android:name=".HelplineActivity"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Epidemic"
+            android:exported="false" />
+        <activity
+            android:name=".ForestFires"
+            android:exported="false" />
+        <activity
+            android:name=".Earthquake"
+            android:exported="false" />
+        <activity
+            android:name=".Floods"
+            android:exported="false" />
+        <activity
+            android:name=".DrugsPrevention"
+            android:exported="false" />
+        <activity
+            android:name=".MythsAndReality"
+            android:exported="false" />
+        <activity
+            android:name=".TreatmentAids"
+            android:exported="false" />
+        <activity
+            android:name=".consumption"
+            android:exported="false" />
+        <activity
+            android:name=".substances"
+            android:exported="false" />
+        <activity
+            android:name=".seizures"
+            android:exported="false" />
+        <activity
+            android:name=".burns"
+            android:exported="false" />
+        <activity
+            android:name=".choking"
+            android:exported="false" />
+        <activity
+            android:name=".Symptoms"
+            android:exported="false" />
+        <activity
+            android:name=".AidsVsHiv"
+            android:exported="false" />
+        <activity
+            android:name=".treatment"
+            android:exported="false" />
+        <activity
+            android:name=".screening"
+            android:exported="false" />
+        <activity
+            android:name=".prevention"
+            android:exported="false" />
+        <activity
+            android:name=".shock"
+            android:exported="false" />
+        <activity
+            android:name=".splints"
+            android:exported="false" />
+        <activity
+            android:name=".CPR"
+            android:exported="false" />
+        <activity
+            android:name=".FirstAid"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".BasicSanitation"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Tb"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".DisasterManagement"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Drugs"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Aids"
+            android:exported="true"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizActivity"
+            android:exported="true" />
+        <activity
+            android:name=".QuizResultActivity"
+            android:exported="true" />
+    </application>
+
+</manifest>
