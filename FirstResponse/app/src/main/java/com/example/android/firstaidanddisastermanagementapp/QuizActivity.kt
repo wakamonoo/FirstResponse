@@ -9,8 +9,8 @@ import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import android.graphics.drawable.ColorDrawable
-import androidx.core.content.ContextCompat
+import com.airbnb.lottie.LottieAnimationView
+import com.airbnb.lottie.LottieDrawable
 
 class QuizActivity : AppCompatActivity() {
     private lateinit var questionTextView: TextView
@@ -25,6 +25,14 @@ class QuizActivity : AppCompatActivity() {
         setContentView(R.layout.quiz)
 
         supportActionBar?.hide()
+
+        // Initialize LottieAnimationView
+        val lottieAnimationView = findViewById<LottieAnimationView>(R.id.lottieAnimationView)
+        lottieAnimationView.apply {
+            setAnimation(R.raw.think) // Ensure this matches your animation file in res/raw/
+            playAnimation()
+            repeatCount = LottieDrawable.INFINITE // Loop animation
+        }
 
         questionTextView = findViewById(R.id.questionTextView)
         answersGroup = findViewById(R.id.answersGroup)

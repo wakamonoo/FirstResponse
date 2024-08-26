@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.Toast
 import android.view.MenuItem
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -39,6 +40,8 @@ class MainActivity : AppCompatActivity() {
         private const val LOCATION_SETTINGS_REQUEST_CODE = 2
         private const val TAG = "MainActivity"
     }
+
+    private var isLocationRequestInProgress = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,10 +91,13 @@ class MainActivity : AppCompatActivity() {
         findViewById<NavigationView>(R.id.navigationView).setNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
                 R.id.location -> {
-                    if (checkLocationPermission()) {
-                        enableLocationSettings()
-                    } else {
-                        requestLocationPermission()
+                    if (!isLocationRequestInProgress) {
+                        isLocationRequestInProgress = true
+                        if (checkLocationPermission()) {
+                            enableLocationSettings()
+                        } else {
+                            requestLocationPermission()
+                        }
                     }
                     true
                 }
@@ -102,6 +108,8 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        isLocationRequestInProgress = false  // Reset the flag on resume
+
         // Set the home menu item as selected
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.menu.findItem(R.id.bottomHome).isChecked = true
@@ -121,8 +129,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun requestLocationPermission() {
-        // Request location permission
-        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
+        // Check if the permission is permanently denied
+        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+            // Show permission dialog
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
+        } else if (!checkLocationPermission()) {
+            // Request permission if not granted and not permanently denied
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
+        } else {
+            // If the permission is permanently denied, show a message to the user
+            showSettingsDialog()
+        }
     }
 
     private fun enableLocationSettings() {
@@ -151,6 +168,8 @@ class MainActivity : AppCompatActivity() {
                 Log.e(TAG, "Location settings are not adequate.")
                 Toast.makeText(this, "Location settings are not adequate, and cannot be fixed here. Fix in Settings.", Toast.LENGTH_LONG).show()
             }
+        }.addOnCompleteListener {
+            isLocationRequestInProgress = false  // Reset the flag once task is complete
         }
     }
 
@@ -168,19 +187,38 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
+        requestCode: Int, permissions: Array<out String>, grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 enableLocationSettings()
             } else {
-                Log.e(TAG, "Location permission denied")
-                Toast.makeText(this, "Permission denied. Please grant location access to use this feature.", Toast.LENGTH_SHORT).show()
+                isLocationRequestInProgress = false
+                // Check if the user has permanently denied the permission
+                if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                    // "Don't ask again" checked
+                    showSettingsDialog()
+                } else {
+                    Log.e(TAG, "Location permission denied")
+                    Toast.makeText(this, "Permission denied. Please grant location access to use this feature.", Toast.LENGTH_SHORT).show()
+                }
             }
         }
+    }
+
+    private fun showSettingsDialog() {
+        AlertDialog.Builder(this).apply {
+            setTitle("Permission Required")
+            setMessage("Location access is required for this feature. Please enable it in the app settings.")
+            setPositiveButton("Go to Settings") { _, _ ->
+                val intent = Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).apply {
+                    data = Uri.fromParts("package", packageName, null)
+                }
+                startActivity(intent)
+            }
+            setNegativeButton("Cancel", null)
+        }.show()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
