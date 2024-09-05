@@ -425,23 +425,6 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- Label for Horizontal ScrollView -->
-                <TextView
-                    android:id="@+id/textViewHealthFacilities"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginEnd="30dp"
-                    android:text="HEALTH FACILITIES IN MY AREA"
-                    android:textSize="18sp"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
-
                 <!-- Second Horizontal ScrollView for RHUs -->
                 <HorizontalScrollView
                     android:id="@+id/horizontalScrollViewRhu"

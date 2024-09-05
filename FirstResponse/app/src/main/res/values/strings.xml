@@ -6,6 +6,8 @@
     <string name="url">https://redcrosskarnataka.org/</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="settings_title">Settings</string>
+
 
     <string name="seizure1"> Epilepsy is a brain condition that causes a person to have seizures. It is one of the most common disorders of the nervous system.\n
         There are different types of seizures. The type of seizure depends on which part and how much of the brain is affected and what happens during the seizure. The 2 main categories of epileptic seizures are <b>focal (partial) seizure</b> and <b>generalized seizure</b>.</string>
@@ -108,133 +110,151 @@
          2.Man made Causes\n
          3.Environmental Causes - Based on climate\n</b>
     </string>
+
     <!-- Quiz Questions -->
-        <string-array name="quiz_questions">
-            <item>What is the first step to take when you encounter someone who is unconscious but breathing?</item>
-            <item>What should you do if someone is choking and cannot breathe?</item>
-            <item>What is the main purpose of performing CPR?</item>
-            <item>How should you treat a burn?</item>
-            <item>What is the recommended way to treat a sprain?</item>
-            <item>What is the first thing you should do in case of a severe allergic reaction?</item>
-            <item>How should you manage a bleeding wound?</item>
-            <item>What is the most common symptom of shock?</item>
-            <item>How do you treat a nosebleed?</item>
-            <item>What should you do if you suspect someone has a spinal injury?</item>
-            <item>What is the proper technique for performing chest compressions?</item>
-            <item>How can you recognize signs of a heart attack?</item>
-            <item>What should you do for a person who has been bitten by a venomous snake?</item>
-            <item>How should you handle a suspected fracture?</item>
-            <item>What is the best way to treat hypothermia?</item>
-        </string-array>
+    <string-array name="quiz_questions">
+        <item>What is the first step to take when you encounter someone who is unconscious but breathing?</item>
+        <item>What should you do if someone is choking and cannot breathe?</item>
+        <item>What is the main purpose of performing CPR?</item>
+        <item>How should you treat a burn?</item>
+        <item>What is the recommended way to treat a sprain?</item>
+        <item>What is the first thing you should do in case of a severe allergic reaction?</item>
+        <item>How should you manage a bleeding wound?</item>
+        <item>What is the most common symptom of shock?</item>
+        <item>How do you treat a nosebleed?</item>
+        <item>What should you do if you suspect someone has a spinal injury?</item>
+    </string-array>
 
-        <!-- Quiz Answers -->
-        <string-array name="quiz_answers_1">
-            <item>Call for medical help</item>
-            <item>Perform CPR</item>
-            <item>Check their airway</item>
-            <item>Give them food</item>
-        </string-array>
-        <string-array name="quiz_answers_2">
-            <item>Perform abdominal thrusts</item>
-            <item>Give them water</item>
-            <item>Pat their back</item>
-            <item>Perform chest compressions</item>
-        </string-array>
-        <string-array name="quiz_answers_3">
-            <item>To restart the heart</item>
-            <item>To remove an obstruction from the airway</item>
-            <item>To stabilize the patient’s condition</item>
-            <item>To restore breathing and circulation</item>
-        </string-array>
-        <string-array name="quiz_answers_4">
-            <item>Apply ice directly</item>
-            <item>Use a bandage</item>
-            <item>Cool the burn with running water</item>
-            <item>Apply ointment</item>
-        </string-array>
-        <string-array name="quiz_answers_5">
-            <item>Apply heat</item>
-            <item>Rest, ice, compress, and elevate</item>
-            <item>Massage the area</item>
-            <item>Keep moving the joint</item>
-        </string-array>
-        <string-array name="quiz_answers_6">
-            <item>Administer antihistamines</item>
-            <item>Call emergency services</item>
-            <item>Apply a cold compress</item>
-            <item>Give them water</item>
-        </string-array>
-        <string-array name="quiz_answers_7">
-            <item>Apply pressure and elevate</item>
-            <item>Clean with soap and water</item>
-            <item>Use a tourniquet</item>
-            <item>Apply ice directly</item>
-        </string-array>
-        <string-array name="quiz_answers_8">
-            <item>Fever</item>
-            <item>Rapid heartbeat</item>
-            <item>Nausea</item>
-            <item>Headache</item>
-        </string-array>
-        <string-array name="quiz_answers_9">
-            <item>Tilt the head back</item>
-            <item>Pinch the nostrils and lean forward</item>
-            <item>Apply ice to the back of the neck</item>
-            <item>Swallow the blood</item>
-        </string-array>
-        <string-array name="quiz_answers_10">
-            <item>Move them to a comfortable position</item>
-            <item>Keep them still and immobilized</item>
-            <item>Encourage them to walk slowly</item>
-            <item>Apply heat to the area</item>
-        </string-array>
-        <string-array name="quiz_answers_11">
-            <item>Push hard and fast at the center of the chest</item>
-            <item>Perform rescue breaths only</item>
-            <item>Place hands on the abdomen</item>
-            <item>Push gently on the ribs</item>
-        </string-array>
-        <string-array name="quiz_answers_12">
-            <item>Sudden chest pain and shortness of breath</item>
-            <item>Headache and dizziness</item>
-            <item>Abdominal pain and nausea</item>
-            <item>Fatigue and weakness</item>
-        </string-array>
-        <string-array name="quiz_answers_13">
-            <item>Apply ice and keep the limb elevated</item>
-            <item>Seek immediate medical attention</item>
-            <item>Apply a bandage and keep still</item>
-            <item>Administer pain medication</item>
-        </string-array>
-        <string-array name="quiz_answers_14">
-            <item>Apply heat and keep warm</item>
-            <item>Give them a warm drink</item>
-            <item>Wrap them in blankets and seek medical help</item>
-            <item>Encourage physical activity</item>
-        </string-array>
-        <string-array name="quiz_answers_15">
-            <item>Wrap the injury with a bandage</item>
-            <item>Apply pressure and immobilize</item>
-            <item>Give them pain medication</item>
-            <item>Encourage movement to check for pain</item>
-        </string-array>
+    <!-- Quiz Answers -->
+    <string-array name="quiz_answers_1">
+        <item>Call for medical help</item>
+        <item>Perform CPR</item>
+        <item>Check their airway</item>
+        <item>Give them food</item>
+    </string-array>
+    <string-array name="quiz_answers_2">
+        <item>Perform abdominal thrusts</item>
+        <item>Give them water</item>
+        <item>Pat their back</item>
+        <item>Perform chest compressions</item>
+    </string-array>
+    <string-array name="quiz_answers_3">
+        <item>To restart the heart</item>
+        <item>To remove an obstruction from the airway</item>
+        <item>To stabilize the patient’s condition</item>
+        <item>To restore breathing and circulation</item>
+    </string-array>
+    <string-array name="quiz_answers_4">
+        <item>Apply ice directly</item>
+        <item>Use a bandage</item>
+        <item>Cool the burn with running water</item>
+        <item>Apply ointment</item>
+    </string-array>
+    <string-array name="quiz_answers_5">
+        <item>Apply heat</item>
+        <item>Rest, ice, compress, and elevate</item>
+        <item>Massage the area</item>
+        <item>Keep moving the joint</item>
+    </string-array>
+    <string-array name="quiz_answers_6">
+        <item>Administer antihistamines</item>
+        <item>Call emergency services</item>
+        <item>Apply a cold compress</item>
+        <item>Give them water</item>
+    </string-array>
+    <string-array name="quiz_answers_7">
+        <item>Apply pressure and elevate</item>
+        <item>Clean with soap and water</item>
+        <item>Use a tourniquet</item>
+        <item>Apply ice directly</item>
+    </string-array>
+    <string-array name="quiz_answers_8">
+        <item>Fever</item>
+        <item>Rapid heartbeat</item>
+        <item>Nausea</item>
+        <item>Headache</item>
+    </string-array>
+    <string-array name="quiz_answers_9">
+        <item>Tilt the head back</item>
+        <item>Pinch the nostrils and lean forward</item>
+        <item>Apply ice to the back of the neck</item>
+        <item>Swallow the blood</item>
+    </string-array>
+    <string-array name="quiz_answers_10">
+        <item>Move them to a comfortable position</item>
+        <item>Keep them still and immobilized</item>
+        <item>Encourage them to walk slowly</item>
+        <item>Apply heat to the area</item>
+    </string-array>
 
-        <!-- Correct Answers Indexes -->
-        <integer-array name="correct_answers">
-            <item>0</item> <!-- Answer for Question 1 -->
-            <item>0</item> <!-- Answer for Question 2 -->
-            <item>3</item> <!-- Answer for Question 3 -->
-            <item>2</item> <!-- Answer for Question 4 -->
-            <item>1</item> <!-- Answer for Question 5 -->
-            <item>1</item> <!-- Answer for Question 6 -->
-            <item>0</item> <!-- Answer for Question 7 -->
-            <item>1</item> <!-- Answer for Question 8 -->
-            <item>1</item> <!-- Answer for Question 9 -->
-            <item>1</item> <!-- Answer for Question 10 -->
-            <item>0</item> <!-- Answer for Question 11 -->
-            <item>0</item> <!-- Answer for Question 12 -->
-            <item>1</item> <!-- Answer for Question 13 -->
-            <item>2</item> <!-- Answer for Question 14 -->
-            <item>1</item> <!-- Answer for Question 15 -->
-        </integer-array>
+    <!-- Correct Answers Indexes -->
+    <integer-array name="correct_answers">
+        <item>0</item> <!-- Answer for Question 1 -->
+        <item>0</item> <!-- Answer for Question 2 -->
+        <item>3</item> <!-- Answer for Question 3 -->
+        <item>2</item> <!-- Answer for Question 4 -->
+        <item>1</item> <!-- Answer for Question 5 -->
+        <item>1</item> <!-- Answer for Question 6 -->
+        <item>0</item> <!-- Answer for Question 7 -->
+        <item>1</item> <!-- Answer for Question 8 -->
+        <item>1</item> <!-- Answer for Question 9 -->
+        <item>1</item> <!-- Answer for Question 10 -->
+    </integer-array>
+
+
+    <string-array name="first_aid_supplies">
+        <item>Adhesive Bandages</item>
+        <item>Sterile Gauze Pads</item>
+        <item>Antiseptic Wipes</item>
+        <item>Medical Tape</item>
+        <item>Elastic Bandages</item>
+        <item>Disposable Gloves</item>
+        <item>CPR Face Shield</item>
+        <item>Tweezers</item>
+        <item>Scissors (Trauma Shears)</item>
+        <item>Instant Cold Packs</item>
+        <item>Hydrocortisone Cream</item>
+        <item>Antibiotic Ointment</item>
+        <item>Pain Relievers</item>
+        <item>Thermometer</item>
+        <item>Emergency Blanket</item>
+    </string-array>
+
+    <string-array name="first_aid_questions">
+        <item>Which item is used to cover small cuts or abrasions?</item>
+        <item>Which item is used to clean wounds to prevent infection?</item>
+        <item>What is used to secure dressings or gauze?</item>
+        <item>What is used to provide support to sprains?</item>
+        <item>Which item should you wear to avoid contact with blood or bodily fluids?</item>
+        <item>What is used for safe mouth-to-mouth resuscitation?</item>
+        <item>Which tool is best for removing splinters?</item>
+        <item>What is used for cutting bandages or clothing?</item>
+        <item>What item helps reduce swelling in injuries?</item>
+        <item>Which cream is used for treating insect bites?</item>
+        <item>Which ointment prevents infection in cuts?</item>
+        <item>Which item is for pain relief during emergencies?</item>
+        <item>Which device helps check for fever?</item>
+        <item>Which item keeps a person warm during shock?</item>
+        <item>Which item is primarily used to cover wounds to control bleeding?</item>
+    </string-array>
+
+    <!-- Correct answers index for Level 2 -->
+    <integer-array name="first_aid_correct_answers">
+        <item>0</item> <!-- Adhesive Bandages -->
+        <item>2</item> <!-- Antiseptic Wipes -->
+        <item>3</item> <!-- Medical Tape -->
+        <item>4</item> <!-- Elastic Bandages -->
+        <item>5</item> <!-- Disposable Gloves -->
+        <item>6</item> <!-- CPR Face Shield -->
+        <item>7</item> <!-- Tweezers -->
+        <item>8</item> <!-- Scissors -->
+        <item>9</item> <!-- Instant Cold Packs -->
+        <item>10</item> <!-- Hydrocortisone Cream -->
+        <item>11</item> <!-- Antibiotic Ointment -->
+        <item>12</item> <!-- Pain Relievers -->
+        <item>13</item> <!-- Thermometer -->
+        <item>14</item> <!-- Emergency Blanket -->
+        <item>1</item> <!-- Sterile Gauze Pads -->
+    </integer-array>
+
 </resources>

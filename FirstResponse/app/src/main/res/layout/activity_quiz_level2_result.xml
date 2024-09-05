@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizResultActivity"
     android:background="@android:color/white"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".QuizLevel2ResultActivity">
 
     <!-- Lottie Animation at the top -->
     <com.airbnb.lottie.LottieAnimationView
@@ -63,7 +63,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button_background"
             android:padding="16dp"
-            android:text="Back to Home"
+            android:text="Return to Quiz Page"
             android:textColor="@android:color/white"
             android:layout_marginTop="8dp" />
     </LinearLayout>

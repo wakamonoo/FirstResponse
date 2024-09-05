@@ -74,7 +74,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonQuiz = findViewById(R.id.buttonQuiz)
         buttonQuiz.setOnClickListener {
-            startActivity(Intent(this, QuizActivity::class.java))
+            startActivity(Intent(this, QuizPageActivity::class.java))
         }
 
         // Bottom navigation setup
@@ -102,6 +102,18 @@ class MainActivity : AppCompatActivity() {
                             requestLocationPermission()
                         }
                     }
+                    true
+                }
+                R.id.settings -> {
+                    startActivity(Intent(this, SettingsActivity::class.java)) // Handle Settings
+                    true
+                }
+                R.id.credits -> {
+                    startActivity(Intent(this, CreditsActivity::class.java)) // Handle Credits
+                    true
+                }
+                R.id.suggestions -> {
+                    startActivity(Intent(this, SuggestionsActivity::class.java)) // Handle Suggestions
                     true
                 }
                 else -> false
@@ -229,8 +241,6 @@ class MainActivity : AppCompatActivity() {
 
         return earthRadius * c
     }
-
-
 
     override fun onRequestPermissionsResult(
         requestCode: Int, permissions: Array<out String>, grantResults: IntArray

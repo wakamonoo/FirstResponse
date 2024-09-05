@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 
-class QuizResultActivity : AppCompatActivity() {
+class QuizLevel3ResultActivity : AppCompatActivity() {
     private lateinit var resultTextView: TextView
     private lateinit var retryButton: Button
     private lateinit var homeButton: Button
@@ -21,7 +21,7 @@ class QuizResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.result)
+        setContentView(R.layout.activity_quiz_level3_result)
 
         supportActionBar?.hide()
 
@@ -35,27 +35,36 @@ class QuizResultActivity : AppCompatActivity() {
 
         resultTextView = findViewById(R.id.resultTextView)
         retryButton = findViewById(R.id.retryButton)
-        homeButton = findViewById(R.id.homeButton)
+        homeButton = findViewById(R.id.mainMenuButton)
 
+        // Retrieve the score from the intent
         val score = intent.getIntExtra("score", 0)
-        val highestScore = sharedPreferences.getInt("highest_score", 0)
+        val highestScore = sharedPreferences.getInt("highest_score_level3", 0)
 
-        // Update the highest score if the current score is higher
+        // Update SharedPreferences if the current score is higher than the highest score
         if (score > highestScore) {
-            sharedPreferences.edit().putInt("highest_score", score).apply()
+            sharedPreferences.edit().putInt("highest_score_level3", score).apply()
         }
 
-        // Display current score and highest score
-        resultTextView.text = "Your Score: $score\nHighest Score: ${sharedPreferences.getInt("highest_score", 0)}"
+        // Provide feedback based on the score
+        val feedbackMessage = when {
+            score == 15 -> "Excellent! You got a perfect score!"
+            score >= 10 -> "Great job! You have a good grasp of the material."
+            score >= 5 -> "Good effort! Keep practicing to improve."
+            else -> "Keep trying! You'll get better with more practice."
+        }
+
+        // Display the current score, highest score, and feedback message
+        resultTextView.text = "Your Score: $score\nHighest Score: $highestScore\n$feedbackMessage"
 
         retryButton.setOnClickListener {
-            finish() // Close QuizResultActivity
-            startActivity(Intent(this, QuizActivity::class.java)) // Restart QuizActivity
+            finish() // Close QuizLevel3ResultActivity
+            startActivity(Intent(this, QuizLevel3Activity::class.java)) // Restart QuizLevel3Activity
         }
 
         homeButton.setOnClickListener {
-            finish() // Close QuizResultActivity
-            startActivity(Intent(this, MainActivity::class.java)) // Go back to MainActivity
+            finish() // Close QuizLevel3ResultActivity
+            startActivity(Intent(this, QuizPageActivity::class.java)) // Go back to Quiz Page
         }
     }
 }

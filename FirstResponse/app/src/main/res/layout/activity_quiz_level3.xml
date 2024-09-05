@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizActivity"
+    android:padding="16dp"
     android:background="@color/white"
-    android:padding="16dp">
+    tools:context=".QuizLevel3Activity">
 
-    <!-- Lottie Animation at the top -->
-
-    <!-- Container for question and options -->
-
+    <!-- Lottie Animation View -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieAnimationView"
         android:layout_width="200dp"
@@ -26,6 +22,7 @@
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/think" />
 
+    <!-- Question CardView -->
     <androidx.cardview.widget.CardView
         android:id="@+id/questionCardView"
         android:layout_width="match_parent"
@@ -39,52 +36,55 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- Content inside CardView -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp">
 
+            <!-- Clue TextView -->
             <TextView
-                android:id="@+id/questionTextView"
+                android:id="@+id/clueTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
                 android:text="Question will appear here"
-                android:textSize="18sp"
                 android:textColor="@color/white"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@id/answersGroup"
-                android:paddingBottom="16dp" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
+            <!-- RadioGroup for answers -->
             <RadioGroup
                 android:id="@+id/answersGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/questionTextView"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toBottomOf="@id/clueTextView">
 
                 <!-- RadioButton items will be added programmatically -->
 
             </RadioGroup>
 
+            <!-- Submit Button -->
             <Button
                 android:id="@+id/submitButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button_background"
+                android:padding="16dp"
                 android:text="Submit"
                 android:textColor="@android:color/white"
-                android:background="@drawable/button_background"
-                app:layout_constraintTop_toBottomOf="@id/answersGroup"
-                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:padding="16dp" />
+                app:layout_constraintTop_toBottomOf="@id/answersGroup" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

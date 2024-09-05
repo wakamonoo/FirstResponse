@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 
-class QuizActivity : AppCompatActivity() {
+class QuizLevel1Activity : AppCompatActivity() {
     private lateinit var questionTextView: TextView
     private lateinit var answersGroup: RadioGroup
     private lateinit var submitButton: Button
@@ -22,7 +22,7 @@ class QuizActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.quiz)
+        setContentView(R.layout.activity_quiz_level1)
 
         supportActionBar?.hide()
 
@@ -39,7 +39,7 @@ class QuizActivity : AppCompatActivity() {
         submitButton = findViewById(R.id.submitButton)
 
         try {
-            // Initialize your quiz data here
+            // Initialize your quiz data
             val questionArray = resources.getStringArray(R.array.quiz_questions).toList()
             val answerArrays = listOf(
                 resources.getStringArray(R.array.quiz_answers_1),
@@ -51,16 +51,11 @@ class QuizActivity : AppCompatActivity() {
                 resources.getStringArray(R.array.quiz_answers_7),
                 resources.getStringArray(R.array.quiz_answers_8),
                 resources.getStringArray(R.array.quiz_answers_9),
-                resources.getStringArray(R.array.quiz_answers_10),
-                resources.getStringArray(R.array.quiz_answers_11),
-                resources.getStringArray(R.array.quiz_answers_12),
-                resources.getStringArray(R.array.quiz_answers_13),
-                resources.getStringArray(R.array.quiz_answers_14),
-                resources.getStringArray(R.array.quiz_answers_15)
+                resources.getStringArray(R.array.quiz_answers_10)
             )
             val correctAnswerArray = resources.getIntArray(R.array.correct_answers)
 
-            if (questionArray.isEmpty() || answerArrays.any { it.isEmpty() } || correctAnswerArray.isEmpty()) {
+            if (questionArray.size != answerArrays.size || questionArray.size != correctAnswerArray.size) {
                 throw IllegalStateException("Quiz data not properly initialized")
             }
 
@@ -69,23 +64,31 @@ class QuizActivity : AppCompatActivity() {
                 Triple(questionArray[index], answerArrays[index], correctAnswerArray[index])
             }.shuffled() // Shuffle them together
 
-            Log.d("QuizActivity", "Quiz Data: $quizData")
+            Log.d("QuizLevel1Activity", "Quiz Data: $quizData")
 
             loadQuestion()
 
             submitButton.setOnClickListener {
                 if (checkAnswer()) {
                     score++
+                    Log.d("QuizLevel1Activity", "Correct Answer - Score: $score")
+                } else {
+                    Log.d("QuizLevel1Activity", "Incorrect Answer - Score: $score")
                 }
                 currentQuestionIndex++
                 if (currentQuestionIndex < quizData.size) {
                     loadQuestion()
                 } else {
-                    showResult()
+                    // Directly start the result activity instead of using setResult
+                    val intent = Intent(this, QuizLevel1ResultActivity::class.java)
+                    intent.putExtra("score", score)
+                    intent.putExtra("isPerfectScore", score == 10) // Pass perfect score information
+                    startActivity(intent)
+                    finish() // Close QuizLevel1Activity
                 }
             }
         } catch (e: Exception) {
-            Log.e("QuizActivity", "Error initializing quiz data", e)
+            Log.e("QuizLevel1Activity", "Error initializing quiz data", e)
         }
     }
 
@@ -106,27 +109,18 @@ class QuizActivity : AppCompatActivity() {
                 answersGroup.addView(radioButton)
             }
         } catch (e: Exception) {
-            Log.e("QuizActivity", "Error loading question", e)
+            Log.e("QuizLevel1Activity", "Error loading question", e)
         }
     }
 
     private fun checkAnswer(): Boolean {
         val selectedId = answersGroup.checkedRadioButtonId
         val selectedRadioButton = findViewById<RadioButton>(selectedId)
-        val (_, _, correctAnswerIndex) = quizData[currentQuestionIndex]
+        val (_, answers, correctAnswerIndex) = quizData[currentQuestionIndex]
 
-        return selectedRadioButton != null &&
-                answersGroup.indexOfChild(selectedRadioButton) == correctAnswerIndex
-    }
+        val selectedAnswerIndex = answers.indexOf(selectedRadioButton?.text)
+        Log.d("QuizLevel1Activity", "Selected Answer Index: $selectedAnswerIndex, Correct Answer Index: $correctAnswerIndex")
 
-    private fun showResult() {
-        try {
-            val intent = Intent(this, QuizResultActivity::class.java)
-            intent.putExtra("score", score)
-            finish() // Close QuizActivity
-            startActivity(intent) // Open QuizResultActivity
-        } catch (e: Exception) {
-            Log.e("QuizActivity", "Error showing result", e)
-        }
+        return selectedAnswerIndex == correctAnswerIndex
     }
 }
