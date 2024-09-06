@@ -48,6 +48,11 @@
         <activity android:name="com.example.android.firstresponse.GroundingTechniques" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.StressReduction" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.PanicAttackResponse" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.WaterSafety" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.RoadSafety" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.DailyFoodSafety" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.EmergencyFoodSafety" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.Heatwave" android:exported="false" />
         <activity
             android:name="com.example.android.firstresponse.FirstAid"
             android:exported="true"
@@ -126,6 +131,9 @@
             android:exported="true" />
         <activity
             android:name="com.example.android.firstresponse.FirstAidKitActivity"
+            android:exported="true" />
+        <activity
+            android:name="com.example.android.firstresponse.SafetyAndPreparedeness"
             android:exported="true" />
 
     </application>

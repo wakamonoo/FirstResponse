@@ -1,24 +1,17 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_suggestion.xml -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".SuggestionsActivity">
 
-    <TextView
-        android:id="@+id/suggestionsTitle"
+    <Button
+        android:id="@+id/btn_suggestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Suggestions"
-        android:textSize="24sp"
-        android:textStyle="bold" />
-
-    <!-- Add suggestions content here -->
-    <TextView
-        android:id="@+id/suggestionsContent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/suggestionsTitle"
-        android:text="Suggestions content goes here"
-        android:layout_marginTop="16dp" />
-
+        android:text="Send Suggestion"
+        android:layout_centerInParent="true"
+        android:background="@color/red"
+        android:textColor="@android:color/white"/>
 </RelativeLayout>

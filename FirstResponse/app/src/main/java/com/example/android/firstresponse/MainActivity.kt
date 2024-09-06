@@ -27,6 +27,7 @@ import com.google.android.material.navigation.NavigationView
 import android.graphics.drawable.ColorDrawable
 import com.google.android.gms.common.api.ResolvableApiException
 import com.google.android.gms.location.LocationSettingsResponse
+import android.content.ActivityNotFoundException
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,11 +36,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var buttonQuiz: Button
     private lateinit var buttonFirstAidKits: Button
-
+    private lateinit var buttonSafetyPreparedness: Button
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1
         private const val LOCATION_SETTINGS_REQUEST_CODE = 2
+        private const val EMAIL_PERMISSION_REQUEST_CODE = 3
         private const val TAG = "MainActivity"
     }
 
@@ -79,12 +81,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, QuizPageActivity::class.java))
         }
 
-        // Add this in your `onCreate` method after the initialization of other buttons
         buttonFirstAidKits = findViewById(R.id.buttonFirstAidKits)
         buttonFirstAidKits.setOnClickListener {
             startActivity(Intent(this, FirstAidKitActivity::class.java))
         }
 
+        buttonSafetyPreparedness = findViewById(R.id.buttonSafetyPreparedness)
+        buttonSafetyPreparedness.setOnClickListener {
+            startActivity(Intent(this, SafetyAndPreparedeness::class.java))
+        }
 
         // Bottom navigation setup
         findViewById<BottomNavigationView>(R.id.bottomNavigationView).setOnNavigationItemSelectedListener { menuItem ->
@@ -122,7 +127,11 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.suggestions -> {
-                    startActivity(Intent(this, SuggestionsActivity::class.java)) // Handle Suggestions
+                    if (checkEmailAppPermission()) {
+                        openEmailApp()
+                    } else {
+                        requestEmailAppPermission()
+                    }
                     true
                 }
                 else -> false
@@ -153,15 +162,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun requestLocationPermission() {
-        // Check if the permission is permanently denied
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-            // Show permission dialog
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
         } else if (!checkLocationPermission()) {
-            // Request permission if not granted and not permanently denied
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
         } else {
-            // If the permission is permanently denied, show a message to the user
             showSettingsDialog()
         }
     }
@@ -177,7 +182,6 @@ class MainActivity : AppCompatActivity() {
 
         task.addOnSuccessListener {
             Log.d(TAG, "Location settings are satisfied.")
-            // Directly open Google Maps after ensuring location settings
             getCurrentLocationAndOpenGoogleMaps()
         }
 
@@ -217,7 +221,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openGoogleMaps(userLocation: Pair<Double, Double>) {
-        // Define your predefined locations
         val locations = listOf(
             Pair(13.292603487659566, 123.49065310834811), // RHU Polangui
             Pair(13.257769416930843, 123.49944847998052), // RHU Oas
@@ -225,10 +228,8 @@ class MainActivity : AppCompatActivity() {
             Pair(13.193639797921866, 123.32731289517719)  // Pantao District Hospital
         )
 
-        // Find the nearest location
         val nearestLocation = locations.minByOrNull { distance(userLocation, it) }
 
-        // Build the Google Maps URL
         val nearestLocationUri = if (nearestLocation != null) {
             Uri.parse("https://www.google.com/maps/dir/?api=1&destination=${nearestLocation.first},${nearestLocation.second}")
         } else {
@@ -255,18 +256,25 @@ class MainActivity : AppCompatActivity() {
         requestCode: Int, permissions: Array<out String>, grantResults: IntArray
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        if (requestCode == LOCATION_PERMISSION_REQUEST_CODE) {
-            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                enableLocationSettings()
-            } else {
-                isLocationRequestInProgress = false
-                // Check if the user has permanently denied the permission
-                if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
-                    // "Don't ask again" checked
-                    showSettingsDialog()
+        when (requestCode) {
+            LOCATION_PERMISSION_REQUEST_CODE -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    enableLocationSettings()
                 } else {
-                    Log.e(TAG, "Location permission denied")
-                    Toast.makeText(this, "Permission denied. Please grant location access to use this feature.", Toast.LENGTH_SHORT).show()
+                    isLocationRequestInProgress = false
+                    if (!ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.ACCESS_FINE_LOCATION)) {
+                        showSettingsDialog()
+                    } else {
+                        Log.e(TAG, "Location permission denied")
+                        Toast.makeText(this, "Permission denied. Please grant location access to use this feature.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+            EMAIL_PERMISSION_REQUEST_CODE -> {
+                if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    openEmailApp()
+                } else {
+                    Toast.makeText(this, "Permission denied. Please grant email access to use this feature.", Toast.LENGTH_SHORT).show()
                 }
             }
         }
@@ -285,6 +293,58 @@ class MainActivity : AppCompatActivity() {
             setNegativeButton("Cancel", null)
         }.show()
     }
+
+    private fun checkEmailAppPermission(): Boolean {
+        // No specific permission is needed for email apps
+        return true
+    }
+
+    private fun requestEmailAppPermission() {
+        // As of now, no specific email permission is needed
+        Toast.makeText(this, "Email app access required.", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun openEmailApp() {
+        // Define the package name for Gmail
+        val gmailPackageName = "com.google.android.gm"
+
+        // Create an intent to send an email
+        val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:") // Use mailto: to directly open email clients
+            putExtra(Intent.EXTRA_EMAIL, arrayOf("firstresponse@gmail.com"))
+            putExtra(Intent.EXTRA_SUBJECT, "Suggestion")
+        }
+
+        // Create an intent to specifically open Gmail
+        val gmailIntent = Intent(Intent.ACTION_SENDTO).apply {
+            data = Uri.parse("mailto:") // This will be used to check if Gmail can handle the intent
+            setPackage(gmailPackageName) // Set the Gmail package name
+        }
+
+        // Check if Gmail is installed
+        val packageManager = packageManager
+        val gmailApps = packageManager.queryIntentActivities(gmailIntent, PackageManager.MATCH_DEFAULT_ONLY)
+
+        if (gmailApps.isNotEmpty()) {
+            // If Gmail is installed, use the Gmail intent
+            try {
+                startActivity(gmailIntent)
+            } catch (e: ActivityNotFoundException) {
+                // Handle the exception if needed
+                Toast.makeText(this, "Unable to open Gmail app.", Toast.LENGTH_SHORT).show()
+            }
+        } else {
+            // Fallback to any available email client
+            try {
+                startActivity(emailIntent)
+            } catch (e: ActivityNotFoundException) {
+                Toast.makeText(this, "No email apps found.", Toast.LENGTH_SHORT).show()
+            }
+        }
+    }
+
+
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
