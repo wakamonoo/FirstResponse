@@ -34,6 +34,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var actionBarDrawerToggle: ActionBarDrawerToggle
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var buttonQuiz: Button
+    private lateinit var buttonFirstAidKits: Button
+
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1
@@ -76,6 +78,13 @@ class MainActivity : AppCompatActivity() {
         buttonQuiz.setOnClickListener {
             startActivity(Intent(this, QuizPageActivity::class.java))
         }
+
+        // Add this in your `onCreate` method after the initialization of other buttons
+        buttonFirstAidKits = findViewById(R.id.buttonFirstAidKits)
+        buttonFirstAidKits.setOnClickListener {
+            startActivity(Intent(this, FirstAidKitActivity::class.java))
+        }
+
 
         // Bottom navigation setup
         findViewById<BottomNavigationView>(R.id.bottomNavigationView).setOnNavigationItemSelectedListener { menuItem ->

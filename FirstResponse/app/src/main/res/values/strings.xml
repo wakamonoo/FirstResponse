@@ -257,4 +257,26 @@
         <item>1</item> <!-- Sterile Gauze Pads -->
     </integer-array>
 
+    <!-- First Aid Kit Descriptions -->
+    <string name="bandage_description">Bandages are essential for covering and protecting wounds. They are ideal for treating minor cuts, abrasions, and burns. Use them to keep injuries clean and prevent further damage.</string>
+    <string name="antiseptic_description">Antiseptic solutions are crucial for cleaning wounds to prevent infections. They help to kill germs and bacteria, reducing the risk of complications and speeding up the healing process.</string>
+    <string name="gauze_description">Gauze pads are used to absorb blood, fluids, and exudate from wounds. They are ideal for covering wounds, applying medication, and providing protection to injured areas.</string>
+    <string name="adhesive_tape_description">Adhesive tape is used to secure bandages, gauze, and other dressings in place. It ensures that wound coverings stay intact and are not displaced, which is important for effective healing.</string>
+    <string name="scissors_description">Medical scissors are designed for cutting tape, bandages, gauze, and other materials. They are essential for quickly and safely preparing first aid supplies during emergencies.</string>
+    <string name="pain_reliever_description">Pain relievers are used to alleviate pain and discomfort caused by injuries. They help manage pain levels and improve the overall comfort of individuals who have sustained minor injuries.</string>
+    <string name="thermometer_description">Thermometers are used to measure body temperature, which is crucial for detecting fever and other health conditions. Accurate temperature readings help in assessing the severity of illness or injury.</string>
+    <string name="alcohol_wipes_description">Alcohol wipes are used for disinfecting and cleaning wounds. They are essential for preventing infection and maintaining a sterile environment when treating injuries.</string>
+    <string name="gloves_description">Medical gloves are worn to protect hands and prevent contamination during first aid. They are crucial for maintaining hygiene and safety when dealing with blood or other bodily fluids.</string>
+    <string name="first_aid_manual_description">A first aid manual provides essential instructions and guidelines for treating common injuries and medical emergencies. It is a valuable resource for ensuring proper care during emergencies.</string>
+    <string name="cold_compress_description">Cold compresses are used to reduce swelling, numb pain, and treat bruises. Applying a cold compress helps to manage pain and minimize the effects of minor injuries.</string>
+    <string name="tweezers_description">Tweezers are used for removing splinters, foreign objects, and debris from wounds. They are precision tools that help in safely extracting small particles from the skin.</string>
+    <string name="safety_pins_description">Safety pins are versatile tools used for securing bandages, dressings, and other first aid supplies. They are helpful in holding materials in place during wound care.</string>
+    <string name="emergency_blanket_description">Emergency blankets provide warmth in critical situations, such as when exposed to cold weather or after shock. They are compact and essential for outdoor and survival situations.</string>
+    <string name="mask_description">Medical masks are used to protect against airborne particles and reduce the risk of infection. They are crucial for preventing the spread of respiratory illnesses and ensuring safety in medical environments.</string>
+
+    <string name="shop_now">Shop Now</string>
+    <string name="kit_image_desc">Description of the first aid kit image</string>
+
+
+
 </resources>

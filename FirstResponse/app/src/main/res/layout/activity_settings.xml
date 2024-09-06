@@ -26,18 +26,21 @@
             android:id="@+id/radioEnglish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="English" />
+            android:text="English"
+            android:textColor="@color/black"/>
 
         <RadioButton
             android:id="@+id/radioFilipino"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Filipino" />
+            android:text="Filipino"
+            android:textColor="@color/black"/>
 
         <RadioButton
             android:id="@+id/radioBicol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bicol" />
+            android:text="Bicol"
+            android:textColor="@color/black"/>
     </RadioGroup>
 </RelativeLayout>

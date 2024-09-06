@@ -124,5 +124,9 @@
         <activity
             android:name="com.example.android.firstresponse.SuggestionsActivity"
             android:exported="true" />
+        <activity
+            android:name="com.example.android.firstresponse.FirstAidKitActivity"
+            android:exported="true" />
+
     </application>
 </manifest>
