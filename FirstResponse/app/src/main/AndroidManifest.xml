@@ -135,6 +135,8 @@
         <activity
             android:name="com.example.android.firstresponse.SafetyAndPreparedness"
             android:exported="true" />
-
+        <activity
+            android:name="com.example.android.firstresponse.WhatsWrongActivity"
+            android:exported="true" />
     </application>
 </manifest>

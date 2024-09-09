@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var buttonQuiz: Button
     private lateinit var buttonFirstAidKits: Button
     private lateinit var buttonSafetyPreparedness: Button
+    private lateinit var buttonWhatsWrong: Button
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1
@@ -89,6 +90,11 @@ class MainActivity : AppCompatActivity() {
         buttonSafetyPreparedness = findViewById(R.id.buttonSafetyPreparedness)
         buttonSafetyPreparedness.setOnClickListener {
             startActivity(Intent(this, SafetyAndPreparedness::class.java))
+        }
+
+        buttonWhatsWrong = findViewById(R.id.buttonWhatsWrong)
+        buttonWhatsWrong.setOnClickListener {
+            startActivity(Intent(this, WhatsWrongActivity::class.java))
         }
 
         // Bottom navigation setup
