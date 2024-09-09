@@ -6,6 +6,8 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import android.view.MenuItem
+
 
 class WhatsWrongActivity : AppCompatActivity() {
 
@@ -289,6 +291,17 @@ class WhatsWrongActivity : AppCompatActivity() {
             handleThatAllButton()
         }
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressed() // Handle the Up button click
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     private fun setupSpinner() {
         val options = when (currentStage) {
