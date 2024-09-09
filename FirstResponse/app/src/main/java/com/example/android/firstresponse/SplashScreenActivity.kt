@@ -8,8 +8,8 @@ import android.widget.Button
 import com.airbnb.lottie.LottieAnimationView
 
 class SplashScreenActivity : AppCompatActivity() {
-    private val delayMillis: Long = 2300 // 2 seconds
-    private val pauseProgress: Float = 0.8f // Pause the animation at 80% completion
+    private val delayMillis: Long = 5000 // 2 seconds
+    private val pauseProgress: Float = 0.9f // Pause the animation at 80% completion
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

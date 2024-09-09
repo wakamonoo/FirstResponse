@@ -34,7 +34,9 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/shadow">
+
 
 
                     <ImageView
@@ -92,9 +94,10 @@
                         android:layout_marginBottom="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
+                        android:gravity="center"
                         android:text="CPR: Cardiopulmonary Resuscitation is an emergency lifesaving procedure performed when the heart stops beating. Immediate CPR can double or triple chances of survival after cardiac arrest."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintBottom_toBottomOf="@+id/imageView1"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -166,6 +169,7 @@
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:text="Step 1.Call an Ambulance (Dial your Local Hotline)"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
@@ -185,6 +189,7 @@
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:text="Step 2.Place the person on their back and open their airway"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
@@ -203,11 +208,12 @@
                         android:layout_marginTop="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
+                        android:gravity="center"
                         android:text="Place the person carefully on their back and kneel beside their chest. Tilt their head back slightly by lifting their chin.
 
 Open their mouth and check for any obstruction, such as food or vomit. Remove any obstruction if it is loose. If it is not loose, trying to grasp it may push it farther into the airway."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
@@ -224,6 +230,7 @@ Open their mouth and check for any obstruction, such as food or vomit. Remove an
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:text="Step 3.Check for breathing"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
@@ -242,11 +249,11 @@ Open their mouth and check for any obstruction, such as food or vomit. Remove an
                         android:layout_marginTop="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="20dp"
+                        android:gravity="center"
                         android:text="Place your ear next to the person’s mouth and listen for no more than 10 seconds. If you do not hear breathing, or you only hear occasional gasps, begin CPR.
-
 If someone is unconscious but still breathing, do not perform CPR. Instead, if they do not seem to have a spinal injury, place them in the recovery position. Keep monitoring their breathing and perform CPR if they stop breathing."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
@@ -259,24 +266,22 @@ If someone is unconscious but still breathing, do not perform CPR. Instead, if t
                         android:layout_width="wrap_content"
                         android:layout_height="550dp"
                         android:src="@drawable/cprstepsnew"
-                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toTopOf="@id/textView4"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/imageView4"
-                        app:layout_constraintTop_toBottomOf="@id/imageView2"
-                        tools:layout_editor_absoluteX="16dp">
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/imageView2">
 
                     </ImageView>
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="match_parent"
-                        android:layout_height="640dp"
+                        android:layout_height="600dp"
                         android:background="@color/shadow"
-                        app:layout_constraintBottom_toTopOf="@id/imageView5"
                         app:layout_constraintTop_toBottomOf="@id/imageView3"
-                        tools:layout_editor_absoluteX="16dp">
+                        tools:layout_editor_absoluteX="16dp"/>
 
-                    </ImageView>
 
 
                     <TextView
@@ -287,6 +292,7 @@ If someone is unconscious but still breathing, do not perform CPR. Instead, if t
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:text="Step 4.Perform 30 chest compressions"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
@@ -294,7 +300,8 @@ If someone is unconscious but still breathing, do not perform CPR. Instead, if t
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="@+id/imageView4">
+                        app:layout_constraintTop_toTopOf="@+id/imageView4"
+                        >
 
                     </TextView>
 
@@ -305,12 +312,13 @@ If someone is unconscious but still breathing, do not perform CPR. Instead, if t
                         android:layout_marginTop="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
+                        android:gravity="center"
                         android:text="Place one of your hands on top of the other and clasp them together. With the heel of the hands and straight elbows, push hard and fast in the center of the chest, slightly below the nipples.
-
 Push at least 2 inches deep. Compress their chest at a rate of least 100 times per minute. Let the chest rise fully between compressions."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/shadow3"
                         app:fontFamily="serif"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView5"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
                         app:layout_constraintStart_toStartOf="parent"
@@ -325,6 +333,7 @@ Push at least 2 inches deep. Compress their chest at a rate of least 100 times p
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
                         android:textStyle="bold"
+                        android:gravity="center"
                         android:text="Step 5.Perform two rescue breaths"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
@@ -332,7 +341,7 @@ Push at least 2 inches deep. Compress their chest at a rate of least 100 times p
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textView10">
+                        app:layout_constraintTop_toBottomOf="@+id/imageView5">
 
                     </TextView>
 
@@ -343,13 +352,14 @@ Push at least 2 inches deep. Compress their chest at a rate of least 100 times p
                         android:layout_marginTop="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="20dp"
+                        android:gravity="center"
                         android:text="Making sure their mouth is clear, tilt their head back slightly and lift their chin. Pinch their nose shut, place your mouth fully over theirs, and blow to make their chest rise.
-
 If their chest does not rise with the first breath, retilt their head. If their chest still does not rise with a second breath, the person might be choking.
 Repeat above steps till an ambulance arrives."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/shadow3"
                         app:fontFamily="serif"
+                        app:layout_constraintBottom_toTopOf="@+id/imageView6"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
                         app:layout_constraintStart_toStartOf="parent"
@@ -363,8 +373,8 @@ Repeat above steps till an ambulance arrives."
                         android:src="@drawable/chestcompressions"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintBottom_toTopOf="@id/imageView6"
-                        app:layout_constraintTop_toBottomOf="@id/imageView4"
+                        app:layout_constraintBottom_toTopOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/textView10"
                         tools:layout_editor_absoluteX="16dp">
                     </ImageView>
 
@@ -376,7 +386,7 @@ Repeat above steps till an ambulance arrives."
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintBottom_toTopOf="@id/webView2"
-                        app:layout_constraintTop_toBottomOf="@id/imageView5"
+                        app:layout_constraintTop_toBottomOf="@id/textView12"
                         tools:layout_editor_absoluteX="16dp">
                     </ImageView>
 

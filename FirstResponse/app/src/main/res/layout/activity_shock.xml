@@ -91,15 +91,14 @@
                         android:layout_marginBottom="18dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
-
+                        android:gravity="center"
                         android:text="If you suspect someone has received an electric shock you must ensure all power sources are isolated before you can treat the casualty. The action you take will depend on whether the risk is posed by high voltage or low voltage electricity.\n
 \n■High Voltage\nOverhead power cables are an example of a power source generating high voltage electricity. High voltage electricity has the ability to 'jump' or 'arc' up to distances of 18 metres or more. If faced with a casualty as a result of, or in the vicinity of, dangerous high voltage electricity, DO NOT APPROACH! Stay at least 25 metres away from the casualty until the power has been switched off by an official agency i.e. the Electricity Board.
 \n\n■Low Voltage\nIf faced with a casualty who is in the process of receiving a low voltage electric shock you should:
 Act to break the contact between the casualty and the electrical supply. If possible to do so safely, you should turn off the source of electricity, either by switching off the current at the mains, turning the power off at the circuit board, removing the plug or wrenching the cable free.\n\n
 Alternatively, move the source of the shock (i.e. hairdryer, power tool) away from yourself and the casualty using an object of low conductivity. First, stand on a dry insulating material, such as a book, newspapers or rubber matting. Then, use a long, low-conductivity object like a wooden broom or specially designed Electric Shock Rescue Hook to push the power source away from the casualty or move the casualty's limbs away from the power source."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
-
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintBottom_toBottomOf="@+id/imageView1"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -207,13 +206,9 @@ Alternatively, move the source of the shock (i.e. hairdryer, power tool) away fr
                         android:layout_marginTop="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="10dp"
-                        android:text="1. Ask hello, can you hear me? and call their name if you know it.\n
-2. Ask in both the casualty's ears for them to open their eyes.\n
-3. Pinch an ear lobe or tap the shoulders.\n
-4. Shout for HELP!\n
-5. DO NOT move the casualty unless the environment or situation is dangerous.\nCall emergency services now."
+                        android:text="1. Ask hello, can you hear me? and call their name if you know it.\n2. Ask in both the casualty's ears for them to open their eyes.\n3. Pinch an ear lobe or tap the shoulders.\n4. Shout for HELP!\n5. DO NOT move the casualty unless the environment or situation is dangerous.\nCall emergency services now."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
@@ -248,20 +243,9 @@ Alternatively, move the source of the shock (i.e. hairdryer, power tool) away fr
                         android:layout_marginTop="8dp"
                         android:paddingStart="10dp"
                         android:paddingBottom="20dp"
-                        android:text="If the casualty is unresponsive and breathing normally, turn the casualty to the recovery position. This allows the head to be tilted back and down, stopping the tongue from blocking the airway and allowing any vomit or fluid to drain safely from the mouth.\n
-1. Check for any other obvious injuries and call emergency services\n
-2. Remove sharp objects from casualty's pockets\n
-3. Turn the casualty into the recovery position as follows:\n
-4. Place the nearest arm at a right angle to the body\n
-5. Draw the furthest arm across the chest and place the back of the hand across the cheek nearest to you\n
-6. Keep this here whilst you raise the furthest leg by grasping the top of the knee\n
-7. Gently pull on the knee so the casualty pivots over onto their side facing you\n
-8. The casualty should be fully onto their side and stable\n
-9. Adjust the upper leg so the hip and the knee are bent at right angles\n
-10. Re-check the airway, breathing and circulation. Ensure the airway is open\n
-11. Check for continued breathing ."
+                        android:text="If the casualty is unresponsive and breathing normally, turn the casualty to the recovery position. This allows the head to be tilted back and down, stopping the tongue from blocking the airway and allowing any vomit or fluid to drain safely from the mouth.\n\n1. Check for any other obvious injuries and call emergency services\n2. Remove sharp objects from casualty's pockets\n3. Turn the casualty into the recovery position as follows:\n4. Place the nearest arm at a right angle to the body\n5. Draw the furthest arm across the chest and place the back of the hand across the cheek nearest to you\n6. Keep this here whilst you raise the furthest leg by grasping the top of the knee\n7. Gently pull on the knee so the casualty pivots over onto their side facing you\n8. The casualty should be fully onto their side and stable\n9. Adjust the upper leg so the hip and the knee are bent at right angles\n10. Re-check the airway, breathing and circulation. Ensure the airway is open\n11. Check for continued breathing ."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
@@ -323,7 +307,7 @@ Alternatively, move the source of the shock (i.e. hairdryer, power tool) away fr
                         android:paddingBottom="10dp"
                         android:text="Begin CPR with chest compressions as soon as possible. Do not leave the casualty to search for an AED.\nWhen phoning emergency services, DO NOT hang up at any stage of the conversation. The operator will terminate the call when appropriate. You should determine responsiveness and whether the casualty is breathing before speaking to the emergency services because this enables them to assign the appropriate priority to your situation."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"
@@ -360,7 +344,7 @@ Alternatively, move the source of the shock (i.e. hairdryer, power tool) away fr
                         android:paddingBottom="10dp"
                         android:text="■Exposure to electricity can cause burns to the skin, and in severe cases, the internal organs. The electricity may cause 'entry' and 'exit' burns - for example, entering via a hand and leaving via the feet.\n\n■For responsive casualties:\nCool burns for a minimum of 10 minutes under cold water\n\n■For unresponsive casualties:\nCool the burn with wet dressings (or special burn dressings) after placing them in the recovery position.\n\n■DO NOT\n1.Burst any blisters\n2.Apply adhesive dressings\n3.Remove damaged skin\n4.Apply ointments/creams\n5.Cover with 'fluffy' dressings\n6.Affix dressings too tightly\n7.Apply butter/fats/margarine or other substances commonly believed to cool burns\n8.Remove damaged clothing\n9.Apply ice"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                        android:textColor="@color/shadow3"
+                        android:textColor="@color/black"
                         app:fontFamily="serif"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"

@@ -6,8 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-
-
+import android.view.MenuItem
 
 class FirstAidKitActivity : AppCompatActivity() {
 
@@ -16,20 +15,26 @@ class FirstAidKitActivity : AppCompatActivity() {
         setContentView(R.layout.activity_first_aid_kit)
 
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
+        supportActionBar?.title = "FIRST AID KITS"
 
-        getSupportActionBar()?.setTitle("FIRST AID KITS");
-
-        // calling the action bar
-        var actionBar = getSupportActionBar()
-
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true)
-        }
+        // Enable the Up button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // Initialize RecyclerView and Adapter
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView.adapter = FirstAidKitAdapter(getFirstAidKits())
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                // Handle the back button press to go back to the parent activity
+                finish() // or onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 
     private fun getFirstAidKits(): List<FirstAidKit> {
@@ -51,5 +56,4 @@ class FirstAidKitActivity : AppCompatActivity() {
             FirstAidKit(R.drawable.mask, "Mask", R.string.mask_description, "Shop Now")
         )
     }
-
 }

@@ -1,70 +1,68 @@
 package com.example.android.firstresponse
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.widget.Button
 import android.graphics.drawable.ColorDrawable
+import android.os.Bundle
+import android.view.MenuItem // Import MenuItem
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
-class SafetyAndPreparedeness : AppCompatActivity() {
+class SafetyAndPreparedness : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_safety_and_preparedness)
+
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
+        supportActionBar?.title = "SAFETY AND PREPAREDNESS"
 
-        getSupportActionBar()?.setTitle("SAFETY AND PREPAREDENESS");
+        // Enable the Up button
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        // calling the action bar
-        var actionBar = getSupportActionBar()
-
-        // showing the back button in action bar
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true)
+        // Switching to Water Safety activity
+        val buttonWater = findViewById<Button>(R.id.buttonWater)
+        buttonWater.setOnClickListener {
+            val intent = Intent(this, WaterSafety::class.java)
+            startActivity(intent)
         }
 
-
-        //switching to cpr activity
-        val buttonWater=findViewById<Button>(R.id.buttonWater)
-        buttonWater.setOnClickListener{
-            val Intent= Intent(this,WaterSafety::class.java)
-            startActivity(Intent)
+        // Switching to Road Safety activity
+        val buttonRoad = findViewById<Button>(R.id.buttonRoad)
+        buttonRoad.setOnClickListener {
+            val intent = Intent(this, RoadSafety::class.java)
+            startActivity(intent)
         }
 
-        //switching to shock activity
-        val buttonRoad=findViewById<Button>(R.id.buttonRoad)
-        buttonRoad.setOnClickListener{
-            val Intent= Intent(this,RoadSafety::class.java)
-            startActivity(Intent)
+        // Switching to Daily Food Safety activity
+        val buttonDailyFood = findViewById<Button>(R.id.buttonDailyFood)
+        buttonDailyFood.setOnClickListener {
+            val intent = Intent(this, DailyFoodSafety::class.java)
+            startActivity(intent)
         }
 
-        //switching to splints activity
-        val buttonDailyFood=findViewById<Button>(R.id.buttonDailyFood)
-        buttonDailyFood.setOnClickListener{
-            val Intent= Intent(this,DailyFoodSafety::class.java)
-            startActivity(Intent)
+        // Switching to Emergency Food Safety activity
+        val buttonEmergency = findViewById<Button>(R.id.buttonEmergency)
+        buttonEmergency.setOnClickListener {
+            val intent = Intent(this, EmergencyFoodSafety::class.java)
+            startActivity(intent)
         }
 
-        //switching to choking activity
-        val buttonEmergency=findViewById<Button>(R.id.buttonEmergency)
-        buttonEmergency.setOnClickListener{
-            val Intent= Intent(this,EmergencyFoodSafety::class.java)
-            startActivity(Intent)
+        // Switching to Heatwave activity
+        val buttonHeatwave = findViewById<Button>(R.id.buttonHeatwave)
+        buttonHeatwave.setOnClickListener {
+            val intent = Intent(this, Heatwave::class.java)
+            startActivity(intent)
         }
-
-        //switching to burns activity
-        val buttonHeatwave=findViewById<Button>(R.id.buttonHeatwave)
-        buttonHeatwave.setOnClickListener{
-            val Intent= Intent(this,Heatwave::class.java)
-            startActivity(Intent)
-        }
-
-
-
-
-
-
-
     }
 
+    // Handle Up button presses
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                finish() // Finish the current activity and go back to the previous one
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }

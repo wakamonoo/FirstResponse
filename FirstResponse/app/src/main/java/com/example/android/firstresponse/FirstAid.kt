@@ -46,7 +46,7 @@ class FirstAid : AppCompatActivity() {
         }
 
         //switching to choking activity
-        val buttonchoking=findViewById<Button>(R.id.buttonchoking)
+        val buttonchoking=findViewById<Button>(R.id.buttonChoking)
         buttonchoking.setOnClickListener{
             val Intent= Intent(this,choking::class.java)
             startActivity(Intent)
@@ -60,7 +60,7 @@ class FirstAid : AppCompatActivity() {
         }
 
         //switching to seizures activity
-        val buttonseizures=findViewById<Button>(R.id.buttonseizures)
+        val buttonseizures=findViewById<Button>(R.id.buttonSeizures)
         buttonseizures.setOnClickListener{
             val Intent= Intent(this,seizures::class.java)
             startActivity(Intent)

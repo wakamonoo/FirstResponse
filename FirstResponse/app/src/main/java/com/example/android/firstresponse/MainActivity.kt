@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
 
         buttonSafetyPreparedness = findViewById(R.id.buttonSafetyPreparedness)
         buttonSafetyPreparedness.setOnClickListener {
-            startActivity(Intent(this, SafetyAndPreparedeness::class.java))
+            startActivity(Intent(this, SafetyAndPreparedness::class.java))
         }
 
         // Bottom navigation setup

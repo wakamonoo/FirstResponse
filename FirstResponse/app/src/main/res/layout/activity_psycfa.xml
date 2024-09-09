@@ -8,296 +8,338 @@
     tools:context=".PsycFA">
 
     <ScrollView
-        android:id="@+id/scrollViewPsycFA"
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="40dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayoutPsycFA"
-            android:layout_width="match_parent"
+        <GridLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:padding="0dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp">
 
             <!-- Acute Grief Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/red"
-                app:cardCornerRadius="15dp">
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:gravity="center"
-                        android:text="ACUTE GRIEF"
-                        android:textColor="@color/white"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:fontFamily="serif"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/imageViewAcuteGrief"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
 
                     <ImageView
                         android:id="@+id/imageViewAcuteGrief"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:paddingRight="20dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:src="@drawable/acute_grief"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewAcuteGrief"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewAcuteGrief"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ACUTE GRIEF"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewAcuteGrief" />
 
                     <Button
                         android:id="@+id/buttonAcuteGrief"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- Anxiety Management Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/red"
-                app:cardCornerRadius="15dp">
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="160dp"
-                        android:gravity="center"
-                        android:text="ANXIETY MANAGEMENT"
-                        android:textColor="@color/white"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:fontFamily="serif"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewAnxiety"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/imageViewAnxiety"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:paddingLeft="20dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:src="@drawable/anxiety_management"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewAnxiety"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/textViewAnxiety"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ANXIETY MANAGEMENT"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewAnxiety" />
+
                     <Button
                         android:id="@+id/buttonAnxiety"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Panic Attack Response Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/red"
-                app:cardCornerRadius="15dp">
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="160dp"
-                        android:gravity="center"
-                        android:text="PANIC ATTACK RESPONSE"
-                        android:textColor="@color/white"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:fontFamily="serif"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/imageViewPanic"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/imageViewPanic"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:layout_marginEnd="28dp"
-                        android:paddingLeft="20dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:src="@drawable/panic_attack_response"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewPanic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewPanic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PANIC ATTACK RESPONSE"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintVertical_bias="0.0" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewPanic" />
 
                     <Button
                         android:id="@+id/buttonPanic"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Trauma-Informed Care Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/red"
-                app:cardCornerRadius="15dp">
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="170dp"
-                        android:layout_height="160dp"
-                        android:gravity="center"
-                        android:text=" TRAUMA- INFORMED CARE"
-                        android:textColor="@color/white"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:fontFamily="serif"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewTrauma"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/imageViewTrauma"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:paddingLeft="20dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:src="@drawable/trauma_informed_care"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewTrauma"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/textViewTrauma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="TRAUMA- INFORMED CARE"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewTrauma" />
+
                     <Button
                         android:id="@+id/buttonTraumaCare"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Grounding Techniques Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/red"
-                app:cardCornerRadius="15dp">
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:gravity="center"
-                        android:text="GROUNDING TECHNIQUES"
-                        android:textColor="@color/white"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:fontFamily="serif"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/imageViewGrounding"
+                    <ImageView
+                        android:id="@+id/imageViewGrounding"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:src="@drawable/grounding_techniques"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewGrounding"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imageViewGrounding"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:paddingRight="20dp"
-                        android:src="@drawable/grounding_techniques"
+                    <TextView
+                        android:id="@+id/textViewGrounding"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="GROUNDING TECHNIQUES"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewGrounding" />
 
                     <Button
                         android:id="@+id/buttonGrounding"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
             <!-- Stress Reduction Card -->
             <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="160dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="30dp"
-                android:backgroundTint="@color/red"
-                app:cardCornerRadius="15dp">
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_margin="8dp"
+                android:backgroundTint="@android:color/white"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="4dp">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <TextView
-                        android:layout_width="160dp"
-                        android:layout_height="160dp"
-                        android:gravity="center"
-                        android:text="STRESS REDUCTION"
-                        android:textColor="@color/white"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                        app:fontFamily="serif"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/imageViewStressReduction"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
                     <ImageView
                         android:id="@+id/imageViewStressReduction"
-                        android:layout_width="100dp"
-                        android:layout_height="160dp"
-                        android:paddingRight="20dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
                         android:src="@drawable/stress_reduction"
-                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:scaleType="fitCenter"
+                        app:layout_constraintBottom_toTopOf="@+id/textViewStressReduction"
+                        app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
+                    <TextView
+                        android:id="@+id/textViewStressReduction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STRESS REDUCTION"
+                        android:textColor="@android:color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewStressReduction" />
+
                     <Button
                         android:id="@+id/buttonStressReduction"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent" />
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:background="@android:color/transparent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
 
-
-
-
-        </LinearLayout>
+        </GridLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

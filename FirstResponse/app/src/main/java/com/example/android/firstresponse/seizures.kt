@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.graphics.drawable.ColorDrawable
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import androidx.core.content.ContextCompat
 
 class seizures : AppCompatActivity() {
+
+    private lateinit var webView1: WebView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_seizures)
@@ -17,6 +21,19 @@ class seizures : AppCompatActivity() {
 
         //to show back button on action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        webView1 = findViewById(R.id.webView1)
+        webView1.settings.javaScriptEnabled = true
+        webView1.webViewClient = WebViewClient()
+
+        val videoId = "fG9obAfI8UM"
+        val videoUrl = "https://www.youtube.com/embed/$videoId"
+
+        webView1.loadData(
+            "<iframe width=\"100%\" height=\"100%\" src=\"$videoUrl\" frameborder=\"0\" allowfullscreen></iframe>",
+            "text/html",
+            "utf-8"
+        )
     }
 
     //function to make back button work
@@ -28,5 +45,13 @@ class seizures : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
+    }
+    override fun onBackPressed() {
+        if (webView1.canGoBack()) {
+            webView1.goBack()
+        }
+        else {
+            super.onBackPressed()
+        }
     }
 }
