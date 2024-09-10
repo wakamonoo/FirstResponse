@@ -407,7 +407,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         // Delay showing the pop-up message
         Handler(Looper.getMainLooper()).postDelayed({
             showAlert()
-        }, 3000) // 3 seconds delay
+        }, 1000) // 3 seconds delay
     }
 
     private fun showAlert() {
