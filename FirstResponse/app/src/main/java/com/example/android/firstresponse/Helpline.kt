@@ -26,24 +26,58 @@ class HelplineActivity : AppCompatActivity() {
             repeatCount = LottieDrawable.INFINITE // Optional: loop animation
         }
 
-        val qrtPolanguiPhoneNumber = "09123456789"
-        val qrtLigaoPhoneNumber = "09876543210"
-        val qrtOasPhoneNumber = "09012345678"
+        // Phone numbers for the health facilities
+        val phoneNumbers = mapOf(
+            R.id.buttonOurLadyOfPerpetualHelp to "09123456789",
+            R.id.buttonPolanguiRhu to "09123456789",
+            R.id.buttonPerilloGeneralHospital to "09123456789",
+            R.id.buttonIsipGeneralHospital to "09123456789",
+            R.id.buttonOasDistrictHospital to "09123456789",
+            R.id.buttonOasRhu to "09123456789",
+            R.id.buttonLigaoCityHospital to "09123456789",
+            R.id.buttonLigaoRhu to "09123456789"
+        )
 
-        val buttonQrtPolangui = findViewById<Button>(R.id.button_qrt_polangui)
-        val buttonQrtLigao = findViewById<Button>(R.id.button_qrt_ligao)
-        val buttonQrtOas = findViewById<Button>(R.id.button_qrt_oas)
+        // Initialize buttons and set click listeners
+        val buttonOurLadyOfPerpetualHelp = findViewById<Button>(R.id.buttonOurLadyOfPerpetualHelp)
+        val buttonPolanguiRhu = findViewById<Button>(R.id.buttonPolanguiRhu)
+        val buttonPerilloGeneralHospital = findViewById<Button>(R.id.buttonPerilloGeneralHospital)
+        val buttonIsipGeneralHospital = findViewById<Button>(R.id.buttonIsipGeneralHospital)
+        val buttonOasDistrictHospital = findViewById<Button>(R.id.buttonOasDistrictHospital)
+        val buttonOasRhu = findViewById<Button>(R.id.buttonOasRhu)
+        val buttonLigaoCityHospital = findViewById<Button>(R.id.buttonLigaoCityHospital)
+        val buttonLigaoRhu = findViewById<Button>(R.id.buttonLigaoRhu)
 
-        buttonQrtPolangui.setOnClickListener {
-            dialPhoneNumber(qrtPolanguiPhoneNumber)
+        buttonOurLadyOfPerpetualHelp.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonOurLadyOfPerpetualHelp]!!)
         }
 
-        buttonQrtLigao.setOnClickListener {
-            dialPhoneNumber(qrtLigaoPhoneNumber)
+        buttonPolanguiRhu.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonPolanguiRhu]!!)
         }
 
-        buttonQrtOas.setOnClickListener {
-            dialPhoneNumber(qrtOasPhoneNumber)
+        buttonPerilloGeneralHospital.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonPerilloGeneralHospital]!!)
+        }
+
+        buttonIsipGeneralHospital.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonIsipGeneralHospital]!!)
+        }
+
+        buttonOasDistrictHospital.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonOasDistrictHospital]!!)
+        }
+
+        buttonOasRhu.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonOasRhu]!!)
+        }
+
+        buttonLigaoCityHospital.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonLigaoCityHospital]!!)
+        }
+
+        buttonLigaoRhu.setOnClickListener {
+            dialPhoneNumber(phoneNumbers[R.id.buttonLigaoRhu]!!)
         }
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)

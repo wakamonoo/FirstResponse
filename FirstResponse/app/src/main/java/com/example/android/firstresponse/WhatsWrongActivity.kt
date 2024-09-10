@@ -7,6 +7,14 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import android.view.MenuItem
+import androidx.appcompat.app.AlertDialog
+import android.os.Handler
+import android.os.Looper
+import android.view.LayoutInflater
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+
 
 
 class WhatsWrongActivity : AppCompatActivity() {
@@ -38,7 +46,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Head",
-            "How intense are the symptoms on a scale of 1-10?" to "7",
+            "How intense are the symptoms on a scale of 1-10?" to "High",
             "How often do the symptoms occur?" to "Frequently",
             "Describe the type of pain." to "Sharp",
             "Is there any swelling in the affected area?" to "No",
@@ -51,7 +59,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last week",
             "Where does the pain or discomfort originate?" to "Abdomen",
-            "How intense are the symptoms on a scale of 1-10?" to "6",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
             "Describe the type of pain." to "Cramping",
             "Is there any swelling in the affected area?" to "Yes",
@@ -64,7 +72,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Chest",
-            "How intense are the symptoms on a scale of 1-10?" to "8",
+            "How intense are the symptoms on a scale of 1-10?" to "High",
             "How often do the symptoms occur?" to "Constantly",
             "Describe the type of pain." to "Pressure",
             "Is there any swelling in the affected area?" to "No",
@@ -74,11 +82,10 @@ class WhatsWrongActivity : AppCompatActivity() {
             "Are there any activities or factors that seem to worsen your symptoms?" to "Yes"
         ) to "Heart Attack",
 
-        // New conditions
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Back",
-            "How intense are the symptoms on a scale of 1-10?" to "5",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
             "Describe the type of pain." to "Aching",
             "Is there any swelling in the affected area?" to "No",
@@ -91,7 +98,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Legs",
-            "How intense are the symptoms on a scale of 1-10?" to "4",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Frequently",
             "Describe the type of pain." to "Cramping",
             "Is there any swelling in the affected area?" to "Yes",
@@ -104,7 +111,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last month",
             "Where does the pain or discomfort originate?" to "Head",
-            "How intense are the symptoms on a scale of 1-10?" to "6",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
             "Describe the type of pain." to "Throbbing",
             "Is there any swelling in the affected area?" to "No",
@@ -117,7 +124,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Abdomen",
-            "How intense are the symptoms on a scale of 1-10?" to "8",
+            "How intense are the symptoms on a scale of 1-10?" to "High",
             "How often do the symptoms occur?" to "Constantly",
             "Describe the type of pain." to "Cramping",
             "Is there any swelling in the affected area?" to "Yes",
@@ -130,7 +137,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Chest",
-            "How intense are the symptoms on a scale of 1-10?" to "7",
+            "How intense are the symptoms on a scale of 1-10?" to "High",
             "How often do the symptoms occur?" to "Frequently",
             "Describe the type of pain." to "Burning",
             "Is there any swelling in the affected area?" to "No",
@@ -143,7 +150,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Head",
-            "How intense are the symptoms on a scale of 1-10?" to "5",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
             "Describe the type of pain." to "Pounding",
             "Is there any swelling in the affected area?" to "No",
@@ -156,7 +163,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Joints",
-            "How intense are the symptoms on a scale of 1-10?" to "6",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
             "Describe the type of pain." to "Aching",
             "Is there any swelling in the affected area?" to "Yes",
@@ -169,7 +176,7 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Feet",
-            "How intense are the symptoms on a scale of 1-10?" to "4",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Frequently",
             "Describe the type of pain." to "Burning",
             "Is there any swelling in the affected area?" to "Yes",
@@ -182,88 +189,81 @@ class WhatsWrongActivity : AppCompatActivity() {
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Back",
-            "How intense are the symptoms on a scale of 1-10?" to "7",
+            "How intense are the symptoms on a scale of 1-10?" to "High",
             "How often do the symptoms occur?" to "Constantly",
-            "Describe the type of pain." to "Dull",
-            "Is there any swelling in the affected area?" to "No",
+            "Describe the type of pain." to "Stiffness",
+            "Is there any swelling in the affected area?" to "Yes",
             "Is the area red or inflamed?" to "No",
-            "Are you taking any medications or undergoing any treatments?" to "Yes",
+            "Are you taking any medications or undergoing any treatments?" to "No",
             "Have your symptoms improved, worsened, or remained the same?" to "Worsened",
             "Are there any activities or factors that seem to worsen your symptoms?" to "Yes"
         ) to "Herniated Disc",
 
         listOf(
-            "When did the symptoms begin?" to "Within the last week",
+            "When did the symptoms begin?" to "Within the last 24 hours",
             "Where does the pain or discomfort originate?" to "Head",
-            "How intense are the symptoms on a scale of 1-10?" to "4",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
-            "Describe the type of pain." to "Throbbing",
+            "Describe the type of pain." to "Dull",
             "Is there any swelling in the affected area?" to "No",
             "Is the area red or inflamed?" to "No",
-            "Are you taking any medications or undergoing any treatments?" to "Yes",
-            "Have your symptoms improved, worsened, or remained the same?" to "Improved",
+            "Are you taking any medications or undergoing any treatments?" to "No",
+            "Have your symptoms improved, worsened, or remained the same?" to "Remained the same",
             "Are there any activities or factors that seem to worsen your symptoms?" to "No"
         ) to "Cluster Headache",
 
         listOf(
-            "When did the symptoms begin?" to "Within the last 24 hours",
-            "Where does the pain or discomfort originate?" to "Chest",
-            "How intense are the symptoms on a scale of 1-10?" to "9",
-            "How often do the symptoms occur?" to "Constantly",
-            "Describe the type of pain." to "Crushing",
-            "Is there any swelling in the affected area?" to "No",
-            "Is the area red or inflamed?" to "No",
-            "Are you taking any medications or undergoing any treatments?" to "No",
-            "Have your symptoms improved, worsened, or remained the same?" to "Worsened",
-            "Are there any activities or factors that seem to worsen your symptoms?" to "Yes"
-        ) to "Pulmonary Embolism",
-
-        listOf(
             "When did the symptoms begin?" to "Within the last week",
             "Where does the pain or discomfort originate?" to "Neck",
-            "How intense are the symptoms on a scale of 1-10?" to "6",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Frequently",
             "Describe the type of pain." to "Stiffness",
             "Is there any swelling in the affected area?" to "No",
             "Is the area red or inflamed?" to "No",
-            "Are you taking any medications or undergoing any treatments?" to "Yes",
+            "Are you taking any medications or undergoing any treatments?" to "No",
             "Have your symptoms improved, worsened, or remained the same?" to "Remained the same",
-            "Are there any activities or factors that seem to worsen your symptoms?" to "No"
+            "Are there any activities or factors that seem to worsen your symptoms?" to "Yes"
         ) to "Cervical Spondylosis",
 
         listOf(
             "When did the symptoms begin?" to "Within the last 24 hours",
-            "Where does the pain or discomfort originate?" to "Abdomen",
-            "How intense are the symptoms on a scale of 1-10?" to "5",
+            "Where does the pain or discomfort originate?" to "Hands",
+            "How intense are the symptoms on a scale of 1-10?" to "Moderate",
             "How often do the symptoms occur?" to "Occasionally",
-            "Describe the type of pain." to "Aching",
-            "Is there any swelling in the affected area?" to "Yes",
+            "Describe the type of pain." to "Numbness",
+            "Is there any swelling in the affected area?" to "No",
             "Is the area red or inflamed?" to "No",
             "Are you taking any medications or undergoing any treatments?" to "No",
-            "Have your symptoms improved, worsened, or remained the same?" to "Improved",
+            "Have your symptoms improved, worsened, or remained the same?" to "Remained the same",
             "Are there any activities or factors that seem to worsen your symptoms?" to "No"
-        ) to "Peptic Ulcer",
+        ) to "Carpal Tunnel Syndrome",
 
         listOf(
             "When did the symptoms begin?" to "Within the last month",
-            "Where does the pain or discomfort originate?" to "Joints",
-            "How intense are the symptoms on a scale of 1-10?" to "7",
-            "How often do the symptoms occur?" to "Constantly",
-            "Describe the type of pain." to "Stiffness",
-            "Is there any swelling in the affected area?" to "Yes",
-            "Is the area red or inflamed?" to "Yes",
+            "Where does the pain or discomfort originate?" to "Stomach",
+            "How intense are the symptoms on a scale of 1-10?" to "High",
+            "How often do the symptoms occur?" to "Occasionally",
+            "Describe the type of pain." to "Cramping",
+            "Is there any swelling in the affected area?" to "No",
+            "Is the area red or inflamed?" to "No",
             "Are you taking any medications or undergoing any treatments?" to "Yes",
             "Have your symptoms improved, worsened, or remained the same?" to "Worsened",
-            "Are there any activities or factors that seem to worsen your symptoms?" to "No"
-        ) to "Osteoarthritis"
+            "Are there any activities or factors that seem to worsen your symptoms?" to "Yes"
+        ) to "Peptic Ulcer"
     )
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_whats_wrong)
 
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
+        supportActionBar?.setBackgroundDrawable(
+            ColorDrawable(
+                ContextCompat.getColor(
+                    this,
+                    R.color.shadow2
+                )
+            )
+        )
         supportActionBar?.title = "SAFETY AND PREPAREDNESS"
 
         // Enable the Up button
@@ -298,18 +298,24 @@ class WhatsWrongActivity : AppCompatActivity() {
                 onBackPressed() // Handle the Up button click
                 true
             }
+
             else -> super.onOptionsItemSelected(item)
         }
     }
 
-
     private fun setupSpinner() {
         val options = when (currentStage) {
-            0 -> listOf("Within the last 24 hours", "Within the last week", "Within the last month", "More than a month ago")
-            1 -> listOf("Head", "Chest", "Abdomen", "Legs", "Arms", "Back", "Joints", "Other")  // Updated list
-            2 -> listOf("1", "2", "3", "4", "5", "6", "7", "8", "9", "10")
+            0 -> listOf(
+                "Within the last 24 hours",
+                "Within the last week",
+                "Within the last month",
+                "More than a month ago"
+            )
+
+            1 -> listOf("Head", "Chest", "Abdomen", "Legs", "Arms", "Back", "Joints")
+            2 -> listOf("Low (1-3)", "Moderate (4-6)", "High (7-10)")
             3 -> listOf("Rarely", "Occasionally", "Frequently", "Constantly")
-            4 -> listOf("Sharp", "Dull", "Throbbing", "Aching", "Burning", "Cramping", "Other")
+            4 -> listOf("Sharp", "Dull", "Throbbing", "Aching", "Burning", "Cramping")
             5 -> listOf("Yes", "No")
             6 -> listOf("Yes", "No")
             7 -> listOf("Yes", "No", "Not sure")
@@ -350,13 +356,22 @@ class WhatsWrongActivity : AppCompatActivity() {
     }
 
     private fun handleResults() {
+        val selectedLocation = answersSelected["Where does the pain or discomfort originate?"]
+
         val possibleConditions = diagnosis.map { (criteria, condition) ->
             // Give more weight to the location of pain
             val locationWeight = 2  // Weight factor for location of pain
             val totalCriteria = criteria.size
             var matchingCriteria = 0
 
-            // Count matches with higher weight for location of pain
+            // Find the specific pair for location of pain
+            val locationPair =
+                criteria.find { it.first == "Where does the pain or discomfort originate?" }
+            val isRelevant = locationPair?.second == selectedLocation
+            if (!isRelevant) {
+                return@map condition to 0
+            }
+
             criteria.forEach { (question, answer) ->
                 if (answersSelected[question] == answer) {
                     matchingCriteria += if (question == "Where does the pain or discomfort originate?") {
@@ -367,15 +382,18 @@ class WhatsWrongActivity : AppCompatActivity() {
                 }
             }
 
-            val confidencePercentage = (matchingCriteria.toDouble() / (totalCriteria + locationWeight - 1) * 100).toInt()
+            val confidencePercentage =
+                (matchingCriteria.toDouble() / (totalCriteria + locationWeight - 1) * 100).toInt()
             condition to confidencePercentage
         }
 
-        val bestMatch = possibleConditions.maxByOrNull { it.second } ?: "Unknown Condition" to 0
+        // Filter out conditions with 0 confidence and find the best match
+        val bestMatch = possibleConditions.filter { it.second > 0 }.maxByOrNull { it.second }
+            ?: "Unknown Condition" to 0
         val result = if (bestMatch.second > 0) {
             "Possible Condition: ${bestMatch.first} (Confidence: ${bestMatch.second}%)"
         } else {
-            "No matching conditions found."
+            "Kindly Provide More Information!"
         }
         resultTextView.text = result
         resultTextView.visibility = View.VISIBLE
@@ -385,5 +403,32 @@ class WhatsWrongActivity : AppCompatActivity() {
         optionsSpinner.visibility = View.GONE
         nextButton.visibility = View.GONE
         thatAllButton.visibility = View.GONE
+
+        // Delay showing the pop-up message
+        Handler(Looper.getMainLooper()).postDelayed({
+            showAlert()
+        }, 3000) // 3 seconds delay
+    }
+
+    private fun showAlert() {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_custom, null)
+        val imageView: ImageView = dialogView.findViewById(R.id.dialog_image)
+        val messageTextView: TextView = dialogView.findViewById(R.id.dialog_message)
+        val okButton: Button = dialogView.findViewById(R.id.dialog_button)
+
+        // Customize the message
+        messageTextView.text =
+            "It's still advisable to see a personal health authority for a more accurate analysis."
+
+        // Create and show the dialog
+        val dialog = AlertDialog.Builder(this)
+            .setView(dialogView)
+            .create()
+
+        okButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        dialog.show()
     }
 }
