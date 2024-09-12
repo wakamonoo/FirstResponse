@@ -53,13 +53,17 @@
         <activity android:name="com.example.android.firstresponse.DailyFoodSafety" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.EmergencyFoodSafety" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.Heatwave" android:exported="false" />
+
+        <!-- Add other activities here -->
         <activity
             android:name="com.example.android.firstresponse.FirstAid"
             android:exported="true"
+            android:theme="@style/Theme.NoActionBar"
             android:parentActivityName="com.example.android.firstresponse.MainActivity" />
         <activity
             android:name="com.example.android.firstresponse.PsycFA"
             android:exported="true"
+            android:theme="@style/Theme.NoActionBar"
             android:parentActivityName="com.example.android.firstresponse.MainActivity" />
         <activity
             android:name="com.example.android.firstresponse.BasicSanitation"
@@ -72,6 +76,7 @@
         <activity
             android:name="com.example.android.firstresponse.DisasterManagement"
             android:exported="true"
+            android:theme="@style/Theme.NoActionBar"
             android:parentActivityName="com.example.android.firstresponse.MainActivity" />
         <activity
             android:name="com.example.android.firstresponse.Drugs"
@@ -99,6 +104,7 @@
         <activity
             android:name="com.example.android.firstresponse.QuizPageActivity"
             android:exported="true"
+            android:theme="@style/Theme.NoActionBar"
             android:parentActivityName="com.example.android.firstresponse.MainActivity" />
         <activity
             android:name="com.example.android.firstresponse.QuizLevel1Activity"
@@ -134,9 +140,11 @@
             android:exported="true" />
         <activity
             android:name="com.example.android.firstresponse.SafetyAndPreparedness"
+            android:theme="@style/Theme.NoActionBar"
             android:exported="true" />
         <activity
             android:name="com.example.android.firstresponse.WhatsWrongActivity"
             android:exported="true" />
+
     </application>
 </manifest>

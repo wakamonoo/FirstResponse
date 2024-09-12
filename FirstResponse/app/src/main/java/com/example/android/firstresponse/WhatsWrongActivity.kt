@@ -1316,6 +1316,14 @@ class WhatsWrongActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_whats_wrong)
+        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
+
+        // Change title of action bar
+        supportActionBar?.title = "WATER SAFETY"
+
+        // Show back button on action bar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
 
         questionTextView = findViewById(R.id.questionTextView)
         optionsSpinner = findViewById(R.id.optionsSpinner)
@@ -1328,6 +1336,18 @@ class WhatsWrongActivity : AppCompatActivity() {
 
         updateStage()
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                // Handle the home button press
+                onBackPressed() // Or use finish() if you want to close the activity
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
 
     private fun handleNextButtonClick() {
         val selectedOption = optionsSpinner.selectedItem.toString()
@@ -1407,10 +1427,12 @@ class WhatsWrongActivity : AppCompatActivity() {
     }
 
     private fun setupSpinner(options: List<String>) {
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, options)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        val adapter = ArrayAdapter(this, R.layout.spinner_item, options)
+        adapter.setDropDownViewResource(R.layout.spinner_item) // Apply custom layout to dropdown
         optionsSpinner.adapter = adapter
     }
+
+
 
     private fun handleResults() {
         // Evaluate possible conditions

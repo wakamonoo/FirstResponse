@@ -1,8 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
+    <!-- Base application theme with ActionBar -->
     <style name="Theme.FirstAidAndDisasterManagementApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/shadow2</item>
+        <item name="colorPrimary">@color/shadow2</item> <!-- Updated primary color -->
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/black</item>
 
@@ -23,6 +22,7 @@
     <!-- Custom ActionBar style -->
     <style name="CustomActionBar" parent="@style/Widget.AppCompat.ActionBar">
         <item name="android:background">@android:color/transparent</item> <!-- Make ActionBar background transparent -->
+        <item name="background">@android:color/transparent</item> <!-- Ensure transparency -->
         <item name="displayOptions">homeAsUp</item> <!-- Show only the Up button -->
         <item name="titleTextStyle">@style/HiddenTitleTextStyle</item> <!-- Hide the title text -->
     </style>
@@ -32,6 +32,24 @@
         <item name="android:textColor">@android:color/transparent</item> <!-- Hide the text -->
     </style>
 
+    <!-- Theme without ActionBar for Toolbar -->
+    <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/shadow2</item> <!-- Updated primary color -->
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/shadow2</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+
+    <!-- Theme for navigation drawer -->
     <style name="Theme.navigationDrawer" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/red</item>
@@ -52,7 +70,7 @@
 
     <!-- Custom ActionBar style for navigation drawer -->
     <style name="CustomActionBarRed" parent="@style/Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/red</item> <!-- This was corrected to @color/red -->
+        <item name="android:background">@color/red</item> <!-- Corrected to @color/red -->
     </style>
 
     <!-- Style for selected item in BottomNavigationView -->
@@ -70,6 +88,19 @@
         <item name="android:textColor">@android:color/black</item>
         <item name="android:textSize">18sp</item>
         <item name="android:padding">8dp</item>
-        <!-- Add more attributes if needed -->
+    </style>
+
+    <!-- Custom Spinner style -->
+    <style name="CustomSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:background">@android:color/white</item>
+        <item name="android:popupBackground">@android:color/white</item>
+        <item name="android:spinnerItemStyle">@style/CustomSpinnerItemStyle</item>
+    </style>
+
+    <style name="CustomSpinnerItemStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:padding">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@android:color/white</item>
     </style>
 </resources>

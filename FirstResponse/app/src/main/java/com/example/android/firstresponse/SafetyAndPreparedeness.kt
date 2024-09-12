@@ -4,7 +4,9 @@ import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem // Import MenuItem
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -13,11 +15,25 @@ class SafetyAndPreparedness : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_safety_and_preparedness)
 
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
-        supportActionBar?.title = "SAFETY AND PREPAREDNESS"
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
 
-        // Enable the Up button
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        // Set up the back button in the action bar
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            // Start the press animation
+            backButton.startAnimation(pressAnim)
+
+            // Delayed action to finish activity and apply release animation
+            backButton.postDelayed({
+                // Apply release animation (optional)
+                backButton.startAnimation(releaseAnim)
+
+                // Close the activity
+                finish()
+            }, pressAnim.duration)
+        }
 
         // Switching to Water Safety activity
         val buttonWater = findViewById<Button>(R.id.buttonWater)

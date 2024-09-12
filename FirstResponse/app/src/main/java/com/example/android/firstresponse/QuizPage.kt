@@ -6,7 +6,9 @@ import android.content.SharedPreferences
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -25,9 +27,26 @@ class QuizPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_page)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
-        getSupportActionBar()?.setTitle("TEST YOUR KNOWLEDGE");
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
+
+        // Set up the back button in the action bar
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            // Start the press animation
+            backButton.startAnimation(pressAnim)
+
+            // Delayed action to finish activity and apply release animation
+            backButton.postDelayed({
+                // Apply release animation (optional)
+                backButton.startAnimation(releaseAnim)
+
+                // Close the activity
+                finish()
+            }, pressAnim.duration)
+        }
 
 
         buttonLevel1 = findViewById(R.id.buttonLevel1)

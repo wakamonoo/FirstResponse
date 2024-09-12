@@ -5,21 +5,34 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.graphics.drawable.ColorDrawable
+import android.view.animation.AnimationUtils
+import android.widget.ImageButton
 import androidx.core.content.ContextCompat
+
 
 class PsycFA : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_psycfa)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
 
-        getSupportActionBar()?.setTitle("Psychological First Aid")
+        // Set up the back button in the action bar
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            // Start the press animation
+            backButton.startAnimation(pressAnim)
 
-        // calling the action bar
-        val actionBar = supportActionBar
+            // Delayed action to finish activity and apply release animation
+            backButton.postDelayed({
+                // Apply release animation (optional)
+                backButton.startAnimation(releaseAnim)
 
-        // showing the back button in the action bar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+                // Close the activity
+                finish()
+            }, pressAnim.duration)
+        }
 
         // Switching to Acute Grief activity
         val buttonAcuteGrief = findViewById<Button>(R.id.buttonAcuteGrief)

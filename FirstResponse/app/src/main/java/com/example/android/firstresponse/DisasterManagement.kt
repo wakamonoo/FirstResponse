@@ -5,23 +5,35 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.graphics.drawable.ColorDrawable
+import android.view.animation.AnimationUtils
+import android.widget.ImageButton
 import androidx.core.content.ContextCompat
+
 
 
 class DisasterManagement : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_disaster_management)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
-        getSupportActionBar()?.setTitle("DISASTER MANAGEMENT");
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
 
-        // calling the action bar
-        var actionBar = getSupportActionBar()
+        // Set up the back button in the action bar
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            // Start the press animation
+            backButton.startAnimation(pressAnim)
 
-        // showing the back button in action bar
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true)
+            // Delayed action to finish activity and apply release animation
+            backButton.postDelayed({
+                // Apply release animation (optional)
+                backButton.startAnimation(releaseAnim)
+
+                // Close the activity
+                finish()
+            }, pressAnim.duration)
         }
 
         //switching to earthquake activity

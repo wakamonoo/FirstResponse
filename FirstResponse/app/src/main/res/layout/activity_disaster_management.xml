@@ -8,25 +8,34 @@
     android:background="@color/white"
     tools:context=".DisasterManagement">
 
+    <include
+        layout="@layout/actionbar_disaster"
+        android:id="@+id/action_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <GridLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:orientation="horizontal"
             android:layout_gravity="center"
-            android:layout_margin="16dp"
-            android:padding="0dp"
-            android:paddingLeft="0dp"
-            android:paddingRight="0dp">
+            android:layout_marginTop="-10dp"
+            android:padding="16dp"
+            android:columnCount="2"
+            android:orientation="horizontal">
 
             <!-- FLOODS Card -->
             <androidx.cardview.widget.CardView

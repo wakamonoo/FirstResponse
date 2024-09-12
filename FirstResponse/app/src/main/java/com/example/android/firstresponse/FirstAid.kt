@@ -1,77 +1,80 @@
 package com.example.android.firstresponse
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.animation.AnimationUtils
 import android.widget.Button
-import android.graphics.drawable.ColorDrawable
-import androidx.core.content.ContextCompat
+import android.widget.ImageButton
+import androidx.appcompat.app.AppCompatActivity
 
 class FirstAid : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_aid)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
-        getSupportActionBar()?.setTitle("FIRST AID");
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
 
-        // calling the action bar
-        var actionBar = getSupportActionBar()
+        // Set up the back button in the action bar
+        val backButton = findViewById<ImageButton>(R.id.back_button)
+        backButton.setOnClickListener {
+            // Start the press animation
+            backButton.startAnimation(pressAnim)
 
-        // showing the back button in action bar
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true)
+            // Delayed action to finish activity and apply release animation
+            backButton.postDelayed({
+                // Apply release animation (optional)
+                backButton.startAnimation(releaseAnim)
+
+                // Close the activity
+                finish()
+            }, pressAnim.duration)
         }
 
+        // Set up button click listeners for switching to different activities
 
-        //switching to cpr activity
-        val buttonCPR=findViewById<Button>(R.id.buttonCPR)
-        buttonCPR.setOnClickListener{
-            val Intent= Intent(this,CPR::class.java)
-            startActivity(Intent)
+        // CPR Activity
+        val buttonCPR = findViewById<Button>(R.id.buttonCPR)
+        buttonCPR.setOnClickListener {
+            val intent = Intent(this, CPR::class.java)
+            startActivity(intent)
         }
 
-        //switching to shock activity
-        val buttonShock=findViewById<Button>(R.id.buttonShock)
-        buttonShock.setOnClickListener{
-            val Intent= Intent(this,shock::class.java)
-            startActivity(Intent)
+        // Shock Activity
+        val buttonShock = findViewById<Button>(R.id.buttonShock)
+        buttonShock.setOnClickListener {
+            val intent = Intent(this, shock::class.java)
+            startActivity(intent)
         }
 
-        //switching to splints activity
-        val buttonSplint=findViewById<Button>(R.id.buttonSplints)
-        buttonSplint.setOnClickListener{
-            val Intent= Intent(this,splints::class.java)
-            startActivity(Intent)
+        // Splints Activity
+        val buttonSplints = findViewById<Button>(R.id.buttonSplints)
+        buttonSplints.setOnClickListener {
+            val intent = Intent(this, splints::class.java)
+            startActivity(intent)
         }
 
-        //switching to choking activity
-        val buttonchoking=findViewById<Button>(R.id.buttonChoking)
-        buttonchoking.setOnClickListener{
-            val Intent= Intent(this,choking::class.java)
-            startActivity(Intent)
+        // Choking Activity
+        val buttonChoking = findViewById<Button>(R.id.buttonChoking)
+        buttonChoking.setOnClickListener {
+            val intent = Intent(this, choking::class.java)
+            startActivity(intent)
         }
 
-        //switching to burns activity
-        val buttonburns=findViewById<Button>(R.id.buttonBurns)
-        buttonburns.setOnClickListener{
-            val Intent= Intent(this,burns::class.java)
-            startActivity(Intent)
+        // Burns Activity
+        val buttonBurns = findViewById<Button>(R.id.buttonBurns)
+        buttonBurns.setOnClickListener {
+            val intent = Intent(this, burns::class.java)
+            startActivity(intent)
         }
 
-        //switching to seizures activity
-        val buttonseizures=findViewById<Button>(R.id.buttonSeizures)
-        buttonseizures.setOnClickListener{
-            val Intent= Intent(this,seizures::class.java)
-            startActivity(Intent)
+        // Seizures Activity
+        val buttonSeizures = findViewById<Button>(R.id.buttonSeizures)
+        buttonSeizures.setOnClickListener {
+            val intent = Intent(this, seizures::class.java)
+            startActivity(intent)
         }
-
-
-
-
-
-
-
     }
-
 }
