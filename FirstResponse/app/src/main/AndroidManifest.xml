@@ -53,6 +53,17 @@
         <activity android:name="com.example.android.firstresponse.DailyFoodSafety" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.EmergencyFoodSafety" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.Heatwave" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.bleeding" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.snakebite" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.sprain" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.nosebleed" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.minorconcussion" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.headache" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.musclecramps" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.blister" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.bruises" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.allergicreaction" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.strain" android:exported="false" />
 
         <!-- Add other activities here -->
         <activity

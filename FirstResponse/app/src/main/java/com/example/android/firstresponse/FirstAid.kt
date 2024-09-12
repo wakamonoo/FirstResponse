@@ -35,46 +35,114 @@ class FirstAid : AppCompatActivity() {
 
         // Set up button click listeners for switching to different activities
 
-        // CPR Activity
-        val buttonCPR = findViewById<Button>(R.id.buttonCPR)
-        buttonCPR.setOnClickListener {
-            val intent = Intent(this, CPR::class.java)
-            startActivity(intent)
+        //switching to cpr activity
+        val buttonCPR=findViewById<Button>(R.id.buttonCPR)
+        buttonCPR.setOnClickListener{
+            val Intent= Intent(this,CPR::class.java)
+            startActivity(Intent)
         }
 
-        // Shock Activity
-        val buttonShock = findViewById<Button>(R.id.buttonShock)
-        buttonShock.setOnClickListener {
-            val intent = Intent(this, shock::class.java)
-            startActivity(intent)
+        //switching to shock activity
+        val buttonShock=findViewById<Button>(R.id.buttonShock)
+        buttonShock.setOnClickListener{
+            val Intent= Intent(this,shock::class.java)
+            startActivity(Intent)
         }
 
-        // Splints Activity
-        val buttonSplints = findViewById<Button>(R.id.buttonSplints)
-        buttonSplints.setOnClickListener {
-            val intent = Intent(this, splints::class.java)
-            startActivity(intent)
+        //switching to splints activity
+        val buttonSplint=findViewById<Button>(R.id.buttonSplints)
+        buttonSplint.setOnClickListener{
+            val Intent= Intent(this,splints::class.java)
+            startActivity(Intent)
         }
 
-        // Choking Activity
-        val buttonChoking = findViewById<Button>(R.id.buttonChoking)
-        buttonChoking.setOnClickListener {
-            val intent = Intent(this, choking::class.java)
-            startActivity(intent)
+        //switching to choking activity
+        val buttonchoking=findViewById<Button>(R.id.buttonChoking)
+        buttonchoking.setOnClickListener{
+            val Intent= Intent(this,choking::class.java)
+            startActivity(Intent)
         }
 
-        // Burns Activity
-        val buttonBurns = findViewById<Button>(R.id.buttonBurns)
-        buttonBurns.setOnClickListener {
-            val intent = Intent(this, burns::class.java)
-            startActivity(intent)
+        //switching to burns activity
+        val buttonburns=findViewById<Button>(R.id.buttonBurns)
+        buttonburns.setOnClickListener{
+            val Intent= Intent(this,burns::class.java)
+            startActivity(Intent)
         }
 
-        // Seizures Activity
-        val buttonSeizures = findViewById<Button>(R.id.buttonSeizures)
-        buttonSeizures.setOnClickListener {
-            val intent = Intent(this, seizures::class.java)
-            startActivity(intent)
+        //switching to seizures activity
+        val buttonseizures=findViewById<Button>(R.id.buttonSeizures)
+        buttonseizures.setOnClickListener{
+            val Intent= Intent(this,seizures::class.java)
+            startActivity(Intent)
         }
+
+        val buttonbleeding=findViewById<Button>(R.id.buttonBleeding)
+        buttonbleeding.setOnClickListener{
+            val Intent= Intent(this,bleeding::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonsnakebite=findViewById<Button>(R.id.buttonSnakeBite)
+        buttonsnakebite.setOnClickListener {
+            val Intent = Intent(this, snakebite::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonsprain=findViewById<Button>(R.id.buttonSprains)
+        buttonsprain.setOnClickListener {
+            val Intent = Intent(this, sprain::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonnosebleed=findViewById<Button>(R.id.buttonNosebleeds)
+        buttonnosebleed.setOnClickListener {
+            val Intent = Intent(this, nosebleed::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonminorconcussion=findViewById<Button>(R.id.buttonMinorConcussions)
+        buttonminorconcussion.setOnClickListener {
+            val Intent = Intent(this, minorconcussion::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonheadache=findViewById<Button>(R.id.buttonHeadaches)
+        buttonheadache.setOnClickListener {
+            val Intent = Intent(this, headache::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonmusclecramps=findViewById<Button>(R.id.buttonMuscleCramps)
+        buttonmusclecramps.setOnClickListener {
+            val Intent = Intent(this, musclecramps::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonblister=findViewById<Button>(R.id.buttonBlisters)
+        buttonblister.setOnClickListener {
+            val Intent = Intent(this, blister::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonbruises=findViewById<Button>(R.id.buttonBruises)
+        buttonbruises.setOnClickListener {
+            val Intent = Intent(this, bruises::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonallergicreaction=findViewById<Button>(R.id.buttonAllergicReactions)
+        buttonallergicreaction.setOnClickListener {
+            val Intent = Intent(this, allergicreaction::class.java)
+            startActivity(Intent)
+        }
+
+        val buttonstrain=findViewById<Button>(R.id.buttonStrains)
+        buttonstrain.setOnClickListener {
+            val Intent = Intent(this, strain::class.java)
+            startActivity(Intent)
+        }
+
     }
+
 }

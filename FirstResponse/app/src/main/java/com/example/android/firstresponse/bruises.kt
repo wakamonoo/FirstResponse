@@ -1,5 +1,6 @@
 package com.example.android.firstresponse
 
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -8,28 +9,28 @@ import android.webkit.WebViewClient
 import android.graphics.drawable.ColorDrawable
 import androidx.core.content.ContextCompat
 
-class prevention : AppCompatActivity() {
+class bruises : AppCompatActivity() {
 
     private lateinit var webView1: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_prevention)
+        setContentView(R.layout.activity_bruises)
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
         //to change title of action bar of respective activity
-        getSupportActionBar()?.setTitle("TB PREVENTION");
+        getSupportActionBar()?.setTitle("BRUISES");
 
         //to show back button on action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         //webview
-        webView1 = findViewById(R.id.webView)
+        webView1 = findViewById(R.id.webView1)
         webView1.settings.javaScriptEnabled = true
         webView1.webViewClient = WebViewClient()
 
 
-        val videoId = "lkpKCEio_CM"
+        val videoId = "DkOmr3BEkvE"
         val videoUrl = "https://www.youtube.com/embed/$videoId"
 
         webView1.loadData(
@@ -37,7 +38,9 @@ class prevention : AppCompatActivity() {
             "text/html",
             "utf-8"
         )
+
     }
+
     //function to make back button work
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
@@ -47,14 +50,16 @@ class prevention : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-
     }
 
     override fun onBackPressed() {
         if (webView1.canGoBack()) {
             webView1.goBack()
-        } else {
+        }
+        else {
             super.onBackPressed()
         }
     }
+
+
 }
