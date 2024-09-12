@@ -7,7 +7,7 @@
         android:id="@+id/top_image"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:src="@drawable/quiz"
+        android:src="@drawable/quizback"
         android:scaleType="centerCrop"
         android:contentDescription="Background Image" />
 

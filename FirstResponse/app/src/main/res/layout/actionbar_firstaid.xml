@@ -7,7 +7,7 @@
         android:id="@+id/top_image"
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:src="@drawable/firstaid_background"
+        android:src="@drawable/firstbackground"
         android:scaleType="centerCrop"
         android:contentDescription="Background Image" />
 

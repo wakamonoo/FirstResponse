@@ -11,7 +11,6 @@ import androidx.core.content.ContextCompat
 class StressReduction : AppCompatActivity() {
 
     private lateinit var webView1: WebView
-    private lateinit var webView2: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +28,7 @@ class StressReduction : AppCompatActivity() {
         webView1.settings.javaScriptEnabled = true
         webView1.webViewClient = WebViewClient()
 
-        val videoId = "yourVideoId1"  // Replace with actual video ID
+        val videoId = "Wh5HyJ1rxzk"  // Replace with actual video ID
         val videoUrl = "https://www.youtube.com/embed/$videoId"
         webView1.loadData(
             "<iframe width=\"100%\" height=\"100%\" src=\"$videoUrl\" frameborder=\"0\" allowfullscreen></iframe>",
@@ -37,18 +36,6 @@ class StressReduction : AppCompatActivity() {
             "utf-8"
         )
 
-        // Setup second WebView
-        webView2 = findViewById(R.id.webView2)
-        webView2.settings.javaScriptEnabled = true
-        webView2.webViewClient = WebViewClient()
-
-        val videoId2 = "yourVideoId2"  // Replace with actual video ID
-        val videoUrl2 = "https://www.youtube.com/embed/$videoId2"
-        webView2.loadData(
-            "<iframe width=\"100%\" height=\"100%\" src=\"$videoUrl2\" frameborder=\"0\" allowfullscreen></iframe>",
-            "text/html",
-            "utf-8"
-        )
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -64,8 +51,6 @@ class StressReduction : AppCompatActivity() {
     override fun onBackPressed() {
         if (webView1.canGoBack()) {
             webView1.goBack()
-        } else if (webView2.canGoBack()) {
-            webView2.goBack()
         } else {
             super.onBackPressed()
         }
