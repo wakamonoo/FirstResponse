@@ -55,14 +55,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/text_qrt_perpetual_help"
+                        app:layout_constraintEnd_toStartOf="@+id/mdrrmopol"
                         android:contentDescription="Our Lady of Perpetual Help Diagnostic and Dialysis Center Logo" />
 
                     <TextView
-                        android:id="@+id/text_qrt_perpetual_help"
+                        android:id="@+id/mdrrmopol"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Our Lady of Perpetual Help Diagnostic and Dialysis Center"
+                        android:text="MDRRMO Polangui"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -260,14 +260,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/text_qrt_oas_district"
+                        app:layout_constraintEnd_toStartOf="@+id/mdrrmooas"
                         android:contentDescription="OAS District Hospital Logo" />
 
                     <TextView
-                        android:id="@+id/text_qrt_oas_district"
+                        android:id="@+id/mdrrmooas"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="OAS District Hospital"
+                        android:text="MDRRMO Oas"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold"
@@ -362,14 +362,14 @@
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/text_qrt_ligao_city"
+                        app:layout_constraintEnd_toStartOf="@+id/mdrrmoligao"
                         android:contentDescription="Ligao City Hospital Logo" />
 
                     <TextView
-                        android:id="@+id/text_qrt_ligao_city"
+                        android:id="@+id/mdrrmoligao"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Ligao City Hospital"
+                        android:text="MDRRMO Ligao"
                         android:textColor="@color/white"
                         android:textSize="18sp"
                         android:textStyle="bold"

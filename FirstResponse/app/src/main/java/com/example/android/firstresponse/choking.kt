@@ -1,13 +1,16 @@
 package com.example.android.firstresponse
 
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import android.widget.Toast
+import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class choking : AppCompatActivity() {
@@ -27,6 +30,21 @@ class choking : AppCompatActivity() {
             title = "CHOKING"
             setDisplayHomeAsUpEnabled(true)
         }
+
+        // Find the button by its ID
+        val callButton1 = findViewById<Button>(R.id.callbutton1)
+        callButton1.setOnClickListener {
+            val intent = Intent(this, HelplineActivity::class.java)
+            startActivity(intent)
+        }
+
+// If you have another button with a different ID (callbutton2), add the corresponding code below
+        val callButton2 = findViewById<Button>(R.id.callbutton2)
+        callButton2.setOnClickListener {
+            val intent = Intent(this, HelplineActivity::class.java)
+            startActivity(intent)
+        }
+
 
         // Initialize WebViews
         webView1 = findViewById(R.id.webView)

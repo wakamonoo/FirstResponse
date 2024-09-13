@@ -194,9 +194,24 @@
                 android:paddingRight="20dp"
                 android:textSize="18sp"
                 android:gravity="left"
-                android:text="Call your Local Hotline or Seek for Professional Help if symptoms worsen over time, such as increasing headache or confusion, vomiting, seizure, or loss of consciousness occurs, significant drowsiness or inability to stay awake, difficulty speaking or walking, persistent or worsening symptoms after a few days. Even with a minor concussion, it’s important to take symptoms seriously, rest, and follow up with a healthcare provider to ensure complete recovery."
+                android:text="Call your Local Hotline if symptoms worsen over time, such as increasing headache or confusion, vomiting, seizure, or loss of consciousness occurs, significant drowsiness or inability to stay awake, difficulty speaking or walking, persistent or worsening symptoms after a few days. Even with a minor concussion, it’s important to take symptoms seriously, rest, and follow up with a healthcare provider to ensure complete recovery."
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView1" />
+
+            <Button
+                android:id="@+id/callbutton1"
+                android:layout_width="250dp"
+                android:layout_height="73dp"
+                android:text="CALL THEM NOW"
+                android:textColor="@android:color/white"
+                android:background="@drawable/white_button_background"
+                android:drawableLeft="@drawable/phone_call"
+                android:drawablePadding="8dp"
+                android:layout_marginLeft="55dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView4" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout4"

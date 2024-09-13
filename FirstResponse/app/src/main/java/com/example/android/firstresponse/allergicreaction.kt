@@ -1,14 +1,17 @@
 package com.example.android.firstresponse
 
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.widget.Button
 
 class allergicreaction : AppCompatActivity() {
 
@@ -22,6 +25,13 @@ class allergicreaction : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
         supportActionBar?.title = "ALLERGIC REACTION"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val callButton1=findViewById<Button>(R.id.callbutton1)
+        callButton1.setOnClickListener{
+            val Intent= Intent(this,HelplineActivity::class.java)
+            startActivity(Intent)
+        }
+
 
         // Initialize WebView
         webView1 = findViewById(R.id.webView1)

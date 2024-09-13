@@ -1,10 +1,12 @@
 package com.example.android.firstresponse
 
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -26,6 +28,12 @@ class AnxietyManagement : AppCompatActivity() {
 
         // Show back button on action bar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val groundingbutton1=findViewById<Button>(R.id.groundingbutton1)
+        groundingbutton1.setOnClickListener{
+            val Intent= Intent(this,GroundingTechniques::class.java)
+            startActivity(Intent)
+        }
 
         // Setup WebView
         webView1 = findViewById(R.id.webView1)

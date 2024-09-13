@@ -33,7 +33,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/constraintLayout2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/shadow">
 
 
                     <ImageView
@@ -238,6 +239,22 @@
 
                     </TextView>
 
+                    <Button
+                        android:id="@+id/callbutton1"
+                        android:layout_width="250dp"
+                        android:layout_height="73dp"
+                        android:text="CALL THEM NOW"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/white_button_background"
+                        android:drawableLeft="@drawable/phone_call"
+                        android:drawablePadding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textcontent5" />
+
+
+
                     <WebView
                         android:id="@+id/webView"
                         android:layout_width="match_parent"
@@ -245,7 +262,7 @@
                         app:layout_constraintBottom_toTopOf="@id/imageView2"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/imageView1" />
+                        app:layout_constraintTop_toBottomOf="@id/callbutton1" />
 
                     <ImageView
                         android:id="@+id/imageView2"
@@ -411,6 +428,20 @@
 
                     </TextView>
 
+                    <Button
+                        android:id="@+id/callbutton2"
+                        android:layout_width="250dp"
+                        android:layout_height="73dp"
+                        android:text="CALL THEM NOW"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/white_button_background"
+                        android:drawableLeft="@drawable/phone_call"
+                        android:drawablePadding="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/textcontent9" />
+
                     <WebView
                         android:id="@+id/webView2"
                         android:layout_width="match_parent"
@@ -419,7 +450,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@id/imageView2"
+                        app:layout_constraintTop_toBottomOf="@id/callbutton2"
                         app:layout_constraintVertical_bias="1.0" />
 
 
