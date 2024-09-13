@@ -218,22 +218,46 @@ class MainActivity : AppCompatActivity() {
 
     private fun getCurrentLocationAndOpenGoogleMaps() {
         if (checkLocationPermission()) {
-            fusedLocationClient.lastLocation.addOnSuccessListener { location ->
-                if (location != null) {
-                    val userLocation = Pair(location.latitude, location.longitude)
-                    openGoogleMaps(userLocation)
-                } else {
-                    Log.e(TAG, "Location is null.")
-                    Toast.makeText(this, "Unable to retrieve current location.", Toast.LENGTH_SHORT).show()
-                }
-            }.addOnFailureListener {
-                Log.e(TAG, "Failed to get location: ${it.localizedMessage}")
-                Toast.makeText(this, "Failed to retrieve current location.", Toast.LENGTH_SHORT).show()
+            val locationRequest = LocationRequest.create().apply {
+                priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+                interval = 5000 // Request location updates every 5 seconds for quicker response
+                fastestInterval = 2000 // Allow updates every 2 seconds
             }
+
+            val locationCallback = object : com.google.android.gms.location.LocationCallback() {
+                override fun onLocationResult(locationResult: com.google.android.gms.location.LocationResult) {
+                    super.onLocationResult(locationResult)
+                    val location = locationResult.lastLocation
+                    if (location != null) {
+                        val userLocation = Pair(location.latitude, location.longitude)
+                        openGoogleMaps(userLocation)
+                        fusedLocationClient.removeLocationUpdates(this) // Stop location updates after obtaining the location
+                    } else {
+                        Log.e(TAG, "Location is null.")
+                        Toast.makeText(this@MainActivity, "Unable to retrieve current location. Please try again.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+
+            // Request location updates
+            fusedLocationClient.requestLocationUpdates(locationRequest, locationCallback, null)
+                .addOnSuccessListener {
+                    // Optionally, immediately check for the last known location as a fallback
+                    fusedLocationClient.lastLocation.addOnSuccessListener { location ->
+                        if (location != null) {
+                            val userLocation = Pair(location.latitude, location.longitude)
+                            openGoogleMaps(userLocation)
+                        }
+                    }
+                }.addOnFailureListener {
+                    Log.e(TAG, "Failed to get location updates: ${it.localizedMessage}")
+                    Toast.makeText(this, "Failed to retrieve current location. Please try again.", Toast.LENGTH_SHORT).show()
+                }
         } else {
             requestLocationPermission()
         }
     }
+
 
     private fun openGoogleMaps(userLocation: Pair<Double, Double>) {
         val locations = listOf(
