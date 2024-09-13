@@ -90,6 +90,13 @@ class HelplineActivity : AppCompatActivity() {
                     overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
                     true
                 }
+                R.id.bottomSaved -> {
+                    val intent = Intent(this, SavedActivity::class.java)
+                    startActivity(intent)
+                    // Apply transition animations
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                    true
+                }
                 R.id.bottomHelpline -> {
                     // Already in HelplineActivity, no need to navigate
                     true

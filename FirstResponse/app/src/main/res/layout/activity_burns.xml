@@ -45,7 +45,7 @@
                         android:background="@color/shadow"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.0">
@@ -87,6 +87,7 @@
                         app:layout_constraintVertical_bias="1.0">
 
                     </TextView>
+
                     <ImageView
                         android:id="@+id/image2"
                         android:layout_width="wrap_content"
@@ -586,6 +587,18 @@ any other injuries that need treating"
 
             </LinearLayout>
         </ScrollView>
+
+        <!-- FloatingActionButton for saving the topic -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/saved"
+            app:fabSize="normal"
+            app:tint="@color/red"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

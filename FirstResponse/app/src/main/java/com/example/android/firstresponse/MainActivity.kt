@@ -108,6 +108,15 @@ class MainActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+            when (menuItem.itemId) {
+                R.id.bottomSaved -> {
+                    val intent = Intent(this, SavedActivity::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out)
+                    true
+                }
+                else -> false
+            }
         }
 
         // Initialize navigation drawer and its item selected listener

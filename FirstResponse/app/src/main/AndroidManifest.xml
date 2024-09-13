@@ -21,9 +21,15 @@
             android:exported="true"
             android:parentActivityName="com.example.android.firstresponse.MainActivity" />
 
+        <!-- Saved Activity -->
+        <activity
+            android:name="com.example.android.firstresponse.SavedActivity"
+            android:exported="true"
+            android:parentActivityName="com.example.android.firstresponse.MainActivity" />
+
         <!-- Add all other existing activities here, as you have already listed them -->
         <activity android:name="com.example.android.firstresponse.Epidemic" android:exported="false" />
-        <activity android:name="com.example.android.firstresponse.ForestFires" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.VolcanicEruption" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.Earthquake" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.Floods" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.DrugsPrevention" android:exported="false" />

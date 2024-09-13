@@ -4,11 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.graphics.drawable.ColorDrawable
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
-import androidx.core.content.ContextCompat
-
 
 
 class DisasterManagement : AppCompatActivity() {
@@ -59,7 +56,7 @@ class DisasterManagement : AppCompatActivity() {
         //switching to forest fires activity
         val buttonff=findViewById<Button>(R.id.buttonForestfire)
         buttonff.setOnClickListener{
-            val Intent= Intent(this,ForestFires::class.java)
+            val Intent= Intent(this,VolcanicEruption::class.java)
             startActivity(Intent)
         }
     }
