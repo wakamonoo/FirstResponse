@@ -58,8 +58,7 @@
                     android:text="What are Seizures?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.242"
                     app:layout_constraintStart_toEndOf="@id/imageNumber1"
@@ -72,7 +71,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
+                android:layout_height="wrap_content"
                 android:background="@color/shadow"
                 android:gravity="left"
                 android:paddingTop="10dp"
@@ -80,7 +79,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:text="@string/seizure1"
                 android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView1"
@@ -112,15 +111,14 @@
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="218dp"
-                    android:layout_height="50dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="11dp"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
                     android:text="Causes of a seizure"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.182"
                     app:layout_constraintStart_toEndOf="@+id/imageNumber2"
@@ -133,9 +131,9 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
+                android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:gravity="left"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
@@ -179,8 +177,7 @@
                     android:text="Symptoms of a seizure"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.105"
                     app:layout_constraintStart_toEndOf="@+id/imageNumber3"
@@ -193,7 +190,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="570dp"
+                android:layout_height="wrap_content"
                 android:background="@color/shadow"
                 android:gravity="left"
                 android:paddingTop="10dp"
@@ -203,8 +200,7 @@
                 android:textSize="18sp"
                 android:text="@string/seizure3"
                 android:textColor="@color/black"
-                android:textStyle="normal"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 app:layout_constraintStart_toEndOf="@+id/textView3" />
 
 
@@ -232,17 +228,16 @@
 
                 <TextView
                     android:id="@+id/textView4"
-                    android:layout_width="317dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_marginTop="4dp"
                     android:gravity="center"
                     android:text="How are seizures treated?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.281"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/imageNumber4"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -253,7 +248,7 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="400dp"
+                android:layout_height="wrap_content"
                 android:background="@color/shadow"
                 android:gravity="left"
                 android:paddingTop="10dp"
@@ -263,7 +258,7 @@
                 android:textSize="18sp"
                 android:text="@string/seizure4"
                 android:textColor="@color/black"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 app:layout_constraintStart_toEndOf="@+id/textView3" />
 
             <WebView

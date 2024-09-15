@@ -13,6 +13,7 @@
         android:text="Search Results for (search input)"
         android:textSize="16sp"
         android:textStyle="bold"
+        android:fontFamily="@font/montserrat_bold"
         android:textColor="@color/shadow2"/>
 
     <!-- ListView with margin top -->

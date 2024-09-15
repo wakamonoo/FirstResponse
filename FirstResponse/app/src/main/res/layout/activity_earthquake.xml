@@ -57,8 +57,7 @@
                     android:text="What are earthquakes"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.502"
                     app:layout_constraintStart_toStartOf="@+id/imageNumber1"
@@ -71,9 +70,9 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="188dp"
+                android:layout_height="200dp"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -109,11 +108,10 @@
                     android:layout_width="271dp"
                     android:layout_height="56dp"
                     android:gravity="center"
-                    android:text="Why are earthquakes caused?"
+                    android:text="Why does earthquakes happen?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -127,10 +125,10 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="610dp"
+                android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
-                android:paddingTop="10dp"
+                android:fontFamily="@font/opensans"
+                android:paddingTop="20dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
@@ -177,14 +175,11 @@
                     android:text="What can we do when we face an earthquake?"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.191"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toEndOf="@+id/imageNumber3"
-                    app:layout_constraintTop_toTopOf="parent">
-                </TextView>
-
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -196,19 +191,19 @@
                 android:gravity="center"
                 android:layout_marginRight="100dp"
                 android:paddingLeft="20dp"
+                android:paddingTop="10dp"
                 android:text="If you are Indoors:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
-                android:paddingBottom="20dp"
+                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
@@ -227,16 +222,15 @@
                 android:text="If you are Outdoors:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
-                android:paddingBottom="20dp"
+                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
@@ -255,16 +249,15 @@
                 android:text="If you are in a Vehicle:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
-                android:paddingBottom="20dp"
+                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
@@ -283,16 +276,15 @@
                 android:text="If you are in a Building:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
-                android:paddingBottom="20dp"
+                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
@@ -303,24 +295,23 @@
 
             <TextView
                 android:id="@+id/textView10"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:gravity="center"
+                android:gravity="left"
                 android:layout_marginRight="100dp"
                 android:paddingLeft="20dp"
-                android:text="If you are Near the Shore:"
+                android:text="If you're Near the Shore:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
-                android:paddingBottom="20dp"
+                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
@@ -339,14 +330,13 @@
                 android:text="After the Earthquake:"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"

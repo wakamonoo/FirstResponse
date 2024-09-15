@@ -3,6 +3,8 @@ package com.example.android.firstresponse
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
+import android.webkit.WebView
+import android.webkit.WebViewClient
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -10,6 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class VolcanicEruption : AppCompatActivity() {
 
+    private lateinit var webView1: WebView
     private lateinit var fabSave: FloatingActionButton
     private val topicId = "volcanic eruption" // Unique ID for the topic
 
@@ -19,6 +22,15 @@ class VolcanicEruption : AppCompatActivity() {
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
         supportActionBar?.title = "VOLCANIC ERUPTION"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        // Initialize WebView
+        webView1 = findViewById(R.id.webView)
+        webView1.settings.javaScriptEnabled = true
+        webView1.webViewClient = WebViewClient()
+
+        val videoId = "Z-w_z9yobpE"
+        val videoUrl = "https://www.youtube.com/embed/$videoId"
+        webView1.loadData("<iframe width=\"100%\" height=\"100%\" src=\"$videoUrl\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8")
 
         // Initialize FloatingActionButton for saving the topic
         fabSave = findViewById(R.id.fab_save)
@@ -67,6 +79,14 @@ class VolcanicEruption : AppCompatActivity() {
                 true
             }
             else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onBackPressed() {
+        if (webView1.canGoBack()) {
+            webView1.goBack()
+        } else {
+            super.onBackPressed()
         }
     }
 }

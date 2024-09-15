@@ -6,23 +6,23 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import android.widget.Button
 
-class nosebleed : AppCompatActivity() {
+class insectbite : AppCompatActivity() {
 
     private lateinit var webView1: WebView
     private lateinit var fabSave: FloatingActionButton
-    private val topicId = "nosebleed" // Unique ID for the topic
+    private val topicId = "allergic reaction" // Unique ID for the topic
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_nose_bleed)
+        setContentView(R.layout.activity_insect_bite)
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
-        supportActionBar?.title = "NOSEBLEED"
+        supportActionBar?.title = "INSECT BITE/STING"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val callButton1=findViewById<Button>(R.id.callbutton1)
@@ -31,13 +31,19 @@ class nosebleed : AppCompatActivity() {
             startActivity(Intent)
         }
 
+
         // Initialize WebView
         webView1 = findViewById(R.id.webView1)
         webView1.settings.javaScriptEnabled = true
         webView1.webViewClient = WebViewClient()
-        val videoId = "PmmhxW0vVXA"
+
+        val videoId = "7Fh3v5c6FY4"
         val videoUrl = "https://www.youtube.com/embed/$videoId"
-        webView1.loadData("<iframe width=\"100%\" height=\"100%\" src=\"$videoUrl\" frameborder=\"0\" allowfullscreen></iframe>", "text/html", "utf-8")
+        webView1.loadData(
+            "<iframe width=\"100%\" height=\"100%\" src=\"$videoUrl\" frameborder=\"0\" allowfullscreen></iframe>",
+            "text/html",
+            "utf-8"
+        )
 
         // Initialize FloatingActionButton for saving the topic
         fabSave = findViewById(R.id.fab_save)

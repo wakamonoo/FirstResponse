@@ -59,8 +59,7 @@
                     android:text="What is A Sprain"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.492"
                     app:layout_constraintStart_toStartOf="@+id/imageNumber1"
@@ -74,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -107,14 +106,13 @@
                 android:text="Grade 1 (Mild Sprain)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -136,21 +134,21 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:fontFamily="serif"/>
+                android:fontFamily="@font/opensans" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
                 android:gravity="left"
-                android:text="Mild pain, swelling, and stiffness around the joint, but typically no instability. You can still bear weight on the joint, but it may be slightly uncomfortable."
-                android:textColor="@color/shadow3"
+                android:text="■Mild pain\n■Swelling\n■Stiffness around the joint, but typically no instability. You can still bear weight on the joint, but it may be slightly uncomfortable."
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView1" />
 
             <TextView
@@ -163,14 +161,13 @@
                 android:text="Grade 2 (Moderate Sprain)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -192,21 +189,21 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:fontFamily="serif"/>
+                android:fontFamily="@font/opensans" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textSize="18sp"
                 android:gravity="left"
-                android:text="Moderate to significant pain, swelling, and bruising around the joint. Joint mobility may be restricted, and the person may feel some instability or difficulty bearing weight on the joint."
-                android:textColor="@color/shadow3"
+                android:text="■Moderate to significant pain\n■Swelling\n■Bruising around the joint. \n■Joint mobility may be restricted, and the person may feel some instability or difficulty bearing weight on the joint."
+                android:textColor="@color/black"
                 app:layout_constraintStart_toEndOf="@+id/textView1" />
 
             <TextView
@@ -219,14 +216,13 @@
                 android:text="Grade 3 (Severe Sprain)"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -248,21 +244,24 @@
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                app:fontFamily="serif"/>
+                android:fontFamily="@font/opensans" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
-                android:paddingTop="10dp"
-                android:paddingBottom="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
-                android:textSize="18sp"
+                android:fontFamily="@font/opensans"
                 android:gravity="left"
-                android:text="Severe pain (though sometimes less painful if the ligament is completely torn), significant swelling, bruising, and total loss of joint function. The person is typically unable to bear any weight on the joint, and the joint feels very unstable."
-                android:textColor="@color/shadow3"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp"
+                android:text="■Severe pain (though sometimes less painful if the ligament is completely torn)
+                \n■Significant swelling
+                \n■Bruising
+                \n■Total loss of joint function (The person is typically unable to bear any weight on the joint, and the joint feels very unstable)."
+                android:textColor="@color/black"
+                android:textSize="18sp"
                 app:layout_constraintStart_toEndOf="@+id/textView1" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -293,8 +292,7 @@
                     android:text="Actions For each Sprains"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    app:fontFamily="serif"
+                    app:fontFamily="@font/montserrat_bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -315,14 +313,13 @@
                 android:text="Grade 1"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -344,14 +341,13 @@
                 android:text="Grade 2"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -372,14 +368,13 @@
                 android:text="Grade 3"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                app:fontFamily="serif"/>
+                app:fontFamily="@font/montserrat_bold"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
@@ -394,7 +389,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/shadow"
-                android:fontFamily="serif"
+                android:fontFamily="@font/opensans"
                 android:paddingTop="10dp"
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"

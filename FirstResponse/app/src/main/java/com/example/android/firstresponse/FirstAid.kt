@@ -143,6 +143,12 @@ class FirstAid : AppCompatActivity() {
             startActivity(Intent)
         }
 
+        val buttoninsectbites=findViewById<Button>(R.id.buttonInsectBites)
+        buttoninsectbites.setOnClickListener {
+            val Intent = Intent(this, insectbite::class.java)
+            startActivity(Intent)
+        }
+
     }
 
 }

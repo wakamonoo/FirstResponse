@@ -92,7 +92,7 @@
                         android:text="HIV and AIDS are frequently confused with one another. Despite the fact that they are distinct illnesses, AIDS and HIV are closely related. HIV is a virus that can lead to a condition called AIDS, also known as stage 3 HIV. However, an HIV infection does not necessarily progress to stage 3."
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/shadow3"
-                        app:fontFamily="serif"
+                        app:fontFamily="@font/opensans"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.533"
                         app:layout_constraintStart_toStartOf="parent"
