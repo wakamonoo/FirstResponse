@@ -1,2 +1,0 @@
-# FirstResponse
-Capstone Project
