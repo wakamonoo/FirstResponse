@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.airbnb.lottie.LottieAnimationView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class SavedActivity : AppCompatActivity() {
+class SavedActivity : BaseActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var noSavedTopicsTextView: TextView
