@@ -70,6 +70,7 @@
         <activity android:name="com.example.android.firstresponse.bruises" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.allergicreaction" android:exported="false" />
         <activity android:name="com.example.android.firstresponse.strain" android:exported="false" />
+        <activity android:name="com.example.android.firstresponse.insectbite" android:exported="false" />
 
         <!-- Add other activities here -->
         <activity
