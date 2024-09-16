@@ -1,14 +1,11 @@
 package com.example.android.firstresponse
 
 import android.content.Context
-import android.content.ContextWrapper
-import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.Configuration
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -18,15 +15,17 @@ class SettingsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        applyLocale()
         setContentView(R.layout.activity_settings)
         supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        val languageGroup = findViewById<RadioGroup>(R.id.languageGroup)
 
         // Load the saved language and set it
         val sharedPreferences = getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
         val savedLanguage = sharedPreferences.getString("selected_language", "en") // Default to English
 
-        val languageGroup = findViewById<RadioGroup>(R.id.languageGroup)
         when (savedLanguage) {
             "en" -> languageGroup.check(R.id.radioEnglish)
             "fil" -> languageGroup.check(R.id.radioFilipino)
@@ -41,7 +40,6 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private fun setLocale(languageCode: String) {
         // Save the selected language to SharedPreferences
@@ -60,6 +58,17 @@ class SettingsActivity : AppCompatActivity() {
         updateUI()
     }
 
+    private fun applyLocale() {
+        // Retrieve the saved language from SharedPreferences and set it
+        val sharedPreferences = getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
+        val savedLanguage = sharedPreferences.getString("selected_language", "en") // Default to English
+
+        val locale = Locale(savedLanguage)
+        Locale.setDefault(locale)
+        val config = Configuration()
+        config.setLocale(locale)
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
 
     private fun updateUI() {
         // Manually update UI elements if needed
