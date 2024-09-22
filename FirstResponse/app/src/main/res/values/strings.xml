@@ -805,6 +805,14 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="safety_pins_description">Safety pins are versatile tools used for securing bandages, dressings, and other first aid supplies. They are helpful in holding materials in place during wound care.</string>
     <string name="emergency_blanket_description">Emergency blankets provide warmth in critical situations, such as when exposed to cold weather or after shock. They are compact and essential for outdoor and survival situations.</string>
     <string name="mask_description">Medical masks are used to protect against airborne particles and reduce the risk of infection. They are crucial for preventing the spread of respiratory illnesses and ensuring safety in medical environments.</string>
+    <string name="splint_description">A splint is used to immobilize and protect an injured limb, reducing movement and preventing further injury until medical assistance can be provided.</string>
+    <string name="eye_wash_description">Eye wash solutions are used to rinse and cleanse the eyes in case of exposure to harmful substances or debris, helping to reduce irritation and prevent serious eye damage.</string>
+    <string name="hand_sanitizer_description">Hand sanitizer is a quick and effective solution for disinfecting hands, eliminating bacteria and viruses when soap and water are not available.</string>
+    <string name="cotton_balls_description">Cotton balls are soft, absorbent tools used for cleaning wounds, applying antiseptics, or other medical purposes in a first aid kit.</string>
+    <string name="burn_gel_description">Burn gel is used to soothe and protect minor burns, cooling the skin and relieving pain while preventing infection.</string>
+    <string name="trauma_pad_description">Trauma pads are large, absorbent pads designed to manage heavy bleeding and provide protection for large wounds or injuries.</string>
+    <string name="finger_splint_description">A finger splint immobilizes and protects injured fingers, helping to reduce pain and prevent further damage during the healing process.</string>
+
 
     <string name="shop_now">Shop Now</string>
     <string name="kit_image_desc">Description of the first aid kit image</string>

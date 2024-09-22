@@ -32,14 +32,12 @@ class SettingsActivity : BaseActivity() {
         when (savedLanguage) {
             "en" -> languageGroup.check(R.id.radioEnglish)
             "fil" -> languageGroup.check(R.id.radioFilipino)
-            "bcl" -> languageGroup.check(R.id.radioBicol)
         }
 
         languageGroup.setOnCheckedChangeListener { _, checkedId ->
             when (checkedId) {
                 R.id.radioEnglish -> setLocale("en")
                 R.id.radioFilipino -> setLocale("fil")
-                R.id.radioBicol -> setLocale("bcl")
             }
         }
     }

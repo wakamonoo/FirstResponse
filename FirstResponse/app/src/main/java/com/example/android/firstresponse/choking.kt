@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import android.widget.ImageButton
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
-import android.widget.Toast
-import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class choking : BaseActivity() {
 
@@ -19,6 +20,7 @@ class choking : BaseActivity() {
     private lateinit var webView2: WebView
     private lateinit var fabSave: FloatingActionButton
     private val topicId = "choking" // Unique ID for the topic
+    private val topicTitle = "Choking" // Topic title for display
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,20 +33,18 @@ class choking : BaseActivity() {
             setDisplayHomeAsUpEnabled(true)
         }
 
-        // Find the button by its ID
+        // Find and set up buttons for helpline activity
         val callButton1 = findViewById<Button>(R.id.callbutton1)
         callButton1.setOnClickListener {
             val intent = Intent(this, HelplineActivity::class.java)
             startActivity(intent)
         }
 
-// If you have another button with a different ID (callbutton2), add the corresponding code below
         val callButton2 = findViewById<Button>(R.id.callbutton2)
         callButton2.setOnClickListener {
             val intent = Intent(this, HelplineActivity::class.java)
             startActivity(intent)
         }
-
 
         // Initialize WebViews
         webView1 = findViewById(R.id.webView)
@@ -83,19 +83,30 @@ class choking : BaseActivity() {
     // Function to toggle save status
     private fun toggleSaveTopic() {
         val sharedPref = getSharedPreferences("SavedTopics", MODE_PRIVATE)
-        val savedTopicsSet = sharedPref.getStringSet("savedTopics", mutableSetOf()) ?: mutableSetOf()
-        val isSaved = savedTopicsSet.contains(topicId)
+        val gson = Gson()
+
+        // Load saved topics from SharedPreferences
+        val savedTopicsJson = sharedPref.getString("savedTopicsJson", "[]")
+        val type = object : TypeToken<MutableList<SavedTopic>>() {}.type
+        val savedTopicsSet: MutableList<SavedTopic> = gson.fromJson(savedTopicsJson, type)
+
+        // Check if the topic is already saved
+        val isSaved = savedTopicsSet.any { it.id == topicId }
 
         if (isSaved) {
-            savedTopicsSet.remove(topicId)
+            // Remove the topic if it's already saved
+            savedTopicsSet.removeAll { it.id == topicId }
             Toast.makeText(this, "Topic removed", Toast.LENGTH_SHORT).show()
         } else {
-            savedTopicsSet.add(topicId)
+            // Add the topic if it's not saved
+            savedTopicsSet.add(SavedTopic(topicId, topicTitle))
             Toast.makeText(this, "Topic saved", Toast.LENGTH_SHORT).show()
         }
 
+        // Save the updated list of topics to SharedPreferences
+        val updatedTopicsJson = gson.toJson(savedTopicsSet)
         with(sharedPref.edit()) {
-            putStringSet("savedTopics", savedTopicsSet)
+            putString("savedTopicsJson", updatedTopicsJson)
             apply()
         }
         updateFabIcon()
@@ -104,8 +115,15 @@ class choking : BaseActivity() {
     // Function to update FloatingActionButton icon based on save state
     private fun updateFabIcon() {
         val sharedPref = getSharedPreferences("SavedTopics", MODE_PRIVATE)
-        val savedTopicsSet = sharedPref.getStringSet("savedTopics", mutableSetOf()) ?: mutableSetOf()
-        val isSaved = savedTopicsSet.contains(topicId)
+        val gson = Gson()
+
+        // Load saved topics from SharedPreferences
+        val savedTopicsJson = sharedPref.getString("savedTopicsJson", "[]")
+        val type = object : TypeToken<List<SavedTopic>>() {}.type
+        val savedTopicsSet: List<SavedTopic> = gson.fromJson(savedTopicsJson, type)
+
+        // Check if the topic is already saved
+        val isSaved = savedTopicsSet.any { it.id == topicId }
         val iconResId = if (isSaved) R.drawable.saved_red else R.drawable.saved
         fabSave.setImageDrawable(ContextCompat.getDrawable(this, iconResId))
     }

@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:text="@string/choose_language"
             android:textSize="24sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:fontFamily="@font/montserrat_bold"
             android:layout_marginBottom="24dp"/>
 
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:text="English"
                 android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:layout_marginBottom="8dp"/>
 
             <RadioButton
@@ -52,16 +52,8 @@
                 android:layout_height="wrap_content"
                 android:text="Filipino"
                 android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:layout_marginBottom="8dp"/>
-
-            <RadioButton
-                android:id="@+id/radioBicol"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bicol"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="@color/black"/>
         </RadioGroup>
     </LinearLayout>
 </RelativeLayout>
