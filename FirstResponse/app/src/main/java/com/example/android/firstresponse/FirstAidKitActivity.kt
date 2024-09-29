@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import android.app.AlertDialog
 import android.view.MotionEvent
 import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -24,11 +25,30 @@ class FirstAidKitActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_first_aid_kit)
 
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
-        supportActionBar?.title = "FIRST AID KITS"
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
 
-        // Enable the Up button
+        // Initialize custom toolbar
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.customToolbar)
+        setSupportActionBar(toolbar)
+
+        // Set the title for the Toolbar
+        supportActionBar?.title = getString(R.string.first_aid_kits)
+        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.red))
+
+        // Show back button on the Toolbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.back)
+
+        // Set up back button click listener with animation
+        toolbar.setNavigationOnClickListener {
+            it.startAnimation(pressAnim)
+            it.postDelayed({
+                it.startAnimation(releaseAnim)
+                finish()
+            }, pressAnim.duration)
+        }
 
         // Initialize RecyclerView and Adapter
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)

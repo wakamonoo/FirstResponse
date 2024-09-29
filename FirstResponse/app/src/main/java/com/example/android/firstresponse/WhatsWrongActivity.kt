@@ -13,7 +13,10 @@ import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
+import android.view.animation.AnimationUtils
 import androidx.core.content.ContextCompat
+import androidx.appcompat.widget.Toolbar
+
 
 class WhatsWrongActivity : BaseActivity() {
 
@@ -1316,26 +1319,54 @@ class WhatsWrongActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_whats_wrong)
-        supportActionBar?.setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this, R.color.shadow2)))
 
-        // Change title of action bar
-        supportActionBar?.title = "WATER SAFETY"
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
 
-        // Show back button on action bar
+        // Initialize custom toolbar
+        val toolbar: Toolbar = findViewById(R.id.customToolbar)
+        setSupportActionBar(toolbar)
+
+        // Set the title for the Toolbar
+        supportActionBar?.title = getString(R.string.whats_wrong)
+        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.red))
+
+        // Show back button on the Toolbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.back)
 
+        // Set up back button click listener with animation
+        toolbar.setNavigationOnClickListener {
+            // Start the press animation for the back button
+            it.startAnimation(pressAnim)
 
+            // Delayed action to finish activity and apply release animation
+            it.postDelayed({
+                // Apply release animation (optional)
+                it.startAnimation(releaseAnim)
+
+                // Close the activity
+                finish()
+            }, pressAnim.duration)
+        }
+
+        // Initialize views
         questionTextView = findViewById(R.id.questionTextView)
         optionsSpinner = findViewById(R.id.optionsSpinner)
         nextButton = findViewById(R.id.nextButton)
         resultTextView = findViewById(R.id.resultTextView)
 
+        // Set up button click listener for next button
         nextButton.setOnClickListener {
             handleNextButtonClick()
         }
 
+        // Update the stage
         updateStage()
     }
+
+
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
@@ -1347,6 +1378,7 @@ class WhatsWrongActivity : BaseActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
 
 
     private fun handleNextButtonClick() {

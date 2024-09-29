@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.MenuItem
+import android.view.animation.AnimationUtils
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
@@ -26,14 +27,32 @@ class CPR : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cpr)
 
-        // Set up Action Bar
-        supportActionBar?.apply {
-            setBackgroundDrawable(ColorDrawable(ContextCompat.getColor(this@CPR, R.color.shadow2)))
-            title = "CPR"
-            setDisplayHomeAsUpEnabled(true)
+        // Load animations
+        val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
+        val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
+
+        // Initialize custom toolbar
+        val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.customToolbar)
+        setSupportActionBar(toolbar)
+
+        // Set the title for the Toolbar
+        supportActionBar?.title = getString(R.string.cpr_t)
+        toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.red))
+
+        // Show back button on the Toolbar
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationIcon(R.drawable.back)
+
+        // Set up back button click listener with animation
+        toolbar.setNavigationOnClickListener {
+            it.startAnimation(pressAnim)
+            it.postDelayed({
+                it.startAnimation(releaseAnim)
+                finish()
+            }, pressAnim.duration)
         }
 
-        // Initialize Buttons
+    // Initialize Buttons
         val callButton1 = findViewById<Button>(R.id.callbutton1)
         callButton1.setOnClickListener {
             val intent = Intent(this, HelplineActivity::class.java)

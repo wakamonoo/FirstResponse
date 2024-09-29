@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">FirstResponse</string>
-    <string name="home">Home</string>
     <string name="about_us">About Us</string>
     <string name="website">Website</string>
     <string name="url">https://redcrosskarnataka.org/</string>
@@ -827,6 +826,68 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="ligao_city_hospital_content">Polangui Rural Health Unit is dedicated to providing comprehensive healthcare services to the community. They offer a range of medical services including general check-ups, emergency care, and specialized treatments. Their team of healthcare professionals is committed to delivering quality care and improving the well-being of their patients.</string>
     <string name="duran_hospital_content">Polangui Rural Health Unit is dedicated to providing comprehensive healthcare services to the community. They offer a range of medical services including general check-ups, emergency care, and specialized treatments. Their team of healthcare professionals is committed to delivering quality care and improving the well-being of their patients.</string>
     <string name="ligao_rhu_content">Polangui Rural Health Unit is dedicated to providing comprehensive healthcare services to the community. They offer a range of medical services including general check-ups, emergency care, and specialized treatments. Their team of healthcare professionals is committed to delivering quality care and improving the well-being of their patients.</string>
+
+    //OTHER ONES
+        <string name="start_text">Start</string>
+        <string name="saved">Saved</string>
+        <string name="home">Home</string>
+        <string name="helpline">Helpline</string>
+        <string name="first_aid_kits">FIRST AID KITS YOU NEED</string>
+        <string name="basic_first_aid">BASIC FIRST AID</string>
+        <string name="psychological_first_aid">PSYCHOLOGICAL FIRST AID</string>
+        <string name="disaster_management">DISASTER MANAGEMENT</string>
+        <string name="basic_sanitation_t">BASIC SANITATION</string>
+        <string name="test_your_knowledge">TEST YOUR KNOWLEDGE!</string>
+        <string name="safety_preparedness">SAFETY AND &#10;PREPAREDNESS</string>
+        <string name="whats_wrong">WHAT\'S WRONG?</string>
+        <string name="safety_preparedness_t">SAFETY AND PREPAREDNESS</string>
+
+
+        <string name="burns_t">BURNS</string>
+        <string name="choking_t">CHOKING</string>
+        <string name="cpr_t">CPR</string>
+        <string name="splints_t">SPLINTS</string>
+        <string name="seizures_t">SEIZURES</string>
+        <string name="shock_t">SHOCK</string>
+        <string name="bleeding_t">BLEEDING</string>
+        <string name="snake_bite_t">SNAKE BITE</string>
+        <string name="insect_bites_t">INSECT BITES/STING</string>
+        <string name="bruises_t">BRUISES</string>
+        <string name="sprains_t">SPRAINS</string>
+        <string name="strains_t">STRAINS</string>
+        <string name="nose_bleeds_t">NOSE BLEEDS</string>
+        <string name="allergic_reactions_t">ALLERGIC REACTIONS</string>
+        <string name="headaches_t">HEADACHES</string>
+        <string name="minor_concussions_t">MINOR CONCUSSIONS</string>
+        <string name="muscle_cramps_t">MUSCLE CRAMPS</string>
+        <string name="blisters_t">BLISTERS</string>
+
+    <string name="acute_grief_t">ACUTE GRIEF</string>
+    <string name="anxiety_management_t">ANXIETY MANAGEMENT</string>
+    <string name="panic_attack_response_t">PANIC ATTACK RESPONSE</string>
+    <string name="trauma_informed_care_t">TRAUMA- INFORMED CARE</string>
+    <string name="grounding_techniques_t">GROUNDING TECHNIQUES</string>
+    <string name="stress_reduction_t">STRESS REDUCTION</string>
+
+    <string name="floods_t">FLOODS</string>
+    <string name="earthquake_t">EARTHQUAKE</string>
+    <string name="volcanic_eruption_t">VOLCANIC ERUPTION</string>
+    <string name="epidemic_t">EPIDEMIC</string>
+
+    <string name="water_safety_t">WATER SAFETY</string>
+    <string name="road_safety_t">ROAD SAFETY</string>
+    <string name="daily_food_safety_t">DAILY FOOD SAFETY</string>
+    <string name="emergency_food_safety_t">EMERGENCY FOOD SAFETY</string>
+    <string name="heatwave_t">HEATWAVE</string>
+
+    <string name="location_t">Location</string>
+    <string name="language_t">Language</string>
+    <string name="credits_t">Credits</string>
+    <string name="suggestions_t">Suggestions</string>
+
+    <string name="quiz_level">Quiz Level</string>
+
+
 
 
 

@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:padding="16dp">
+    android:orientation="vertical"
+    android:background="#FFFFFF">
 
-    <RelativeLayout
+    <!-- Fixed Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/customToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center">
+        android:background="@android:color/transparent"
+        android:elevation="4dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginTop="8dp"
+        app:navigationIcon="@drawable/back"
+        app:titleTextAppearance="@style/CustomToolbarTitle"/>
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginBottom="32dp">
-
-            <TextView
-                android:id="@+id/creditsTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CREDITS"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="100dp"
-                android:textColor="#000000"
-                android:fontFamily="@font/montserrat_bold" />
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/flaticonLogo"
@@ -34,9 +38,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/flaticon"
                 android:scaleType="fitCenter"
-                android:layout_marginBottom="100dp" />
-
-
+                android:layout_marginBottom="32dp" />
 
             <ImageView
                 android:id="@+id/icons8Logo"
@@ -44,7 +46,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/icons8"
                 android:scaleType="fitCenter"
-                android:layout_marginBottom="100dp" />
+                android:layout_marginBottom="32dp" />
 
             <ImageView
                 android:id="@+id/lottie"
@@ -52,7 +54,7 @@
                 android:layout_height="200dp"
                 android:src="@drawable/lottie"
                 android:scaleType="fitCenter"
-                android:layout_marginBottom="100dp" />
+                android:layout_marginBottom="32dp" />
 
             <ImageView
                 android:id="@+id/figma"
@@ -60,11 +62,9 @@
                 android:layout_height="200dp"
                 android:src="@drawable/figma"
                 android:scaleType="fitCenter"
-                android:layout_marginBottom="100dp" />
-
-
+                android:layout_marginBottom="32dp" />
 
         </LinearLayout>
+    </ScrollView>
 
-    </RelativeLayout>
-</ScrollView>
+</LinearLayout>
