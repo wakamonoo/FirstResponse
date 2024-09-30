@@ -16,8 +16,8 @@ open class BaseActivity : AppCompatActivity() {
     private lateinit var languageChangeReceiver: BroadcastReceiver
 
     override fun attachBaseContext(newBase: Context) {
-        super.attachBaseContext(newBase)
-        applyLocale(newBase)
+        val newLocaleContext = applyLocale(newBase)  // Apply the locale to the base context
+        super.attachBaseContext(newLocaleContext)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,7 +26,7 @@ open class BaseActivity : AppCompatActivity() {
         // Register the broadcast receiver to listen for language changes
         languageChangeReceiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context, intent: Intent) {
-                recreate() // Recreate the activity to apply the new language
+                recreate()  // Recreate the activity to apply the new language immediately
             }
         }
         LocalBroadcastManager.getInstance(this).registerReceiver(languageChangeReceiver, IntentFilter("LANGUAGE_CHANGED"))
@@ -38,7 +38,7 @@ open class BaseActivity : AppCompatActivity() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(languageChangeReceiver)
     }
 
-    private fun applyLocale(context: Context) {
+    private fun applyLocale(context: Context): Context {
         val sharedPreferences: SharedPreferences = context.getSharedPreferences("app_preferences", Context.MODE_PRIVATE)
         val savedLanguage = sharedPreferences.getString("selected_language", "en") ?: "en"
         val locale = Locale(savedLanguage)
@@ -46,6 +46,8 @@ open class BaseActivity : AppCompatActivity() {
 
         val config = Configuration(context.resources.configuration)
         config.setLocale(locale)
-        context.createConfigurationContext(config)
+
+        // Return a new context with the updated locale
+        return context.createConfigurationContext(config)
     }
 }
