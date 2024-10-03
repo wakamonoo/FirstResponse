@@ -1139,7 +1139,8 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="one_to_three_days">1-3 days</string>
     <string name="more_than_three_days">More than 3 days</string>
 
-
+    <string name="savedt">SAVED TOPICS</string>
+    <string name="nosavedt">No saved topics yet</string>
 
 
 

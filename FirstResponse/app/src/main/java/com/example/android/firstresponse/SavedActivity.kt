@@ -13,7 +13,7 @@ import android.widget.TextView
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
-class SavedActivity : AppCompatActivity() {
+class SavedActivity : BaseActivity() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var emptyAnimation: LottieAnimationView
