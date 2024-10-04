@@ -901,6 +901,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="head_question_8">Are you experiencing any vision changes?</string>
     <string name="head_question_9">Do you have any other symptoms?</string>
     <string name="head_question_10">Is there a family history of headaches?</string>
+
     <string name="chest_question_1">Do you have chest pain?</string>
     <string name="chest_question_2">Is the pain sharp or dull?</string>
     <string name="chest_question_3">Does the pain radiate to other areas?</string>
@@ -925,7 +926,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="stomach">Stomach</string>
 
     <!-- Abdomen Questions -->
-    <string name="abdomen_question_1">Do you feel any cramping?</string>
+    <string name="abdomen_question_1">Do you feel any abdominal pain?</string>
     <string name="abdomen_question_2">Is the pain localized or diffuse?</string>
     <string name="abdomen_question_3">Is the pain cramping or sharp?</string>
     <string name="abdomen_question_4">Is there any nausea associated with the pain?</string>
@@ -937,22 +938,22 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="abdomen_question_10">Is the pain affecting your daily activities?</string>
 
 
-    <string name="back_question_1">Is the pain constant or intermittent?</string>
+    <string name="back_question_1">Do you have back pain?</string>
     <string name="back_question_2">Is the pain in the upper or lower back?</string>
-    <string name="back_question_3">Do you have sharp or dull pain?</string>
+    <string name="back_question_3">Is the pain sharp or dull?</string>
     <string name="back_question_4">Does the pain radiate down your legs?</string>
     <string name="back_question_5">Is there any tingling or numbness?</string>
     <string name="back_question_6">Does the pain worsen with certain positions?</string>
-    <string name="back_question_7">Have you had any recent injuries?</string>
+    <string name="back_question_7">Is the pain worse when standing or sitting?</string>
     <string name="back_question_8">Does physical activity relieve the pain?</string>
     <string name="back_question_9">Is the pain affecting your sleep?</string>
     <string name="back_question_10">Do you have any other symptoms like fever or chills?</string>
 
 
     <!-- Legs Questions -->
-    <string name="legs_question_1">Do you have pain in one leg or both?</string>
-    <string name="legs_question_2">Is the pain sharp or dull?</string>
-    <string name="legs_question_3">Is the pain constant or intermittent?</string>
+    <string name="legs_question_1">Do you have leg pain?</string>
+    <string name="legs_question_2">Is the pain in one or both legs?</string>
+    <string name="legs_question_3">Is the pain sharp or dull?</string>
     <string name="legs_question_4">Is there swelling in the leg?</string>
     <string name="legs_question_5">Is the pain worse with movement?</string>
     <string name="legs_question_6">Do you have any numbness or tingling?</string>
@@ -962,9 +963,9 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="legs_question_10">Is there redness or warmth in the leg?</string>
 
     <!-- Arms Questions -->
-    <string name="arms_question_1">Do you have pain in one arm or both?</string>
-    <string name="arms_question_2">Is the pain sharp or dull?</string>
-    <string name="arms_question_3">Is the pain constant or intermittent?</string>
+    <string name="arms_question_1">Do you have arm pain?</string>
+    <string name="arms_question_2">Is the pain in one or both arms?</string>
+    <string name="arms_question_3">Is the pain sharp or dull?</string>
     <string name="arms_question_4">Is there any swelling in the arm?</string>
     <string name="arms_question_5">Is the pain worse with movement?</string>
     <string name="arms_question_6">Do you have any numbness or tingling?</string>
@@ -975,11 +976,11 @@ Act to break the contact between the casualty and the electrical supply. If poss
 
 
     <!-- Joints Questions -->
-    <string name="joints_question_1">Do you have pain in one joint or multiple?</string>
-    <string name="joints_question_2">Is the pain sharp or dull?</string>
+    <string name="joints_question_1">Do you have joint pain?</string>
+    <string name="joints_question_2">Is the pain in one or multiple joints?</string>
     <string name="joints_question_3">Does the pain worsen with activity?</string>
     <string name="joints_question_4">Is there any swelling in the joint?</string>
-    <string name="joints_question_5">Do you have any stiffness in the joint?</string>
+    <string name="joints_question_5">Is the pain constant or intermittent?</string>
     <string name="joints_question_6">Have you had any recent injuries?</string>
     <string name="joints_question_7">Do you have a history of arthritis?</string>
     <string name="joints_question_8">Is the pain affecting your range of motion?</string>
@@ -987,11 +988,11 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="joints_question_10">Is the pain affecting your daily activities?</string>
 
     <!-- Feet Questions -->
-    <string name="feet_question_1">Do you have pain in one foot or both?</string>
-    <string name="feet_question_2">Is the pain sharp or dull?</string>
+    <string name="feet_question_1">Do you have foot pain?</string>
+    <string name="feet_question_2">Is the pain in one or both feet?</string>
     <string name="feet_question_3">Is there swelling in the foot?</string>
     <string name="feet_question_4">Does the pain worsen with walking?</string>
-    <string name="feet_question_5">Do you have any numbness or tingling?</string>
+    <string name="feet_question_5">Is the pain sharp or dull?</string>
     <string name="feet_question_6">Have you had any injuries to your foot?</string>
     <string name="feet_question_7">Is the pain affecting your balance?</string>
     <string name="feet_question_8">Do you have a history of diabetes?</string>
@@ -1012,11 +1013,11 @@ Act to break the contact between the casualty and the electrical supply. If poss
 
 
     <!-- Hands Questions -->
-    <string name="hands_question_1">Do you have pain in one hand or both?</string>
-    <string name="hands_question_2">Is the pain sharp or dull?</string>
-    <string name="hands_question_3">Is the pain constant or intermittent?</string>
+    <string name="hands_question_1">Do you have hand pain?</string>
+    <string name="hands_question_2">Is the pain in one or both hands?</string>
+    <string name="hands_question_3">Do you experience tingling or numbness?</string>
     <string name="hands_question_4">Is there any swelling in the hand?</string>
-    <string name="hands_question_5">Is the pain affecting your grip strength?</string>
+    <string name="hands_question_5">Is the pain sharp or dull?</string>
     <string name="hands_question_6">Have you had any recent injuries?</string>
     <string name="hands_question_7">Do you have any numbness or tingling?</string>
     <string name="hands_question_8">Is the pain affecting your daily activities?</string>
@@ -1135,7 +1136,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
 
     <string name="advisory_message">It\'s still advisable to see a personal health authority for a more accurate analysis.</string>
     <string name="unknown_condition">Unknown Condition</string>
-    <string name="possible_condition">Possible Condition:</string>
+    <string name="possible_condition">Possible Conditions:</string>
     <string name="confidence">Confidence:</string>
     <string name="select_option_message">Please select an option.</string>
     <string name="select_an_option">Select an option</string>
@@ -1147,6 +1148,10 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="savedt">SAVED TOPICS</string>
     <string name="nosavedt">No saved topics yet</string>
 
+    <string name="when_symptoms_happen">When did the symptom happen?</string>
+    <string name="unknown">Unknown</string>
+
+    <string name="panic_attack_condition">Panic Attack</string>
 
 
 

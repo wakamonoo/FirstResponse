@@ -806,14 +806,15 @@
     <string name="head_question_4">Mayroon ka bang sensibilidad sa liwanag?</string>
     <string name="head_question_5">Ang sakit ba sa ulo ay malubha?</string>
     <string name="head_question_6">Lumalala ba ang sakit kapag aktibo ka?</string>
-    <string name="head_question_7">Nakararanas ka ba ng katulad na sakit sa ulo dati?</string>
+    <string name="head_question_7">Nakararanas ka ba ng ganito dati?</string>
     <string name="head_question_8">Mayroon ka bang mga pagbabago sa paningin?</string>
     <string name="head_question_9">Mayroon ka bang iba pang sintomas?</string>
     <string name="head_question_10">Mayroon bang kasaysayan ng sakit sa ulo sa pamilya?</string>
+
     <string name="chest_question_1">May sakit ka ba sa dibdib?</string>
-    <string name="chest_question_2">Ang sakit ba ay matulis o bumabagsak?</string>
+    <string name="chest_question_2">Ang sakit ba ay Matulis o Mahina?</string>
     <string name="chest_question_3">Nagpapakita ba ang sakit sa ibang bahagi?</string>
-    <string name="chest_question_4">Mayroon ka bang hirap sa paghinga?</string>
+    <string name="chest_question_4">Hirap ka na sa paghinga?</string>
     <string name="chest_question_5">Ang sakit ba ay tuloy-tuloy o pansamantala?</string>
     <string name="chest_question_6">Nakararanas ka ba ng pagduduwal?</string>
     <string name="chest_question_7">Ang sakit ba ay kaugnay sa pisikal na aktibidad?</string>
@@ -834,35 +835,35 @@
     <string name="stomach">Tiyan</string>
 
     <!-- Abdomen Questions -->
-    <string name="abdomen_question_1">Nakakaranas ka ba ng anumang cramping?</string>
+    <string name="abdomen_question_1">Nakakaranas ka ba ng pananakit?</string>
     <string name="abdomen_question_2">Ang sakit ba ay nakatuon o kalat?</string>
-    <string name="abdomen_question_3">Ang sakit ba ay cramping o matalim?</string>
+    <string name="abdomen_question_3">Ang sakit ba ay cramping o matulis?</string>
     <string name="abdomen_question_4">May kasama bang pagduduwal sa sakit?</string>
-    <string name="abdomen_question_5">Wala ka bang ganang kumain?</string>
+    <string name="abdomen_question_5">May nararamdaman ka ba na pamamaga ng iyong tiyan?</string>
     <string name="abdomen_question_6">Ang sakit ba ay lumalala kapag gumagalaw?</string>
-    <string name="abdomen_question_7">Nakaranas ka ba ng pagbaba ng timbang?</string>
-    <string name="abdomen_question_8">May pamamaga ba sa iyong tiyan?</string>
-    <string name="abdomen_question_9">May lagnat ka ba?</string>
+    <string name="abdomen_question_7">May pagdurugo ba kapag nagbabawas ka??</string>
+    <string name="abdomen_question_8">Nilalagnat ka ba?</string>
+    <string name="abdomen_question_9">Maayos ba ang pakiramdam mo pakatapos kumain?</string>
     <string name="abdomen_question_10">Naaapektuhan ba ng sakit ang iyong pang-araw-araw na aktibidad?</string>
 
 
     <!-- Back Questions -->
-    <string name="back_question_1">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
+    <string name="back_question_1">May nararanasan ka bang pananakit sa iyong likod?</string>
     <string name="back_question_2">Ang sakit ba ay nasa itaas o ibabang bahagi ng likod?</string>
-    <string name="back_question_3">Matalim o mahirap ba ang sakit?</string>
+    <string name="back_question_3">Matulis ba o Mahina lang ang sakit na nararamdaman mo?</string>
     <string name="back_question_4">Ang sakit ba ay kumakalat pababa sa iyong mga binti?</string>
-    <string name="back_question_5">Mayroon bang pangangalay o pamamanhid?</string>
-    <string name="back_question_6">Ang sakit ba ay lumalala sa ilang posisyon?</string>
-    <string name="back_question_7">Mayroon ka bang mga kamakailang pinsala?</string>
-    <string name="back_question_8">Ang pisikal na aktibidad ba ay nagpapagaan sa sakit?</string>
-    <string name="back_question_9">Naaapektuhan ba ng sakit ang iyong tulog?</string>
+    <string name="back_question_5">Nakakaramdam ka ba nang panghihina sa iyong binti?</string>
+    <string name="back_question_6">Hirap ka bang lumakad?</string>
+    <string name="back_question_7">Lumalala ba ang sakit kapag Nakatayo o Nakaupo?</string>
+    <string name="back_question_8">Mayroon ka bang mga kamakailang pinsala?</string>
+    <string name="back_question_9">Mayroon bang pangangalay o pamamanhid?</string>
     <string name="back_question_10">Mayroon ka bang iba pang sintomas tulad ng lagnat o panginginig?</string>
 
 
     <!-- Legs Questions -->
-    <string name="legs_question_1">May sakit ka ba sa isang binti o pareho?</string>
-    <string name="legs_question_2">Ang sakit ba ay matalim o mahirap?</string>
-    <string name="legs_question_3">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
+    <string name="legs_question_1">Masakit ba ang iyong Binti?</string>
+    <string name="legs_question_2">Masakit ba ang iyong isang binti o pareho?</string>
+    <string name="legs_question_3">Matulis ba o Mahina lang ang sakit na nararamdaman mo?</string>
     <string name="legs_question_4">May pamamaga ba sa binti?</string>
     <string name="legs_question_5">Ang sakit ba ay lumalala kapag gumagalaw?</string>
     <string name="legs_question_6">Mayroon ka bang pamamanhid o pangangalay?</string>
@@ -872,9 +873,9 @@
     <string name="legs_question_10">Mayroong pamumula o init sa binti?</string>
 
     <!-- Arms Questions -->
-    <string name="arms_question_1">May sakit ka ba sa isang braso o pareho?</string>
-    <string name="arms_question_2">Ang sakit ba ay matalim o mahirap?</string>
-    <string name="arms_question_3">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
+    <string name="arms_question_1">Masakit ba ang iyong braso?</string>
+    <string name="arms_question_2">Masakit ba ang iyong isang braso o pareho?</string>
+    <string name="arms_question_3">Matulis ba o Mahina lang ang sakit na nararamdaman mo</string>
     <string name="arms_question_4">Mayroong pamamaga sa braso?</string>
     <string name="arms_question_5">Ang sakit ba ay lumalala kapag gumagalaw?</string>
     <string name="arms_question_6">Mayroon ka bang pamamanhid o pangangalay?</string>
@@ -885,11 +886,11 @@
 
 
     <!-- Joints Questions -->
-    <string name="joints_question_1">May sakit ka ba sa isang kasukasuan o marami?</string>
-    <string name="joints_question_2">Ang sakit ba ay matalim o mahirap?</string>
+    <string name="joints_question_1">Masakit ba ang iyong kasukasuan?</string>
+    <string name="joints_question_2">Ang sakit ba ay nasa iisang kasukasuan lang o sa marami?</string>
     <string name="joints_question_3">Ang sakit ba ay lumalala sa aktibidad?</string>
     <string name="joints_question_4">Mayroong pamamaga sa kasukasuan?</string>
-    <string name="joints_question_5">Mayroon ka bang paninigas sa kasukasuan?</string>
+    <string name="joints_question_5">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
     <string name="joints_question_6">Nakaranas ka ba ng anumang kamakailang pinsala?</string>
     <string name="joints_question_7">Mayroon ka bang kasaysayan ng arthritis?</string>
     <string name="joints_question_8">Naaapektuhan ba ng sakit ang iyong saklaw ng paggalaw?</string>
@@ -897,8 +898,8 @@
     <string name="joints_question_10">Naaapektuhan ba ng sakit ang iyong pang-araw-araw na aktibidad?</string>
 
     <!-- Feet Questions -->
-    <string name="feet_question_1">May sakit ka ba sa isang paa o pareho?</string>
-    <string name="feet_question_2">Ang sakit ba ay matalim o mahirap?</string>
+    <string name="feet_question_1">Masakit ba ang iyong paa?</string>
+    <string name="feet_question_2">Isang paa o pareho bang nasakit?</string>
     <string name="feet_question_3">May pamamaga ba sa paa?</string>
     <string name="feet_question_4">Ang sakit ba ay lumalala kapag naglalakad?</string>
     <string name="feet_question_5">Mayroon ka bang pamamanhid o pangangalay?</string>
@@ -910,7 +911,7 @@
 
     <!-- Neck Questions -->
     <string name="neck_question_1">May sakit ka ba sa iyong leeg?</string>
-    <string name="neck_question_2">Ang sakit ba ay matalim o mahirap?</string>
+    <string name="neck_question_2">Matulis ba o Mahina lang ang sakit na nararamdaman mo?</string>
     <string name="neck_question_3">Ang sakit ba ay kumakalat sa iyong mga braso?</string>
     <string name="neck_question_4">Mayroong paninigas sa iyong leeg?</string>
     <string name="neck_question_5">Nakaranas ka ba ng anumang kamakailang pinsala?</string>
@@ -922,11 +923,11 @@
 
 
     <!-- Hands Questions -->
-    <string name="hands_question_1">May sakit ka ba sa isang kamay o pareho?</string>
-    <string name="hands_question_2">Ang sakit ba ay matalim o mahirap?</string>
+    <string name="hands_question_1">Masakit ba ang iyong kamay?</string>
+    <string name="hands_question_2">May sakit ka ba sa isang kamay o pareho?</string>
     <string name="hands_question_3">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
     <string name="hands_question_4">Mayroong pamamaga sa kamay?</string>
-    <string name="hands_question_5">Naaapektuhan ba ng sakit ang iyong lakas sa pagkagat?</string>
+    <string name="hands_question_5">Matulis ba o Mahina lang ang sakit na nararamdaman mo?</string>
     <string name="hands_question_6">Nakaranas ka ba ng anumang kamakailang pinsala?</string>
     <string name="hands_question_7">Mayroon ka bang pamamanhid o pangangalay?</string>
     <string name="hands_question_8">Naaapektuhan ba ng sakit ang iyong pang-araw-araw na aktibidad?</string>
@@ -934,14 +935,14 @@
     <string name="hands_question_10">Mayroong pamumula o init sa kamay?</string>
 
     <string name="stomach_question_1">May sakit ka ba sa tiyan?</string>
-    <string name="stomach_question_2">Sakit ba ang pakiramdam na matalas o cramping?</string>
+    <string name="stomach_question_2">Sakit ba ang pakiramdam na Matulis o cramping?</string>
     <string name="stomach_question_3">Nakararanas ka ba ng pagduduwal o pagsusuka?</string>
-    <string name="stomach_question_4">Patuloy ba o intermittent ang sakit?</string>
+    <string name="stomach_question_4">Patuloy ba o Paminsan-minsan ang sakit?</string>
     <string name="stomach_question_5">May lagnat ka ba?</string>
     <string name="stomach_question_6">May pagbabago ka ba sa gana sa pagkain?</string>
-    <string name="stomach_question_7">May bloating ba?</string>
+    <string name="stomach_question_7">Nakakaramdam ka ba ng paglobo sa tiyan?</string>
     <string name="stomach_question_8">Nakararanas ka ba ng pagtatae o constipation?</string>
-    <string name="stomach_question_9">May lambing ba sa pagdapo?</string>
+    <string name="stomach_question_9">May lambot ba kapag hinahawakan?</string>
     <string name="stomach_question_10">May iba ka bang sintomas?</string>
 
 
@@ -951,7 +952,7 @@
     <string name="localized">Nakatuon</string>
     <string name="diffuse">Kalat</string>
     <string name="cramping">May cramping</string>
-    <string name="sharp">Matalim</string>
+    <string name="sharp">Matulis</string>
     <string name="dull">Mahina</string>
     <string name="one">Isa</string>
     <string name="both">Pareho</string>
@@ -962,7 +963,7 @@
 
     <!-- Additional Common Answers -->
     <string name="standing">Nakatayo</string>
-    <string name="sitting">Naupo</string>
+    <string name="sitting">Nakaupo</string>
     <string name="multiple">Marami</string>
 
 
@@ -1045,7 +1046,7 @@
 
     <string name="advisory_message">Mas mabuti pa ring kumonsulta sa isang personal na awtoridad sa kalusugan para sa mas tumpak na pagsusuri.</string>
     <string name="unknown_condition">Di Kilalang Kundisyon</string>
-    <string name="possible_condition">Posibleng Kundisyon:</string>
+    <string name="possible_condition">Posibleng mga Kundisyon:</string>
     <string name="confidence">Kumpiyansa:</string>
     <string name="select_option_message">Mangyaring pumili ng isang opsyon.</string>
     <string name="select_an_option">Mangyaring pumili ng opsyon.</string>
@@ -1058,6 +1059,10 @@
     <string name="savedt">MGA PAKSANG NAKASAVE</string>
     <string name="nosavedt">Walang paksang nakasave</string>
 
+    <string name="when_symptoms_happen">When did the symptom happen?</string>
+    <string name="unknown">Unknown</string>
+
+    <string name="panic_attack_condition">Panic Attack</string>
 
 
 
