@@ -1629,7 +1629,7 @@ class WhatsWrongActivity : BaseActivity() {
         } else {
             "${getString(R.string.unknown_condition)} (Confidence 0%)" // Return a single string
         }
-        
+
         return resultString
 
     }
