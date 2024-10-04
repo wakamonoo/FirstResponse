@@ -28,9 +28,6 @@ class WhatsWrongActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_whats_wrong)
 
-
-
-
         // Initialize toolbar
         setupToolbar()
 
@@ -53,15 +50,12 @@ class WhatsWrongActivity : BaseActivity() {
         val toolbar: Toolbar = findViewById(R.id.customToolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.title = getString(R.string.whats_wrong)
-        // Load animations
         val pressAnim = AnimationUtils.loadAnimation(this, R.anim.button_press)
         val releaseAnim = AnimationUtils.loadAnimation(this, R.anim.button_release)
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.red))
-        // Show back button on the Toolbar
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationIcon(R.drawable.back)
 
-        // Set up back button click listener with animation
         toolbar.setNavigationOnClickListener {
             it.startAnimation(pressAnim)
             it.postDelayed({
@@ -69,10 +63,8 @@ class WhatsWrongActivity : BaseActivity() {
                 finish()
             }, pressAnim.duration)
         }
-
     }
 
-    // Updated logic to handle stages of questions
     private fun handleNextButtonClick() {
         val selectedOption = optionsSpinner.selectedItem?.toString() ?: return
 
@@ -90,20 +82,22 @@ class WhatsWrongActivity : BaseActivity() {
                 val currentQuestion = currentQuestions.getOrNull(currentStage - 1)
                 if (currentQuestion != null && selectedOption != getString(R.string.select_an_option)) {
                     answersSelected[currentQuestion.first] = selectedOption
-                    currentStage++
-                    updateStage()
+                    if (currentStage < currentQuestions.size) {
+                        currentStage++
+                        updateStage()
+                    } else {
+                        handleResults()
+                    }
                 } else {
-                    handleResults()
+                    Toast.makeText(this, getString(R.string.select_option_message), Toast.LENGTH_SHORT).show()
                 }
             }
         }
     }
 
-    // Dynamically updates the stage/question based on currentStage variable
     private fun updateStage() {
         when (currentStage) {
             0 -> {
-                // First stage: Ask where the pain is located
                 questionTextView.text = getString(R.string.where_pain_originate)
                 setupSpinner(
                     listOf(
@@ -123,11 +117,8 @@ class WhatsWrongActivity : BaseActivity() {
                 )
             }
             else -> {
-                // Load questions specific to the pain location
-                val questions = getQuestionsForLocation(painLocation)
-                currentQuestions = questions
-
-                val questionPair = questions.getOrNull(currentStage - 1)
+                currentQuestions = getQuestionsForLocation(painLocation)
+                val questionPair = currentQuestions.getOrNull(currentStage - 1)
                 if (questionPair != null) {
                     questionTextView.text = questionPair.first
                     setupSpinner(questionPair.second)
@@ -138,7 +129,6 @@ class WhatsWrongActivity : BaseActivity() {
         }
     }
 
-    // Sample method to get questions for specific pain locations
     private fun getQuestionsForLocation(location: String): List<Pair<String, List<String>>> {
         return when (location) {
             getString(R.string.head) -> listOf(
@@ -277,32 +267,28 @@ class WhatsWrongActivity : BaseActivity() {
         }
     }
 
-
     private fun setupSpinner(options: List<String>) {
-        val adapter = ArrayAdapter(this, R.layout.spinner_dropdown_item, options) // Use custom layout here
-        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item) // Set the dropdown view to the same custom layout
+        val adapter = ArrayAdapter(this, R.layout.spinner_dropdown_item, options)
+        adapter.setDropDownViewResource(R.layout.spinner_dropdown_item)
         optionsSpinner.adapter = adapter
     }
 
-
-    // Handle results after all questions have been answered
     private fun handleResults() {
-        val result = calculateDiagnosis()
-        resultTextView.text = result
+        val possibleConditions = calculateDiagnosis()
+
+        resultTextView.text = possibleConditions
         resultTextView.visibility = View.VISIBLE
 
         questionTextView.visibility = View.GONE
         optionsSpinner.visibility = View.GONE
         nextButton.visibility = View.GONE
 
-        // Delay showing the alert dialog
         Handler(Looper.getMainLooper()).postDelayed({
             showAlert()
         }, 1000)
     }
 
     private fun calculateDiagnosis(): String {
-        // List of possible conditions with matching answer sets
         val diagnosisOptions = mapOf(
             getString(R.string.head) to listOf(
                 listOf(
@@ -1477,49 +1463,20 @@ class WhatsWrongActivity : BaseActivity() {
             )
         )
 
-        // User's answers for the current session (this should come from your app's question flow)
-        val userAnswers = listOf(
-            getString(R.string.head_question_1) to getString(R.string.yes),
-            getString(R.string.head_question_2) to getString(R.string.localized),
-            getString(R.string.head_question_3) to getString(R.string.yes),
-            getString(R.string.head_question_4) to getString(R.string.yes),
-            getString(R.string.head_question_5) to getString(R.string.yes),
-            getString(R.string.head_question_6) to getString(R.string.yes),
-            getString(R.string.head_question_7) to getString(R.string.yes),
-            getString(R.string.head_question_8) to getString(R.string.no),
-            getString(R.string.head_question_9) to getString(R.string.no),
-            getString(R.string.head_question_10) to getString(R.string.yes)
-        )
-
-        // Check the answers and return the corresponding condition
-        diagnosisOptions[painLocation]?.forEach { (expectedAnswers, condition) ->
-            // Count matching answers
-            var matchCount = 0
-            expectedAnswers.forEachIndexed { index, expectedAnswer ->
-                if (expectedAnswer == userAnswers[index]) {
-                    matchCount++
-                }
+        val possibleConditions = diagnosisOptions[painLocation]?.map { (criteria, condition) ->
+            val matchingCriteria = criteria.count { (question, answer) ->
+                answersSelected[question] == answer
             }
+            val confidencePercentage = (matchingCriteria.toDouble() / criteria.size * 100).toInt()
+            condition to confidencePercentage
+        } ?: emptyList()
 
-            // Calculate percentage of matching answers
-            val totalQuestions = expectedAnswers.size
-            val matchPercentage = (matchCount.toDouble() / totalQuestions) * 100
+        val bestMatch = possibleConditions.maxByOrNull { it.second }
+            ?: getString(R.string.unknown_condition) to 0
 
-            // If all answers match, return the condition with 100% certainty
-            if (matchCount == totalQuestions) {
-                return "${getString(R.string.possible_condition)} $condition (${String.format("%.0f", matchPercentage)}% confidence)"
-            } else if (matchCount > 0) {
-                // If partial answers match, return the condition with partial certainty
-                return "${getString(R.string.possible_condition)} $condition (${String.format("%.0f", matchPercentage)}% confidence)"
-            }
-        }
-
-        // If no match, return unknown condition
-        return getString(R.string.unknown_condition)
+        return "${getString(R.string.possible_condition)} ${bestMatch.first} (${getString(R.string.confidence)} ${bestMatch.second}%)"
     }
 
-
-    // Custom alert dialog with advisory message
     private fun showAlert() {
         val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_custom, null)
         val messageTextView: TextView = dialogView.findViewById(R.id.dialog_message)

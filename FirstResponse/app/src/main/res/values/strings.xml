@@ -912,6 +912,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="chest_question_9">Are you experiencing sweating/bloating/wheezing/tenderness?</string>
     <string name="chest_question_10">Do you have any other symptoms?</string>
 
+
     <!-- Pain Locations -->
     <string name="abdomen">Abdomen</string>
     <string name="back">Back</string>
@@ -935,10 +936,10 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="abdomen_question_9">Do you have any fever?</string>
     <string name="abdomen_question_10">Is the pain affecting your daily activities?</string>
 
-    <!-- Back Questions -->
-    <string name="back_question_1">Do you have sharp or dull pain?</string>
+
+    <string name="back_question_1">Is the pain constant or intermittent?</string>
     <string name="back_question_2">Is the pain in the upper or lower back?</string>
-    <string name="back_question_3">Is the pain constant or intermittent?</string>
+    <string name="back_question_3">Do you have sharp or dull pain?</string>
     <string name="back_question_4">Does the pain radiate down your legs?</string>
     <string name="back_question_5">Is there any tingling or numbness?</string>
     <string name="back_question_6">Does the pain worsen with certain positions?</string>
@@ -946,6 +947,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="back_question_8">Does physical activity relieve the pain?</string>
     <string name="back_question_9">Is the pain affecting your sleep?</string>
     <string name="back_question_10">Do you have any other symptoms like fever or chills?</string>
+
 
     <!-- Legs Questions -->
     <string name="legs_question_1">Do you have pain in one leg or both?</string>
@@ -970,6 +972,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="arms_question_8">Is the pain affecting your grip strength?</string>
     <string name="arms_question_9">Do you have a history of heart problems?</string>
     <string name="arms_question_10">Is there redness or warmth in the arm?</string>
+
 
     <!-- Joints Questions -->
     <string name="joints_question_1">Do you have pain in one joint or multiple?</string>
@@ -1007,6 +1010,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="neck_question_9">Do you have any headache associated with the pain?</string>
     <string name="neck_question_10">Is the pain affecting your daily activities?</string>
 
+
     <!-- Hands Questions -->
     <string name="hands_question_1">Do you have pain in one hand or both?</string>
     <string name="hands_question_2">Is the pain sharp or dull?</string>
@@ -1018,6 +1022,18 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="hands_question_8">Is the pain affecting your daily activities?</string>
     <string name="hands_question_9">Do you have a history of arthritis?</string>
     <string name="hands_question_10">Is there redness or warmth in the hand?</string>
+
+    <string name="stomach_question_1">Do you have stomach pain?</string>
+    <string name="stomach_question_2">Is the pain sharp or cramping?</string>
+    <string name="stomach_question_3">Do you experience nausea or vomiting?</string>
+    <string name="stomach_question_4">Is the pain constant or intermittent?</string>
+    <string name="stomach_question_5">Do you have a fever?</string>
+    <string name="stomach_question_6">Do you have any changes in appetite?</string>
+    <string name="stomach_question_7">Is there bloating?</string>
+    <string name="stomach_question_8">Do you experience diarrhea or constipation?</string>
+    <string name="stomach_question_9">Is there any tenderness to touch?</string>
+    <string name="stomach_question_10">Do you have any other symptoms?</string>
+
 
     <!-- Common Answers -->
     <string name="yes">Yes</string>
@@ -1037,17 +1053,6 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="standing">Standing</string>
     <string name="sitting">Sitting</string>
     <string name="multiple">Multiple</string>
-
-    <string name="stomach_question_1">Do you have stomach pain?</string>
-    <string name="stomach_question_2">Is the pain sharp or cramping?</string>
-    <string name="stomach_question_3">Do you experience nausea or vomiting?</string>
-    <string name="stomach_question_4">Is the pain constant or intermittent?</string>
-    <string name="stomach_question_5">Do you have a fever?</string>
-    <string name="stomach_question_6">Do you have any changes in appetite?</string>
-    <string name="stomach_question_7">Is there bloating?</string>
-    <string name="stomach_question_8">Do you experience diarrhea or constipation?</string>
-    <string name="stomach_question_9">Is there any tenderness to touch?</string>
-    <string name="stomach_question_10">Do you have any other symptoms?</string>
 
 
     <string name="migraine">Migraine</string>

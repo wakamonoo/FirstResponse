@@ -821,6 +821,7 @@
     <string name="chest_question_9">Nakararanas ka ba ng pagpapawis/pag-umbok/pag-ubo/pagkalambot?</string>
     <string name="chest_question_10">Mayroon ka bang iba pang sintomas?</string>
 
+
     <!-- Pain Locations -->
     <string name="abdomen">Abdomen</string>
     <string name="back">Likod</string>
@@ -833,28 +834,30 @@
     <string name="stomach">Tiyan</string>
 
     <!-- Abdomen Questions -->
-    <string name="abdomen_question_1">Nakakaranas ka ba ng anumang pananakit?</string>
+    <string name="abdomen_question_1">Nakakaranas ka ba ng anumang cramping?</string>
     <string name="abdomen_question_2">Ang sakit ba ay nakatuon o kalat?</string>
-    <string name="abdomen_question_3">Ang sakit ba ay may cramping o matalim?</string>
-    <string name="abdomen_question_4">May kasama bang pagsusuka sa sakit?</string>
+    <string name="abdomen_question_3">Ang sakit ba ay cramping o matalim?</string>
+    <string name="abdomen_question_4">May kasama bang pagduduwal sa sakit?</string>
     <string name="abdomen_question_5">Wala ka bang ganang kumain?</string>
     <string name="abdomen_question_6">Ang sakit ba ay lumalala kapag gumagalaw?</string>
     <string name="abdomen_question_7">Nakaranas ka ba ng pagbaba ng timbang?</string>
-    <string name="abdomen_question_8">Mayroong pamamaga sa iyong tiyan?</string>
+    <string name="abdomen_question_8">May pamamaga ba sa iyong tiyan?</string>
     <string name="abdomen_question_9">May lagnat ka ba?</string>
     <string name="abdomen_question_10">Naaapektuhan ba ng sakit ang iyong pang-araw-araw na aktibidad?</string>
 
+
     <!-- Back Questions -->
-    <string name="back_question_1">May matalim o mahirap na sakit ka ba?</string>
+    <string name="back_question_1">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
     <string name="back_question_2">Ang sakit ba ay nasa itaas o ibabang bahagi ng likod?</string>
-    <string name="back_question_3">Ang sakit ba ay tuloy-tuloy o paminsan-minsan?</string>
+    <string name="back_question_3">Matalim o mahirap ba ang sakit?</string>
     <string name="back_question_4">Ang sakit ba ay kumakalat pababa sa iyong mga binti?</string>
-    <string name="back_question_5">Mayroong pangangalay o pamamanhid?</string>
+    <string name="back_question_5">Mayroon bang pangangalay o pamamanhid?</string>
     <string name="back_question_6">Ang sakit ba ay lumalala sa ilang posisyon?</string>
     <string name="back_question_7">Mayroon ka bang mga kamakailang pinsala?</string>
     <string name="back_question_8">Ang pisikal na aktibidad ba ay nagpapagaan sa sakit?</string>
     <string name="back_question_9">Naaapektuhan ba ng sakit ang iyong tulog?</string>
     <string name="back_question_10">Mayroon ka bang iba pang sintomas tulad ng lagnat o panginginig?</string>
+
 
     <!-- Legs Questions -->
     <string name="legs_question_1">May sakit ka ba sa isang binti o pareho?</string>
@@ -879,6 +882,7 @@
     <string name="arms_question_8">Naaapektuhan ba ng sakit ang iyong lakas sa pagkagat?</string>
     <string name="arms_question_9">Mayroon ka bang kasaysayan ng mga problema sa puso?</string>
     <string name="arms_question_10">Mayroong pamumula o init sa braso?</string>
+
 
     <!-- Joints Questions -->
     <string name="joints_question_1">May sakit ka ba sa isang kasukasuan o marami?</string>
@@ -916,6 +920,7 @@
     <string name="neck_question_9">Mayroon ka bang sakit ng ulo na kasama ng sakit?</string>
     <string name="neck_question_10">Naaapektuhan ba ng sakit ang iyong pang-araw-araw na aktibidad?</string>
 
+
     <!-- Hands Questions -->
     <string name="hands_question_1">May sakit ka ba sa isang kamay o pareho?</string>
     <string name="hands_question_2">Ang sakit ba ay matalim o mahirap?</string>
@@ -927,6 +932,18 @@
     <string name="hands_question_8">Naaapektuhan ba ng sakit ang iyong pang-araw-araw na aktibidad?</string>
     <string name="hands_question_9">Mayroon ka bang kasaysayan ng arthritis?</string>
     <string name="hands_question_10">Mayroong pamumula o init sa kamay?</string>
+
+    <string name="stomach_question_1">May sakit ka ba sa tiyan?</string>
+    <string name="stomach_question_2">Sakit ba ang pakiramdam na matalas o cramping?</string>
+    <string name="stomach_question_3">Nakararanas ka ba ng pagduduwal o pagsusuka?</string>
+    <string name="stomach_question_4">Patuloy ba o intermittent ang sakit?</string>
+    <string name="stomach_question_5">May lagnat ka ba?</string>
+    <string name="stomach_question_6">May pagbabago ka ba sa gana sa pagkain?</string>
+    <string name="stomach_question_7">May bloating ba?</string>
+    <string name="stomach_question_8">Nakararanas ka ba ng pagtatae o constipation?</string>
+    <string name="stomach_question_9">May lambing ba sa pagdapo?</string>
+    <string name="stomach_question_10">May iba ka bang sintomas?</string>
+
 
     <!-- Common Answers -->
     <string name="yes">Oo</string>
@@ -948,16 +965,6 @@
     <string name="sitting">Naupo</string>
     <string name="multiple">Marami</string>
 
-    <string name="stomach_question_1">May sakit ka ba sa tiyan?</string>
-    <string name="stomach_question_2">Sakit ba ang pakiramdam na matalas o cramping?</string>
-    <string name="stomach_question_3">Nakararanas ka ba ng pagduduwal o pagsusuka?</string>
-    <string name="stomach_question_4">Patuloy ba o intermittent ang sakit?</string>
-    <string name="stomach_question_5">May lagnat ka ba?</string>
-    <string name="stomach_question_6">May pagbabago ka ba sa gana sa pagkain?</string>
-    <string name="stomach_question_7">May bloating ba?</string>
-    <string name="stomach_question_8">Nakararanas ka ba ng pagtatae o constipation?</string>
-    <string name="stomach_question_9">May lambing ba sa pagdapo?</string>
-    <string name="stomach_question_10">May iba ka bang sintomas?</string>
 
     <string name="migraine">Migraine</string>
     <string name="tension_headache">Tension Headache</string>
