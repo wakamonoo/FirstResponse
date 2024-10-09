@@ -24,22 +24,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="wrap"/>
 
-    <!-- Text, Image, and Information Section -->
+    <!-- FrameLayout for Overlapping Text and Logo -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="16dp">
+
+    <!-- Information Text Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:layout_marginTop="24dp">
-
-        <!-- Information Text Section -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="8dp">
 
             <!-- Address -->
             <TextView
@@ -55,7 +52,7 @@
                 android:id="@+id/address_details_ligao_city_hospital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="456 Main St, Ligao City, Albay"
+                android:text="Diversion Rd., Ligao City, Albay"
                 android:textColor="#000000"
                 android:fontFamily="@font/opensans"
                 android:layout_marginBottom="8dp" />
@@ -82,20 +79,39 @@
 
             <!-- Head Facilitator -->
             <TextView
-                android:id="@+id/head_facilitator_ligao_city_hospital"
+                android:id="@+id/head_facilitator_duran_hospital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Head Facilitator:"
+                android:text="Chairman:"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
                 android:textColor="#000000"
                 android:fontFamily="@font/montserrat_bold" />
 
             <TextView
-                android:id="@+id/head_facilitator_details_ligao_city_hospital"
+                android:id="@+id/head_facilitator_details_duran_hospital"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dr. John Smith"
+                android:text="Christopher D. Asido, MD., FPCP., FPCC., MHA."
+                android:textColor="#000000"
+                android:fontFamily="@font/opensans" />
+
+            <!-- Admin -->
+            <TextView
+                android:id="@+id/admin_duran_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="President/CEO:"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="#000000"
+                android:fontFamily="@font/montserrat_bold" />
+
+            <TextView
+                android:id="@+id/admin_details_duran_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Christopher D. Asido, MD., FPCP., FPCC., MHA."
                 android:textColor="#000000"
                 android:fontFamily="@font/opensans" />
         </LinearLayout>
@@ -103,12 +119,14 @@
         <!-- Logo Image -->
         <ImageView
             android:id="@+id/logo_ligao_city_hospital"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="end|center_vertical"
+            android:alpha="0.1"
+            android:scaleType="centerInside"
             android:contentDescription="Ligao City Hospital Logo"
             android:src="@drawable/zone" />
-    </LinearLayout>
+    </FrameLayout>
 
     <!-- Content Section (After Image and Information) -->
     <TextView

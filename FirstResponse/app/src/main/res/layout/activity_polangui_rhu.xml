@@ -24,21 +24,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="wrap"/>
 
-    <!-- Information and Logo Section -->
+    <!-- FrameLayout for Overlapping Text and Logo -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:padding="16dp">
+
+    <!-- Information Text Section -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:padding="16dp"
-        android:layout_marginTop="24dp">
-
-        <!-- Information Text -->
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="8dp">
 
             <!-- Address -->
             <TextView
@@ -55,7 +53,7 @@
                 android:id="@+id/address_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="123 Health Street, Polangui, Albay"
+                android:text="Polangui, Albay"
                 android:textSize="16sp"
                 android:textColor="#000000"
                 android:fontFamily="@font/opensans"
@@ -87,7 +85,7 @@
                 android:id="@+id/facilitator_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Head Facilitator:"
+                android:text="Municipal Health Officer:"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#000000"
@@ -97,7 +95,7 @@
                 android:id="@+id/facilitator_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dr. Juan Dela Cruz"
+                android:text="Dr. Mario B. Cerillo"
                 android:textSize="16sp"
                 android:textColor="#000000"
                 android:fontFamily="@font/opensans" />
@@ -107,12 +105,14 @@
         <!-- Logo Image -->
         <ImageView
             android:id="@+id/logo_polangui_rhu"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="end|center_vertical"
+            android:alpha="0.1"
+            android:scaleType="centerInside"
             android:contentDescription="Polangui RHU Logo"
             android:src="@drawable/qrtpol" />
-    </LinearLayout>
+    </FrameLayout>
 
     <!-- Main Content Section (Below Information) -->
     <TextView        android:id="@+id/content_polangui_rhu"

@@ -624,7 +624,7 @@
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="bottom|start"
                                     android:layout_margin="8dp"
-                                    android:text="Ligao RHU"
+                                    android:text="City Health Office Ligao"
                                     android:textSize="14dp"
                                     android:textColor="@color/white"
                                     android:fontFamily="@font/montserrat_bold" />
