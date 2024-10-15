@@ -75,6 +75,7 @@ class MainActivity : BaseActivity() {
     private lateinit var buttonFirstAidKits: Button
     private lateinit var buttonSafetyPreparedness: Button
     private lateinit var buttonWhatsWrong: Button
+    private lateinit var buttonFlashlight: Button
 
     companion object {
         private const val LOCATION_PERMISSION_REQUEST_CODE = 1
@@ -166,6 +167,12 @@ class MainActivity : BaseActivity() {
         buttonWhatsWrong.setOnClickListener {
             startActivity(Intent(this, WhatsWrongActivity::class.java))
         }
+
+        buttonFlashlight = findViewById<Button>(R.id.buttonFlashlight)
+        buttonFlashlight.setOnClickListener {
+            startActivity(Intent(this, FlashlightActivity::class.java))
+        }
+
 
         // Bottom navigation setup
         findViewById<BottomNavigationView>(R.id.bottomNavigationView).setOnNavigationItemSelectedListener { menuItem ->

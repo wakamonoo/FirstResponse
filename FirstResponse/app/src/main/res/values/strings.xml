@@ -865,7 +865,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="acute_grief_t">ACUTE GRIEF</string>
     <string name="anxiety_management_t">ANXIETY MANAGEMENT</string>
     <string name="panic_attack_response_t">PANIC ATTACK RESPONSE</string>
-    <string name="trauma_informed_care_t">TRAUMA- INFORMED CARE</string>
+    <string name="trauma_informed_care_t">TRAUMA-\nINFORMED CARE</string>
     <string name="grounding_techniques_t">GROUNDING TECHNIQUES</string>
     <string name="stress_reduction_t">STRESS REDUCTION</string>
 
@@ -887,7 +887,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
 
     <string name="quiz_level">Quiz Level</string>
 
-    <string name="when_symptom_started">When did the symptom start?</string>
+    <string name="when_symptoms_happen">When did the symptom start?</string>
     <string name="where_pain_originate">Where does the pain or discomfort originate?</string>
     <string name="head">Head</string>
     <string name="chest">Chest</string>
@@ -1148,10 +1148,196 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="savedt">SAVED TOPICS</string>
     <string name="nosavedt">No saved topics yet</string>
 
-    <string name="when_symptoms_happen">When did the symptom happen?</string>
     <string name="unknown">Unknown</string>
 
     <string name="panic_attack_condition">Panic Attack</string>
+
+    <string name="burnst1"> CLASSIFICATION OF BURNS</string>
+    <string name="burnst2">First-Degree Burns</string>
+    <string name="burnst3">Second-Degree Burns</string>
+    <string name="burnst4">Third-Degree Burns</string>
+    <string name="burnst5">WHAT TO DO IF YOU \nGET A BURN</string>
+    <string name="burnst6">WHEN TO GO TO HOSPITAL</string>
+    <string name="burnst7">Go to a hospital accident and emergency department if:</string>
+
+    <string name="chokingt1">FOR ADULTS</string>
+    <string name="chokingt2">FOR INFANTS</string>
+    <string name="call">CALL THEM NOW</string>
+
+    <string name="cprt">WHAT IS CPR ?</string>
+    <string name="cprt1">HOW TO PERFORM \nCPR ?</string>
+
+    <string name="splintt1">WHAT IS A SPLINT?</string>
+    <string name="splintt2">HOW TO APPLY \nSPLINT?</string>
+
+    <string name="seizurest1">WHAT ARE SEIZURES?</string>
+    <string name="seizurest2">CAUSES OF SEIZURES</string>
+    <string name="seizurest3">SYMPTOMS OF \nSEIZURE</string>
+    <string name="seizurest4">HOW ARE SEIZURES \nTREATED?</string>
+
+    <string name="shockt1">DANGER</string>
+    <string name="shockt2">RESPONSE</string>
+
+    <string name="bleedingt1">CLASSIFICATION OF \nBLEEDING</string>
+    <string name="bleedingt2">ACTIONS FOR EACH \nTYPES OF BLEEDING</string>
+
+    <string name="snaket1">WHAT IS A SNAKE \nBITE</string>
+    <string name="snaket2">ACTIONS FOR EACH \nTYPES OF BITES</string>
+    <string name="snaket3">Dry Bite</string>
+    <string name="snaket4">Venomous Bite</string>
+
+    <string name="insectt1">WHAT IS AN INSECT \nBITE/STING</string>
+    <string name="insectt2">Mild Symptoms:</string>
+    <string name="insectt3">Severe Symptoms</string>
+    <string name="insectt4">HOW TO TREAT \nINSECT BITES/STING</string>
+    <string name="insectt5">For Mild Symptoms:</string>
+    <string name="insectt6">For Severe Symptoms</string>
+    <string name="insectt7">For Stings:</string>
+    <string name="insectt8">For Tick Bites:</string>
+
+    <string name="bruiset1">WHAT IS A BRUISE</string>
+    <string name="bruiset2">HOW TO HANDLE \nA BRUISE</string>
+
+    <string name="spraint1">WHAT IS A SPRAIN</string>
+    <string name="spraint2">Grade 1 (Mild Sprain)</string>
+    <string name="symptoms">Symptoms:</string>
+    <string name="spraint3">Grade 2 (Moderate Sprain)</string>
+    <string name="spraint4">Grade 3 (Severe Sprain)</string>
+    <string name="spraint5">ACTIONS FOR EACH \nSPRAIN</string>
+    <string name="spraint6">Grade 1</string>
+    <string name="spraint7">Grade 2</string>
+    <string name="spraint8">Grade 3</string>
+
+    <string name="straint1">WHAT IS A STRAIN</string>
+    <string name="straint2">ACTIONS YOU NEED \nFOR STRAIN</string>
+
+    <string name="noset1">WHAT IS A NOSEBLEED</string>
+    <string name="noset2">STEPS TO HANDLE \nNOSEBLEED</string>
+
+    <string name="allergyt1">WHAT IS AN ALLERGIC \nREACTION</string>
+    <string name="allergyt2">Mild Symptoms:</string>
+    <string name="allergyt3">Severe Symptoms:</string>
+    <string name="allergyt4">HOW TO HANDLE \nALLERGIC REACTION</string>
+    <string name="allergyt5">For Mild Symptoms:</string>
+    <string name="allergyt6">For Severe Symptoms:</string>
+
+    <string name="headt1">WHAT IS A HEADACHE</string>
+    <string name="headt2">HOW TO HANDLE \nYOUR HEADACHE</string>
+
+    <string name="minort1">WHAT IS MINOR \nCONCUSION</string>
+    <string name="minort2">Common Symptoms:</string>
+    <string name="minort3">HOW TO HANDLE \nMINOR CONCUSION</string>
+
+    <string name="musclet1">WHAT IS A MUCLE \nCRAMP</string>
+    <string name="musclet2">Causes:</string>
+    <string name="musclet3">HOW TO HANDLE \nMUSCLE CRAMPS</string>
+
+    <string name="blistert1">WHAT IS A BLISTER</string>
+    <string name="blistert2">HOW TO HANDLE \nBLISTER</string>
+
+    <string name="acutet1">WHAT IS ACUTE \nGRIEF?</string>
+    <string name="acutet2">HOW TO HELP \nSOMEONE WHO\'S \nDEALING WITH IT?</string>
+
+    <string name="anxietyt1">WHAT IS ANXIETY?</string>
+    <string name="anxietyt2">HOW TO HELP \nSOMEONE WHO\'S \nDEALING WITH IT?</string>
+
+    <string name="panict1">WHAT IS A PANIC \nATTACK?</string>
+    <string name="panict2">HOW TO HELP \nSOMEONE WHO\'S \nDEALING WITH IT?</string>
+
+    <string name="traumat1">WHAT IS A TRAUMA\n-INFORMED CARE?</string>
+    <string name="traumat2">WAYS TO IMPLEMENT \nTRAUMA-INFORMED \nCARE</string>
+
+    <string name="groundt1">IMPORTANCE \nOF GROUNDING \nTECHNIQUES</string>
+    <string name="groundt2">LIST OF GROUNDING \n TECHNIQUES</string>
+
+    <string name="stresst1">WHAT IS STRESS?</string>
+    <string name="stresst2">WAYS TO REDUCE AND \nHANDLE STRESS</string>
+
+    <string name="floodst1">WHAT ARE FLOODS?</string>
+    <string name="floodst2">HOW ARE FLOODS \nCAUSED?</string>
+    <string name="floodst3">WHAT CAN WE DO \nDURING FLOODS?</string>
+
+    <string name="eartht1">WHAT ARE \nEATHQUAKES?</string>
+    <string name="eartht2">WHY DOES \nEARTHQUAKES \nHAPPEN?</string>
+    <string name="eartht3">GUIDELINES FOR \nEARTHQUAKE \nPREPAREDNESS</string>
+    <string name="eartht4">If you are Indoors:</string>
+    <string name="eartht5">Drop, Cover and Hold:</string>
+    <string name="eartht6">Stay away from windows,glass, \nand exterior walls:</string>
+    <string name="eartht7">Do not run outside:</string>
+    <string name="eartht8">Avoid elevators:</string>
+    <string name="eartht9">If you are Outdoors:</string>
+    <string name="eartht10">Move away from building, trees, \nstreetlights, and utility wires:</string>
+    <string name="eartht11">Find an open space:</string>
+    <string name="eartht12">Drop to the ground:</string>
+    <string name="eartht13">If you are in a Vehicle:</string>
+    <string name="eartht14">Pull Over:</string>
+    <string name="eartht15">Stay inside the vehicle:</string>
+    <string name="eartht16">Avoid parking near buildings, \ntrees, or large signs:</string>
+    <string name="eartht17">Proceed cautiously:</string>
+    <string name="eartht18">If you are in a Building:</string>
+    <string name="eartht19">Stay inside:</string>
+    <string name="eartht20">Move away from windows and \noutside walls:</string>
+    <string name="eartht21">If you are by the Shore:</string>'
+    <string name="eartht22">Be aware of Tsunamis:</string>
+    <string name="eartht23">After the Earthquake:</string>
+    <string name="eartht24">Be prepared for aftershocks:</string>
+    <string name="eartht25">Check for inquiries and hazards:</string>
+    <string name="eartht26">Stay tuned to news or alerts:</string>
+
+    <string name="vulcant1">WHAT IS VOLCANIC \nERUPTION?</string>
+    <string name="vulcant2">KEY HAZARDS \nDURING A VOLCANIC \nERUPTION?</string>
+    <string name="vulcant3">HOW TO HANDLE A \nVOLCANIC ERUPTION?</string>
+    <string name="vulcant4">Before an Eruption:</string>
+    <string name="vulcant5">During an Eruption:</string>
+    <string name="vulcant6">After an Eruption:</string>
+
+    <string name="epit1">WHAT IS EPIDEMIC?</string>
+    <string name="epit2">EPIDEMIC VS. \nPANDEMIC VS. \nENDEMIC</string>
+    <string name="epit3">SAFETY MEASURES \nTO TAKE</string>
+
+    <string name="basict1">WHY?</string>
+    <string name="basict2">HOW?</string>
+    <string name="basict3">WHEN?</string>
+
+    <string name="watert1">IMPORTANCE OF \nWATER SAFETY</string>
+    <string name="watert2">ACTIONS TO ENSURE \nWATER SAFETY</string>
+
+    <string name="roadt1">IMPORTANCE OF \nSROAD AFETY</string>
+    <string name="roadt2">ACTIONS TO ENSURE \nROAD SAFETY</string>
+
+    <string name="dailyt1">IMPORTANCE OF \nDAILY FOOD SAFETY</string>
+    <string name="dailyt2">ACTIONS TO ENSURE \nDAILY FOOD SAFETY</string>
+
+    <string name="foodt1">IMPORTANCE OF \nEMERGENCY FOOD \nSAFETY</string>
+    <string name="foodt2">ACTIONS TO ENSURE \nEMERGENCY FOOD \nSAFETY</string>
+
+    <string name="heatt1">HOW DANGEROUS \nHEATWAVE IS?</string>
+    <string name="heatt2">HOW TO SAY COOL \nFROM HEATWAVE?</string>
+
+
+    <string name="flashlight">FLASHLIGHT</string>
+    <string name="turn_on">TURN ON</string>
+    <string name="turn_off">TURN OFF</string>
+    <string name="strobe">STROBE</string>
+    <string name="sos">SOS</string>
+    <string name="sos_with_alarm">SOS WITH ALARM</string>
+    <string name="stop">STOP</string>
+    <string name="dialog_message">
+    Flashlight Features:\n
+    \n
+    1. TURN ON:    Activates the flashlight to provide continuous light.\n
+    2. TURN OFF:   Deactivates the flashlight.\n
+    3. STROBE:     Flashing light mode, useful for emergencies.\n
+    4. SOS:        Sends an SOS signal using Morse code for distress situations.\n
+    5. ALARM:      Sends SOS signal with an alarm sound for urgent distress.\n
+    6. STOP:       Stops any ongoing strobe or SOS signals.\n
+    \n
+    Use these features according to your needs.
+    </string>
+
+
+
+
 
 
 
