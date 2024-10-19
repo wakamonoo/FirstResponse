@@ -3,7 +3,13 @@ package com.example.android.firstresponse
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
+import android.widget.ImageButton
+import androidx.appcompat.app.AlertDialog
 import com.airbnb.lottie.LottieAnimationView
 import com.airbnb.lottie.LottieDrawable
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -65,11 +71,6 @@ class HelplineActivity : BaseActivity() {
             makeCall("1122334455") // Replace with actual phone number
         }
 
-        val buttonMDRRMOLIGAO: Button = findViewById(R.id.button_mdrmmo_ligao)
-        buttonMDRRMOLIGAO.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
-        }
-
         val buttonZoneMedical: Button = findViewById(R.id.button_zone_medical)
         buttonZoneMedical.setOnClickListener {
             makeCall("0123456789") // Replace with actual phone number
@@ -84,6 +85,8 @@ class HelplineActivity : BaseActivity() {
         buttonDuran.setOnClickListener {
             makeCall("0123456789") // Replace with actual phone number
         }
+
+
 
         // Initialize BottomNavigationView
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
@@ -113,7 +116,43 @@ class HelplineActivity : BaseActivity() {
 
         // Set the Helpline item as selected
         bottomNavigationView.menu.findItem(R.id.bottomHelpline).isChecked = true
+
+        // Initialize Question Icon Button
+        val questionIcon: ImageButton = findViewById(R.id.questionIcon)
+        questionIcon.setOnClickListener {
+            showInstructionsDialog()
+        }
     }
+
+    private fun showInstructionsDialog() {
+        // Inflate the custom layout for the dialog
+        val dialogView: View = LayoutInflater.from(this).inflate(R.layout.dialog_instructions, null)
+
+        // Find the views in the dialog
+        val dialogImage: ImageView = dialogView.findViewById(R.id.dialog_image)
+        val dialogMessage: TextView = dialogView.findViewById(R.id.dialog_message)
+        val dialogButton: Button = dialogView.findViewById(R.id.dialog_button)
+
+        // Set the title and message for the dialog
+        dialogMessage.text = getString(R.string.instruction_dialog_message)
+
+        // Create the AlertDialog
+        val dialogBuilder = AlertDialog.Builder(this)
+        dialogBuilder.setTitle(getString(R.string.instruction_dialog_title)) // Set the title
+        dialogBuilder.setView(dialogView)
+
+        // Create the dialog
+        val dialog = dialogBuilder.create()
+
+        // Set the button click listener to dismiss the dialog
+        dialogButton.setOnClickListener {
+            dialog.dismiss()
+        }
+
+        // Show the dialog
+        dialog.show()
+    }
+
 
     private fun makeCall(phoneNumber: String) {
         val intent = Intent(Intent.ACTION_DIAL).apply {

@@ -1322,8 +1322,8 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="sos">SOS</string>
     <string name="sos_with_alarm">SOS WITH ALARM</string>
     <string name="stop">STOP</string>
+    <string name="dialog_title_flashlight">Flashlight Features</string>
     <string name="dialog_message">
-    Flashlight Features:\n
     \n
     1. TURN ON:    Activates the flashlight to provide continuous light.\n
     2. TURN OFF:   Deactivates the flashlight.\n
@@ -1333,7 +1333,28 @@ Act to break the contact between the casualty and the electrical supply. If poss
     6. STOP:       Stops any ongoing strobe or SOS signals.\n
     \n
     Use these features according to your needs.
+</string>
+
+
+    <string name="instruction_dialog_title">Emergency Contact Instructions</string>
+        <string name="instruction_dialog_message">
+        If you are in Polangui and require immediate assistance, please call the following emergency contacts:\n\n
+        - Polangui EMS QRT\n
+        - MDRRMO Polangui\n
+        - Polangui Rural Health Unit\n\n
+        If you are in OAS, please contact:\n
+        - OAS Emergency Response Team\n
+        - MDRRMO OAS\n
+        - OAS Rural Health Unit\n\n
+        If you are in Ligao City, reach out to:\n
+        - CDRRMO EQRT Ligao City\n
+        - Zone Medical Clinic\n
+        - Ligao Rural Health Unit\n\n
+        For urgent medical attention, you may also contact:\n
+        - Duran Hospital\n\n
+        Please click on the corresponding button to call the required service.
     </string>
+
 
 
 

@@ -100,7 +100,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lottie"
+                android:text="LottieFiles"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/montserrat_bold"
@@ -120,6 +120,82 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Figma"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/shadow4"
+                android:gravity="center"
+                android:layout_marginBottom="84dp" />
+
+            <ImageView
+                android:id="@+id/red"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/redcross"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="American Red Cross"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/shadow4"
+                android:gravity="center"
+                android:layout_marginBottom="84dp" />
+
+            <ImageView
+                android:id="@+id/nhs"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/nhs"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NHS England"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/shadow4"
+                android:gravity="center"
+                android:layout_marginBottom="84dp" />
+
+            <ImageView
+                android:id="@+id/webmd"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/webmd"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WebMD"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/montserrat_bold"
+                android:textColor="@color/shadow4"
+                android:gravity="center"
+                android:layout_marginBottom="84dp" />
+
+            <ImageView
+                android:id="@+id/maps"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/maps"
+                android:scaleType="fitCenter"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Maps"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/montserrat_bold"

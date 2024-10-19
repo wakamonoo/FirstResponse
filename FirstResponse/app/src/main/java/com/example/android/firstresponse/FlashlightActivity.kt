@@ -13,7 +13,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import android.widget.Toast
 
-class FlashlightActivity : AppCompatActivity() {
+class FlashlightActivity : BaseActivity() {
     private lateinit var flashlightManager: FlashlightManager
     private var mediaPlayer: MediaPlayer? = null // MediaPlayer for alarm sound
 
@@ -111,8 +111,16 @@ class FlashlightActivity : AppCompatActivity() {
     private fun showInstructions() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_flashlight_instructions, null)
 
+        // Find the TextView for the message
+        val dialogMessage: TextView = dialogView.findViewById(R.id.dialog_message)
+
+        // Set the title and message for the dialog
+        val instructionTitle = getString(R.string.dialog_title_flashlight) // Assuming you create this string resource
+        dialogMessage.text = getString(R.string.dialog_message) // Your existing message
+
         // Create the dialog
         val alertDialog = AlertDialog.Builder(this)
+            .setTitle(instructionTitle) // Set the instruction title
             .setView(dialogView) // Use the custom dialog layout
             .setCancelable(true)
             .create() // Create the dialog without showing it yet
@@ -125,6 +133,7 @@ class FlashlightActivity : AppCompatActivity() {
 
         alertDialog.show() // Now show the dialog
     }
+
 
     // Function to stop the alarm sound
     private fun stopAlarm() {
