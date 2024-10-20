@@ -41,7 +41,7 @@ class HelplineActivity : BaseActivity() {
         // Initialize buttons and set their click listeners
         val buttonMDRRMOPOL: Button = findViewById(R.id.buttonMDRRMOPOL)
         buttonMDRRMOPOL.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09610512959") // Replace with actual phone number
         }
 
         val buttonPolanguiRHU: Button = findViewById(R.id.button_polangui_rhu)
@@ -52,12 +52,12 @@ class HelplineActivity : BaseActivity() {
         // Button for OAS Emergency Response Team
         val buttonOAS: Button = findViewById(R.id.buttonOAS)
         buttonOAS.setOnClickListener {
-            makeCall("2233445566") // Replace with actual phone number
+            makeCall("09205871939") // Replace with actual phone number
         }
 
         val buttonMDRRMOOAS: Button = findViewById(R.id.button_mdrmmo_oas)
         buttonMDRRMOOAS.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09289800909") // Replace with actual phone number
         }
 
         val buttonOASRHU: Button = findViewById(R.id.button_oas_rhu)

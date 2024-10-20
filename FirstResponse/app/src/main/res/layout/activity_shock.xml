@@ -196,7 +196,6 @@
                         android:text="@string/shock1"
                         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                         android:textColor="@color/black"
-                        android:textStyle="bold"
                         app:fontFamily="@font/opensans"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.493"

@@ -7,32 +7,32 @@
     <string name="close">Close</string>
     <string name="choose_language">Choose Language</string>
 
-    <string name="seizure2"> A seizure can be caused by many things. These can include:
-        \n<b>■An imbalance of nerve-signaling brain chemicals (neurotransmitters),</b>
-        \n<b>■Brain tumor</b>
-        \n<b>■Stroke</b>
-        \n<b>■Brain damage from illness or injury</b>
+    <string name="seizure2">A seizure can be caused by many things. These can include:
+        \n<b>■</b> An imbalance of nerve-signaling brain chemicals (neurotransmitters)
+        \n<b>■</b> Brain tumor
+        \n<b>■</b> Stroke
+        \n<b>■</b> Brain damage from illness or injury
         \nEpilepsy may be caused by a combination of these. In most cases, the cause of epilepsy can’t be found.</string>
 
     <string name="seizure3">"Your symptoms depend on the type of seizure. General symptoms or warning signs of a seizure can include:
-\n<b>■Staring</b>
-\n<b>■Jerking movements of the arms and legs</b>
-\n<b>■Stiffening of the body</b>
-\n<b>■Loss of consciousness</b>
-\n<b>■Breathing problems or stopping breathing</b>
-\n<b>■Loss of bowel or bladder control</b>
-\n<b>■Falling suddenly for no apparent reason,especially when associated with loss of consciousness</b>
-\n<b>■Not responding to noise or words for brief periods</b>
-\n<b>■Appearing confused or in a haze</b>
-\n<b>■Nodding your head rhythmically, when associated with loss of awareness or loss of consciousness</b>
-\n<b>■Periods of rapid eye blinking and staring"</b></string>
+\n<b>■</b> Staring
+\n<b>■</b> Jerking movements of the arms and legs
+\n<b>■</b> Stiffening of the body
+\n<b>■</b> Loss of consciousness
+\n<b>■</b> Breathing problems or stopping breathing
+\n<b>■</b> Loss of bowel or bladder control
+\n<b>■</b> Falling suddenly for no apparent reason,especially when associated with loss of consciousness
+\n<b>■</b> Not responding to noise or words for brief periods
+\n<b>■</b> Appearing confused or in a haze
+\n<b>■</b> Nodding your head rhythmically, when associated with loss of awareness or loss of consciousness
+\n<b>■</b> Periods of rapid eye blinking and staring"</string>
 
     <string name="seizure4">The goal of treatment is to control, stop, or reduce how often seizures occur. Treatment is most often done with medicine. There are many types of medicines used to treat epilepsy. Your healthcare provider will need to identify the type of seizure you are having. Medicines are selected based on the type of seizure, age of the person, side effects, cost, and ease of use.\n
-        \n<b>1.Blood tests</b>
-        \n<b>2.Urine tests</b>
-        \n<b>3.Electroencephalogram (EEG)</b>
-        \n<b>4.Vagus Nerve Stimulation (VNS</b>
-        \n<b>5.Surgery"</b></string>
+        \n<b>1.</b> Blood tests
+        \n<b>2.</b> Urine tests
+        \n<b>3.</b> Electroencephalogram (EEG)
+        \n<b>4.</b> Vagus Nerve Stimulation (VNS)
+        \n<b>5.</b> Surgery"</string>
 
     <string name="earth_para1">An earthquake is a sudden shaking of Earth\'s surface caused by the movement of rocks deep underneath.
         Most quakes are unnoticeable by people on Earth\'s surface. Thousands of quakes occur every day but are too weak to be felt.
@@ -73,14 +73,14 @@
 
     <string name="epi_para3">
       \n<b>Follow public health guidelines</b>
-        \n<b>■Practice good hygiene</b>
-        \n<b>■Wear masks</b>
-        \n<b>■Maintain physical distancing</b>
-        \n<b>■Follow respiratory etiquette</b>
-        \n<b>■Clean and disinfect frequently touched surfaces</b>
-        \n<b>■Stay home if you\'re feeling unwell</b>
-        \n<b>■Stay informed and avoid misinformation</b>
-        \n<b>■Support vaccination efforts</b>
+        \n<b>■</b> Practice good hygiene
+        \n<b>■</b> Wear masks
+        \n<b>■</b> Maintain physical distancing
+        \n<b>■</b> Follow respiratory etiquette
+        \n<b>■</b> Clean and disinfect frequently touched surfaces
+        \n<b>■</b> Stay home if you\'re feeling unwell
+        \n<b>■</b> Stay informed and avoid misinformation
+        \n<b>■</b> Support vaccination efforts
     </string>
 
     <string name="epi_para4">
@@ -483,18 +483,18 @@ Some forms of gastrointestinal and respiratory infections can cause serious comp
     </string>
 
     <string name="basic_sanitation9">You should wash your hands thoroughly:\n
-\n■after using the toilet
-\n■after changing nappies
-\n■before, during and after preparing food
-\n■between handling raw and cooked or ready-to-eat food
-\n■before eating
-\n■after blowing your nose, coughing or sneezing
-\n■after using a tissue or handkerchief
-\n■before and after attending to sick children or other family members
-\n■after smoking
-\n■after handling rubbish or working in the garden
-\n■after handling animals
-\n■when you get home, arrive at other people\’s homes, at venues or at work.
+\n■ After using the toilet
+\n■ After changing nappies
+\n■ Before, during and after preparing food
+\n■ Between handling raw and cooked or ready-to-eat food
+\n■ Before eating
+\n■ After blowing your nose, coughing or sneezing
+\n■ After using a tissue or handkerchief
+\n■ Before and after attending to sick children or other family members
+\n■ After smoking
+\n■ After handling rubbish or working in the garden
+\n■ After handling animals
+\n■ @hen you get home, arrive at other people\’s homes, at venues or at work.
     </string>
 
     <string name="first_db">First-degree burns damage the outer layer of your skin, better known as the epidermis. Typically, these burns heal themselves within a week. A good example of a first-degree burn would be sunburn. So, don\’t forget your tanning lotion.
@@ -609,12 +609,12 @@ Some forms of gastrointestinal and respiratory infections can cause serious comp
     </string>
 
     <string name="shock">If you suspect someone has received an electric shock you must ensure all power sources are isolated before you can treat the casualty. The action you take will depend on whether the risk is posed by high voltage or low voltage electricity.\n
-\n■High Voltage\nOverhead power cables are an example of a power source generating high voltage electricity. High voltage electricity has the ability to jump or arc up to distances of 18 metres or more. If faced with a casualty as a result of, or in the vicinity of, dangerous high voltage electricity, DO NOT APPROACH! Stay at least 25 metres away from the casualty until the power has been switched off by an official agency i.e. the Electricity Board.
-\n\n■Low Voltage\nIf faced with a casualty who is in the process of receiving a low voltage electric shock you should:
+\n<b>■High Voltage</b>\nOverhead power cables are an example of a power source generating high voltage electricity. High voltage electricity has the ability to jump or arc up to distances of 18 metres or more. If faced with a casualty as a result of, or in the vicinity of, dangerous high voltage electricity, DO NOT APPROACH! Stay at least 25 metres away from the casualty until the power has been switched off by an official agency i.e. the Electricity Board.
+\n\n<b>■Low Voltage</b>\nIf faced with a casualty who is in the process of receiving a low voltage electric shock you should:
 Act to break the contact between the casualty and the electrical supply. If possible to do so safely, you should turn off the source of electricity, either by switching off the current at the mains, turning the power off at the circuit board, removing the plug or wrenching the cable free.\n\nAlternatively, move the source of the shock (i.e. hairdryer, power tool) away from yourself and the casualty using an object of low conductivity. First, stand on a dry insulating material, such as a book, newspapers or rubber matting. Then, use a long, low-conductivity object like a wooden broom or specially designed Electric Shock Rescue Hook to push the power source away from the casualty or move the casualty\'s limbs away from the power source.
     </string>
 
-    <string name="shock1">■DO NOT touch the casualty if you have been unable to isolate them from the source of the electrical shock or turn off the electricity
+    <string name="shock1"><b>■DO NOT TOUCH</b> the casualty if you have been unable to isolate them from the source of the electrical shock or turn off the electricity
     </string>
 
     <string name="shock2">■Casualty is Responsive
@@ -638,7 +638,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="shock8">■BURNS
     </string>
 
-    <string name="shock9">■Exposure to electricity can cause burns to the skin, and in severe cases, the internal organs. The electricity may cause entry and exit burns - for example, entering via a hand and leaving via the feet.\n\n■For responsive casualties:\nCool burns for a minimum of 10 minutes under cold water\n\n■For unresponsive casualties:\nCool the burn with wet dressings (or special burn dressings) after placing them in the recovery position.\n\n■DO NOT\n1.Burst any blisters\n2.Apply adhesive dressings\n3.Remove damaged skin\n4.Apply ointments/creams\n5.Cover with fluffy dressings\n6.Affix dressings too tightly\n7.Apply butter/fats/margarine or other substances commonly believed to cool burns\n8.Remove damaged clothing\n9.Apply ice
+    <string name="shock9">■Exposure to electricity can cause burns to the skin, and in severe cases, the internal organs. The electricity may cause entry and exit burns - for example, entering via a hand and leaving via the feet.\n\n■For responsive casualties:\nCool burns for a minimum of 10 minutes under cold water\n\n■For unresponsive casualties:\nCool the burn with wet dressings (or special burn dressings) after placing them in the recovery position.\n\n<b>■DO NOT</b>\n1.Burst any blisters\n2.Apply adhesive dressings\n3.Remove damaged skin\n4.Apply ointments/creams\n5.Cover with fluffy dressings\n6.Affix dressings too tightly\n7.Apply butter/fats/margarine or other substances commonly believed to cool burns\n8.Remove damaged clothing\n9.Apply ice
     </string>
 
 
