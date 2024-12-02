@@ -216,6 +216,9 @@
         <receiver android:name=".LanguageChangeReceiver"
             android:exported="false"/>
 
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
+
 
     </application>
 </manifest>
