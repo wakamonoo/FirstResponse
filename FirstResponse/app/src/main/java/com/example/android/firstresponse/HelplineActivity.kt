@@ -34,7 +34,7 @@ class HelplineActivity : BaseActivity() {
         // Button for POLANGUI EMS QRT
         val buttonPOLANGUIEMS: Button = findViewById(R.id.buttonPOLANGUIEMS)
         buttonPOLANGUIEMS.setOnClickListener {
-            makeCall("0987654321") // Replace with actual phone number
+            makeCall("09277555625") // Replace with actual phone number
         }
 
 
@@ -46,7 +46,7 @@ class HelplineActivity : BaseActivity() {
 
         val buttonPolanguiRHU: Button = findViewById(R.id.button_polangui_rhu)
         buttonPolanguiRHU.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09152625978") // Replace with actual phone number
         }
 
         // Button for OAS Emergency Response Team
@@ -62,28 +62,28 @@ class HelplineActivity : BaseActivity() {
 
         val buttonOASRHU: Button = findViewById(R.id.button_oas_rhu)
         buttonOASRHU.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09509007041") // Replace with actual phone number
         }
 
         // Button for CDRRMO EQRT LIGAO CITY
         val buttonCDRRMO: Button = findViewById(R.id.buttonCDRRMO)
         buttonCDRRMO.setOnClickListener {
-            makeCall("1122334455") // Replace with actual phone number
+            makeCall("09954004711") // Replace with actual phone number
         }
 
         val buttonZoneMedical: Button = findViewById(R.id.button_zone_medical)
         buttonZoneMedical.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09156985788") // Replace with actual phone number
         }
 
         val buttonLigaoRhu: Button = findViewById(R.id.buttonLigaoRhu)
         buttonLigaoRhu.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09051985920") // Replace with actual phone number
         }
 
         val buttonDuran: Button = findViewById(R.id.buttonduranbel)
         buttonDuran.setOnClickListener {
-            makeCall("0123456789") // Replace with actual phone number
+            makeCall("09452962595") // Replace with actual phone number
         }
 
 
