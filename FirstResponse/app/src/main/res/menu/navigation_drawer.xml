@@ -12,7 +12,7 @@
 
         <item android:title="@string/login_t"
             android:id="@+id/login"
-            android:icon="@drawable/baseline_contacts_24" />
+            android:icon="@drawable/ic_user" />
 
         <item android:title="@string/location_t"
             android:id="@+id/location"
