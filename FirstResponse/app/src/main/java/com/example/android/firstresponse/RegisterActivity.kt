@@ -17,6 +17,9 @@ class RegisterActivity : AppCompatActivity() {
         private lateinit var etUsername: EditText
         private lateinit var etPassword: EditText
         private lateinit var etEmail: EditText
+        private lateinit var etFullname: EditText // Full Name
+        private lateinit var etAddress: EditText // Address
+        private lateinit var etBirthday: EditText // Birthday
         private lateinit var btnRegister: ImageButton
         private lateinit var btnGoToLogin: Button
         private lateinit var cbFingerprint: CheckBox
@@ -36,6 +39,9 @@ class RegisterActivity : AppCompatActivity() {
                 etUsername = findViewById(R.id.et_register_username)
                 etPassword = findViewById(R.id.et_register_password)
                 etEmail = findViewById(R.id.et_register_email)
+                etFullname = findViewById(R.id.et_register_fullname)
+                etAddress = findViewById(R.id.et_register_address)
+                etBirthday = findViewById(R.id.et_register_birthday)
                 btnRegister = findViewById(R.id.btn_register)
                 btnGoToLogin = findViewById(R.id.btn_go_to_login)
                 cbFingerprint = findViewById(R.id.cb_fingerprint)
@@ -142,6 +148,9 @@ class RegisterActivity : AppCompatActivity() {
                 val username = etUsername.text.toString().trim()
                 val password = etPassword.text.toString().trim()
                 val email = etEmail.text.toString().trim()
+                val fullname = etFullname.text.toString().trim() // Get Full Name
+                val address = etAddress.text.toString().trim() // Get Address
+                val birthday = etBirthday.text.toString().trim() // Get Birthday
 
                 val currentUser = auth.currentUser
                 currentUser?.reload()?.addOnCompleteListener { reloadTask ->
@@ -150,6 +159,9 @@ class RegisterActivity : AppCompatActivity() {
                                 val userMap = mapOf(
                                         "username" to username,
                                         "email" to email,
+                                        "fullname" to fullname,
+                                        "address" to address,
+                                        "birthday" to birthday,
                                         "fingerprintRegistered" to cbFingerprint.isChecked
                                 )
                                 database.child("users").child(userId).setValue(userMap)
@@ -158,11 +170,9 @@ class RegisterActivity : AppCompatActivity() {
                                                 startActivity(Intent(this, LoginActivity::class.java))
                                                 finish()
                                         }
-                                        .addOnFailureListener { e ->
-                                                Toast.makeText(this, "Failed to save user data: ${e.message}", Toast.LENGTH_SHORT).show()
+                                        .addOnFailureListener { exception ->
+                                                Toast.makeText(this, "Registration failed: ${exception.message}", Toast.LENGTH_SHORT).show()
                                         }
-                        } else {
-                                Toast.makeText(this, "Please verify your email to proceed.", Toast.LENGTH_SHORT).show()
                         }
                 }
         }
