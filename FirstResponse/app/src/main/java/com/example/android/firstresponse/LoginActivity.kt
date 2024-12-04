@@ -44,20 +44,20 @@ class LoginActivity : AppCompatActivity() {
                         // Attempt Firebase login
                         auth.signInWithEmailAndPassword(email, password)
                                 .addOnCompleteListener { task ->
-                                if (task.isSuccessful) {
-                                        Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
-                                        // Navigate to DashboardActivity
-                                        val intent = Intent(this, MainActivity::class.java)
-                                        startActivity(intent)
-                                        finish()
-                                } else {
-                                        Toast.makeText(
-                                                this,
-                                                "Login failed: ${task.exception?.message}",
-                                                Toast.LENGTH_SHORT
-                                        ).show()
+                                        if (task.isSuccessful) {
+                                                Toast.makeText(this, "Login successful!", Toast.LENGTH_SHORT).show()
+                                                // Navigate to DashboardActivity
+                                                val intent = Intent(this, MainActivity::class.java)
+                                                startActivity(intent)
+                                                finish()
+                                        } else {
+                                                Toast.makeText(
+                                                        this,
+                                                        "Login failed: ${task.exception?.message}",
+                                                        Toast.LENGTH_SHORT
+                                                ).show()
+                                        }
                                 }
-                        }
                 }
 
                 // Set register button click listener

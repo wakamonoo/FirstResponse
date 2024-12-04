@@ -13,7 +13,7 @@
         android:id="@+id/tv_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="150dp"
         android:layout_marginBottom="20dp"
         android:fontFamily="@font/montserrat_bold"
         android:text="Register"
@@ -163,8 +163,49 @@
                     android:scaleType="fitCenter"
                     android:src="@drawable/ic_done" />
             </androidx.cardview.widget.CardView>
+
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <!-- Fingerprint Authentication Button -->
+
+    <!-- Add marginTop to the Fingerprint Card -->
+
+    <CheckBox
+        android:id="@+id/cb_fingerprint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/black"
+        android:text="Do not Register Fingerprint"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_container" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/shadow2_transparent"
+        app:cardCornerRadius="35dp"
+        app:cardElevation="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_go_to_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <ImageButton
+        android:id="@+id/btn_biometric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_fingerprint1" />
+</androidx.cardview.widget.CardView>
+
+
 
     <!-- Login Redirect Button -->
     <Button
