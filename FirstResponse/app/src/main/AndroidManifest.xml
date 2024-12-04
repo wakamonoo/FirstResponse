@@ -175,10 +175,7 @@
             android:name="com.example.android.firstresponse.SafetyAndPreparedness"
             android:theme="@style/Theme.NoActionBar"
             android:exported="true" />
-        <activity
-            android:name="com.example.android.firstresponse.WhatsWrongActivity"
-            android:theme="@style/Theme.NoActionBar"
-            android:exported="true" />
+
         <activity
             android:name="com.example.android.firstresponse.SearchResultsActivity"
             android:theme="@style/Theme.NoActionBar"
@@ -223,6 +220,8 @@
             android:parentActivityName=".LoginActivity" />
         <activity android:name=".LoginActivity"
             android:theme="@style/Theme.NoActionBar"/>
+
+
 
 
     </application>
