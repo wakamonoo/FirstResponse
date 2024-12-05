@@ -30,6 +30,17 @@ class UserInfoActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         database = FirebaseDatabase.getInstance().reference
 
+        // Check if the user is logged in and email-verified
+        val currentUser = auth.currentUser
+        if (currentUser == null || !currentUser.isEmailVerified) {
+            // Redirect to the login activity if not logged in or email not verified
+            Toast.makeText(this, "Please log in and verify your email.", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+            return
+        }
+
         // Bind views
         tvUsername = findViewById(R.id.tvUsername)
         tvFullName = findViewById(R.id.tvFullName)
@@ -39,37 +50,31 @@ class UserInfoActivity : AppCompatActivity() {
         btnLogout = findViewById(R.id.btnLogout)
 
         // Fetch the current user ID
-        val currentUserId = auth.currentUser?.uid
+        val currentUserId = currentUser.uid
 
-        // Check if the user is logged in and fetch data from Firebase
-        if (currentUserId != null) {
-            // Fetch user data from Firebase
-            database.child("users").child(currentUserId).get().addOnSuccessListener { snapshot ->
-                // Check if data exists for the user
-                if (snapshot.exists()) {
-                    val username = snapshot.child("username").value?.toString() ?: "N/A"
-                    val fullName = snapshot.child("fullname").value?.toString() ?: "N/A"
-                    val email = snapshot.child("email").value?.toString() ?: "N/A"
-                    val address = snapshot.child("address").value?.toString() ?: "N/A"
-                    val birthday = snapshot.child("birthday").value?.toString() ?: "N/A"
+        // Fetch user data from Firebase
+        database.child("users").child(currentUserId).get().addOnSuccessListener { snapshot ->
+            // Check if data exists for the user
+            if (snapshot.exists()) {
+                val username = snapshot.child("username").value?.toString() ?: "N/A"
+                val fullName = snapshot.child("fullname").value?.toString() ?: "N/A"
+                val email = snapshot.child("email").value?.toString() ?: "N/A"
+                val address = snapshot.child("address").value?.toString() ?: "N/A"
+                val birthday = snapshot.child("birthday").value?.toString() ?: "N/A"
 
-                    // Display the user data
-                    tvUsername.text = "Username: $username"
-                    tvFullName.text = "Full Name: $fullName"
-                    tvEmail.text = "Email: $email"
-                    tvAddress.text = "Address: $address"
-                    tvBirthday.text = "Birthday: $birthday"
-                } else {
-                    // Handle case where data doesn't exist for the user
-                    tvUsername.text = "User data not found"
-                }
-            }.addOnFailureListener { exception ->
-                // Handle errors (e.g., network failure, no data)
-                tvUsername.text = "Failed to load data: ${exception.message}"
+                // Display the user data
+                tvUsername.text = "Username: $username"
+                tvFullName.text = "Full Name: $fullName"
+                tvEmail.text = "Email: $email"
+                tvAddress.text = "Address: $address"
+                tvBirthday.text = "Birthday: $birthday"
+            } else {
+                // Handle case where data doesn't exist for the user
+                tvUsername.text = "User data not found"
             }
-        } else {
-            // If the user is not logged in
-            tvUsername.text = "User not logged in"
+        }.addOnFailureListener { exception ->
+            // Handle errors (e.g., network failure, no data)
+            tvUsername.text = "Failed to load data: ${exception.message}"
         }
 
         // Set up the logout button

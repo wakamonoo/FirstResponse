@@ -24,17 +24,13 @@ class LoginActivity : AppCompatActivity() {
                 // Initialize Firebase Auth
                 auth = FirebaseAuth.getInstance()
 
-                // Initialize Firebase Auth state listener
-                auth.addAuthStateListener { firebaseAuth ->
-                        val user = firebaseAuth.currentUser
-                        if (user != null) {
-                                // If the user is logged in, navigate to UserInfoActivity
-                                startActivity(Intent(this, UserInfoActivity::class.java))
-                                finish()  // Close LoginActivity
-                        }
+                // Check if user is already logged in and email verified
+                val currentUser = auth.currentUser
+                if (currentUser != null && currentUser.isEmailVerified) {
+                        navigateToUserInfo()
                 }
 
-                // Initialize Biometric authentication if the user is not logged in
+                // Initialize Biometric authentication
                 executor = ContextCompat.getMainExecutor(this)
                 biometricPrompt = BiometricPrompt(this, executor, object : BiometricPrompt.AuthenticationCallback() {
                         override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
@@ -46,9 +42,8 @@ class LoginActivity : AppCompatActivity() {
                                 super.onAuthenticationSucceeded(result)
                                 Toast.makeText(applicationContext, "Authentication succeeded!", Toast.LENGTH_SHORT).show()
 
-                                // After successful authentication, navigate to UserInfoActivity
-                                startActivity(Intent(this@LoginActivity, UserInfoActivity::class.java))
-                                finish()  // Close LoginActivity
+                                // Navigate to UserInfoActivity after successful authentication
+                                navigateToUserInfo()
                         }
 
                         override fun onAuthenticationFailed() {
@@ -63,18 +58,22 @@ class LoginActivity : AppCompatActivity() {
                         .setNegativeButtonText("Cancel")
                         .build()
 
+                // Set fingerprint button click listener
                 findViewById<Button>(R.id.btn_fingerprint).setOnClickListener {
                         biometricPrompt.authenticate(biometricPromptInfo)
                 }
 
-                // Add this line to bind btnGoToRegister
+                // Bind register button and set click listener
                 val btnGoToRegister: Button = findViewById(R.id.btn_go_to_register)
-
-                // Set register button click listener
                 btnGoToRegister.setOnClickListener {
                         val intent = Intent(this, RegisterActivity::class.java)
                         startActivity(intent)
-                        finish()  // Close LoginActivity after navigating to RegisterActivity
+                        finish()
                 }
+        }
+
+        private fun navigateToUserInfo() {
+                startActivity(Intent(this, UserInfoActivity::class.java))
+                finish()  // Close LoginActivity
         }
 }

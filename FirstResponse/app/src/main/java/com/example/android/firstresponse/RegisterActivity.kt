@@ -17,13 +17,13 @@ class RegisterActivity : AppCompatActivity() {
         private lateinit var etUsername: EditText
         private lateinit var etPassword: EditText
         private lateinit var etEmail: EditText
-        private lateinit var etFullname: EditText // Full Name
-        private lateinit var etAddress: EditText // Address
-        private lateinit var etBirthday: EditText // Birthday
+        private lateinit var etFullname: EditText
+        private lateinit var etAddress: EditText
+        private lateinit var etBirthday: EditText
         private lateinit var btnRegister: ImageButton
         private lateinit var btnGoToLogin: Button
         private lateinit var cbFingerprint: CheckBox
-        private lateinit var btnSendOtp: Button // OTP Button
+        private lateinit var btnSendOtp: Button
 
         private lateinit var auth: FirebaseAuth
         private lateinit var database: DatabaseReference
@@ -85,7 +85,6 @@ class RegisterActivity : AppCompatActivity() {
                 }
         }
 
-        // This method will check email verification status every time the activity resumes
         override fun onResume() {
                 super.onResume()
                 checkEmailVerificationStatus()
@@ -105,7 +104,7 @@ class RegisterActivity : AppCompatActivity() {
                                         user?.sendEmailVerification()?.addOnCompleteListener { emailTask ->
                                                 if (emailTask.isSuccessful) {
                                                         Toast.makeText(this, "Verification sent to $email. Verify to proceed.", Toast.LENGTH_SHORT).show()
-                                                        checkEmailVerificationStatus() // Check the email verification status after sending OTP
+                                                        checkEmailVerificationStatus()
                                                 } else {
                                                         Toast.makeText(this, "Failed to send verification email: ${emailTask.exception?.message}", Toast.LENGTH_SHORT).show()
                                                 }
@@ -122,7 +121,7 @@ class RegisterActivity : AppCompatActivity() {
                         if (reloadTask.isSuccessful) {
                                 if (currentUser.isEmailVerified) {
                                         isEmailVerified = true
-                                        updateEmailVerifiedUI() // Update UI to reflect email verification
+                                        updateEmailVerifiedUI()
                                 } else {
                                         Toast.makeText(this, "Please verify your email to proceed.", Toast.LENGTH_SHORT).show()
                                 }
@@ -133,14 +132,9 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         private fun updateEmailVerifiedUI() {
-                // Update the UI to show that the email is verified
                 btnSendOtp.text = "Email Verified"
-                btnSendOtp.isEnabled = false // Disable the OTP button
-
-                // Change the button color (for example, to green to indicate successful verification)
-                btnSendOtp.setBackgroundColor(ContextCompat.getColor(this, R.color.colorVerified)) // Define the color in your colors.xml
-
-                // Indicate user registration success
+                btnSendOtp.isEnabled = false
+                btnSendOtp.setBackgroundColor(ContextCompat.getColor(this, R.color.colorVerified))
                 Toast.makeText(this, "Email Verified. Proceeding with registration.", Toast.LENGTH_SHORT).show()
         }
 
@@ -148,9 +142,9 @@ class RegisterActivity : AppCompatActivity() {
                 val username = etUsername.text.toString().trim()
                 val password = etPassword.text.toString().trim()
                 val email = etEmail.text.toString().trim()
-                val fullname = etFullname.text.toString().trim() // Get Full Name
-                val address = etAddress.text.toString().trim() // Get Address
-                val birthday = etBirthday.text.toString().trim() // Get Birthday
+                val fullname = etFullname.text.toString().trim()
+                val address = etAddress.text.toString().trim()
+                val birthday = etBirthday.text.toString().trim()
 
                 val currentUser = auth.currentUser
                 currentUser?.reload()?.addOnCompleteListener { reloadTask ->
@@ -173,6 +167,8 @@ class RegisterActivity : AppCompatActivity() {
                                         .addOnFailureListener { exception ->
                                                 Toast.makeText(this, "Registration failed: ${exception.message}", Toast.LENGTH_SHORT).show()
                                         }
+                        } else {
+                                Toast.makeText(this, "Please verify your email before proceeding.", Toast.LENGTH_SHORT).show()
                         }
                 }
         }
