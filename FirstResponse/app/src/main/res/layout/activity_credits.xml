@@ -157,7 +157,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Indian Red Cross"
+                android:text="1. Indian Red Cross"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/montserrat_bold"
@@ -176,7 +176,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="NHS England"
+                android:text="2. NHS England"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/montserrat_bold"
@@ -195,7 +195,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="WebMD"
+                android:text="3. WebMD"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/montserrat_bold"

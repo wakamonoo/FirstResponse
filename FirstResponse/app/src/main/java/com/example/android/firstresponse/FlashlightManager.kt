@@ -14,10 +14,9 @@ class FlashlightManager(private val context: Context) {
 
     private var cameraId: String? = null
     private var isFlashing = false
-    private var mediaPlayer: MediaPlayer? = null // MediaPlayer for alarm sound
+    private var mediaPlayer: MediaPlayer? = null
 
     init {
-        // Find a camera that supports flash
         try {
             for (id in cameraManager.cameraIdList) {
                 val characteristics = cameraManager.getCameraCharacteristics(id)
@@ -33,7 +32,6 @@ class FlashlightManager(private val context: Context) {
         }
     }
 
-    // Turn on the flashlight
     fun turnOn() {
         try {
             cameraId?.let {
@@ -46,7 +44,6 @@ class FlashlightManager(private val context: Context) {
         }
     }
 
-    // Turn off the flashlight
     fun turnOff() {
         try {
             cameraId?.let {
@@ -59,7 +56,6 @@ class FlashlightManager(private val context: Context) {
         }
     }
 
-    // Toggle the strobe light with adjustable frequency
     fun strobe(frequency: Long) {
         isFlashing = true
         handler.post(object : Runnable {
@@ -77,7 +73,6 @@ class FlashlightManager(private val context: Context) {
         })
     }
 
-    // Turn on the SOS pattern (three short, three long, three short)
     fun sos() {
         isFlashing = true
         val sosPattern = listOf(200L, 200L, 200L, 600L, 600L, 600L, 200L, 200L, 200L)
@@ -95,7 +90,7 @@ class FlashlightManager(private val context: Context) {
                         handler.postDelayed(this, sosPattern[index])
                         index++
                     } else {
-                        index = 0 // Repeat the pattern
+                        index = 0
                         handler.postDelayed(this, 1000)
                     }
                 }
@@ -103,11 +98,10 @@ class FlashlightManager(private val context: Context) {
         })
     }
 
-    // Start SOS with alarm sound
     fun sosWithAlarm() {
         isFlashing = true
         val sosPattern = listOf(200L, 200L, 200L, 600L, 600L, 600L, 200L, 200L, 200L)
-        mediaPlayer = MediaPlayer.create(context, R.raw.alarm_sound) // Replace with your alarm sound file
+        mediaPlayer = MediaPlayer.create(context, R.raw.alarm_sound)
         mediaPlayer?.isLooping = true
         mediaPlayer?.start()
 
@@ -125,23 +119,22 @@ class FlashlightManager(private val context: Context) {
                         handler.postDelayed(this, sosPattern[index])
                         index++
                     } else {
-                        index = 0 // Repeat the pattern
+                        index = 0
                         handler.postDelayed(this, 1000)
                     }
                 } else {
-                    stopFlashing() // Stop flashing if it's turned off
+                    stopFlashing()
                 }
             }
         })
     }
 
-    // Stop flashing
     fun stopFlashing() {
         isFlashing = false
         turnOff()
         handler.removeCallbacksAndMessages(null)
         mediaPlayer?.stop()
         mediaPlayer?.release()
-        mediaPlayer = null // Release the MediaPlayer
+        mediaPlayer = null
     }
 }

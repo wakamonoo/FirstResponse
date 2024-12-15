@@ -843,42 +843,42 @@ Act to break the contact between the casualty and the electrical supply. If poss
         <string name="safety_preparedness_t">SAFETY AND PREPAREDNESS</string>
 
 
-        <string name="burns_t">BURNS</string>
-        <string name="choking_t">CHOKING</string>
-        <string name="cpr_t">CPR</string>
-        <string name="splints_t">SPLINTS</string>
-        <string name="seizures_t">SEIZURES</string>
-        <string name="shock_t">SHOCK</string>
-        <string name="bleeding_t">BLEEDING</string>
-        <string name="snake_bite_t">SNAKE BITE</string>
-        <string name="insect_bites_t">INSECT BITES/STING</string>
-        <string name="bruises_t">BRUISES</string>
-        <string name="sprains_t">SPRAINS</string>
-        <string name="strains_t">STRAINS</string>
-        <string name="nose_bleeds_t">NOSE BLEEDS</string>
-        <string name="allergic_reactions_t">ALLERGIC REACTIONS</string>
-        <string name="headaches_t">HEADACHES</string>
-        <string name="minor_concussions_t">MINOR CONCUSSIONS</string>
-        <string name="muscle_cramps_t">MUSCLE CRAMPS</string>
-        <string name="blisters_t">BLISTERS</string>
+        <string name="burns_t">BURNS ²</string>
+        <string name="choking_t">CHOKING ²</string>
+        <string name="cpr_t">CPR ¹</string>
+        <string name="splints_t">SPLINTS ³</string>
+        <string name="seizures_t">SEIZURES ³</string>
+        <string name="shock_t">SHOCK ²</string>
+        <string name="bleeding_t">BLEEDING ²</string>
+        <string name="snake_bite_t">SNAKE BITE ¹</string>
+        <string name="insect_bites_t">INSECT BITES/STING ³</string>
+        <string name="bruises_t">BRUISES ³</string>
+        <string name="sprains_t">SPRAINS ³</string>
+        <string name="strains_t">STRAINS ³</string>
+        <string name="nose_bleeds_t">NOSE BLEEDS ³</string>
+        <string name="allergic_reactions_t">ALLERGIC REACTIONS ³</string>
+        <string name="headaches_t">HEADACHES ³</string>
+        <string name="minor_concussions_t">MINOR CONCUSSIONS ³</string>
+        <string name="muscle_cramps_t">MUSCLE CRAMPS ³</string>
+        <string name="blisters_t">BLISTERS ¹</string>
 
-    <string name="acute_grief_t">ACUTE GRIEF</string>
-    <string name="anxiety_management_t">ANXIETY MANAGEMENT</string>
-    <string name="panic_attack_response_t">PANIC ATTACK RESPONSE</string>
-    <string name="trauma_informed_care_t">TRAUMA-\nINFORMED CARE</string>
-    <string name="grounding_techniques_t">GROUNDING TECHNIQUES</string>
-    <string name="stress_reduction_t">STRESS REDUCTION</string>
+    <string name="acute_grief_t">ACUTE GRIEF ¹</string>
+    <string name="anxiety_management_t">ANXIETY MANAGEMENT ¹</string>
+    <string name="panic_attack_response_t">PANIC ATTACK RESPONSE ¹</string>
+    <string name="trauma_informed_care_t">TRAUMA-\nINFORMED CARE ¹</string>
+    <string name="grounding_techniques_t">GROUNDING TECHNIQUES ¹</string>
+    <string name="stress_reduction_t">STRESS REDUCTION ¹</string>
 
-    <string name="floods_t">FLOODS</string>
-    <string name="earthquake_t">EARTHQUAKE</string>
-    <string name="volcanic_eruption_t">VOLCANIC ERUPTION</string>
-    <string name="epidemic_t">EPIDEMIC</string>
+    <string name="floods_t">FLOODS ²</string>
+    <string name="earthquake_t">EARTHQUAKE ²</string>
+    <string name="volcanic_eruption_t">VOLCANIC ERUPTION ²</string>
+    <string name="epidemic_t">EPIDEMIC ³</string>
 
-    <string name="water_safety_t">WATER SAFETY</string>
-    <string name="road_safety_t">ROAD SAFETY</string>
-    <string name="daily_food_safety_t">DAILY FOOD SAFETY</string>
+    <string name="water_safety_t">WATER SAFETY ²</string>
+    <string name="road_safety_t">ROAD SAFETY ¹</string>
+    <string name="daily_food_safety_t">DAILY FOOD SAFETY ³</string>
     <string name="emergency_food_safety_t">EMERGENCY FOOD SAFETY</string>
-    <string name="heatwave_t">HEATWAVE</string>
+    <string name="heatwave_t">HEATWAVE ²</string>
 
     <string name="location_t">Location</string>
     <string name="login_t">Profile</string>
@@ -1322,6 +1322,7 @@ Act to break the contact between the casualty and the electrical supply. If poss
     <string name="strobe">STROBE</string>
     <string name="sos">SOS</string>
     <string name="sos_with_alarm">SOS WITH ALARM</string>
+    <string name="whistle">WHISTLE</string>
     <string name="stop">STOP</string>
     <string name="dialog_title_flashlight">Flashlight Features</string>
     <string name="dialog_message">

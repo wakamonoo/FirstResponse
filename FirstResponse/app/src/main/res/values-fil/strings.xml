@@ -749,42 +749,42 @@
     <string name="safety_preparedness_t">KALIGTASAN AT KAHANDAAN</string>
 
 
-    <string name="burns_t">PASO</string>
-    <string name="choking_t">SAMID</string>
-    <string name="cpr_t">CPR</string>
-    <string name="splints_t">SPLINTS</string>
-    <string name="seizures_t">SEIZURES</string>
-    <string name="shock_t">SHOCK</string>
-    <string name="bleeding_t">PAGDURUGO</string>
-    <string name="snake_bite_t">TUKLAW NG AHAS</string>
-    <string name="insect_bites_t">KAGAT/STING NG INSEKTO</string>
-    <string name="bruises_t">PASA</string>
-    <string name="sprains_t">SPRAINS</string>
-    <string name="strains_t">STRAINS</string>
-    <string name="nose_bleeds_t">BALINGUYNGUY</string>
-    <string name="allergic_reactions_t">ALLERGIC REACTIONS</string>
-    <string name="headaches_t">SAKIT SA ULO</string>
-    <string name="minor_concussions_t">MINOR CONCUSSIONS</string>
-    <string name="muscle_cramps_t">CRAMP SA MUSCLE</string>
-    <string name="blisters_t">BLISTERS</string>
+    <string name="burns_t">PASO ²</string>
+    <string name="choking_t">SAMID ²</string>
+    <string name="cpr_t">CPR ¹</string>
+    <string name="splints_t">SPLINTS ³</string>
+    <string name="seizures_t">SEIZURES ³</string>
+    <string name="shock_t">SHOCK ²</string>
+    <string name="bleeding_t">PAGDURUGO ²</string>
+    <string name="snake_bite_t">TUKLAW NG AHAS ¹</string>
+    <string name="insect_bites_t">KAGAT/STING NG INSEKTO ³</string>
+    <string name="bruises_t">PASA ³</string>
+    <string name="sprains_t">SPRAINS ³</string>
+    <string name="strains_t">STRAINS ³</string>
+    <string name="nose_bleeds_t">BALINGUYNGUY ³</string>
+    <string name="allergic_reactions_t">ALLERGIC REACTIONS ³</string>
+    <string name="headaches_t">SAKIT SA ULO ³</string>
+    <string name="minor_concussions_t">MINOR CONCUSSIONS ³</string>
+    <string name="muscle_cramps_t">CRAMP SA MUSCLE ³</string>
+    <string name="blisters_t">BLISTERS ¹</string>
 
-    <string name="acute_grief_t">PANGUNGULILA</string>
-    <string name="anxiety_management_t">PAMAMAHALA NG ANXIETY</string>
-    <string name="panic_attack_response_t">TUGON SA PANIC ATTACK</string>
-    <string name="trauma_informed_care_t">TRAUMA-\nINFORMED CARE</string>
-    <string name="grounding_techniques_t">GROUNDING TECHNIQUES</string>
-    <string name="stress_reduction_t">PAGBABAWAS NG STRESS</string>
+    <string name="acute_grief_t">PANGUNGULILA ¹</string>
+    <string name="anxiety_management_t">PAMAMAHALA NG ANXIETY ¹</string>
+    <string name="panic_attack_response_t">TUGON SA PANIC ATTACK ¹</string>
+    <string name="trauma_informed_care_t">TRAUMA-\nINFORMED CARE ¹</string>
+    <string name="grounding_techniques_t">GROUNDING TECHNIQUES ¹</string>
+    <string name="stress_reduction_t">PAGBABAWAS NG STRESS ¹</string>
 
-    <string name="floods_t">BAHA</string>
-    <string name="earthquake_t">LINDOL</string>
-    <string name="volcanic_eruption_t">PAGPUTOK NG BULKAN</string>
-    <string name="epidemic_t">EPIDEMYA</string>
+    <string name="floods_t">BAHA ²</string>
+    <string name="earthquake_t">LINDOL ²</string>
+    <string name="volcanic_eruption_t">PAGPUTOK NG BULKAN ²</string>
+    <string name="epidemic_t">EPIDEMYA ³</string>
 
-    <string name="water_safety_t">KALIGTASAN SA TUBIG</string>
-    <string name="road_safety_t">KALIGTASAN SA DAAN</string>
-    <string name="daily_food_safety_t">DAILY FOOD SAFETY</string>
+    <string name="water_safety_t">KALIGTASAN SA TUBIG ²</string>
+    <string name="road_safety_t">KALIGTASAN SA DAAN ¹</string>
+    <string name="daily_food_safety_t">DAILY FOOD SAFETY ³</string>
     <string name="emergency_food_safety_t">EMERGENCY FOOD SAFETY</string>
-    <string name="heatwave_t">HEATWAVE</string>
+    <string name="heatwave_t">HEATWAVE ²</string>
 
     <string name="location_t">Lokasyon</string>
     <string name="login_t">Propayl</string>
@@ -1231,6 +1231,7 @@
     <string name="strobe">KUTITAP</string>
     <string name="sos">SOS</string>
     <string name="sos_with_alarm">SOS NA MAY ALARMA</string>
+    <string name="whistle">SIPOL</string>
     <string name="stop">ITIGIL</string>
     <string name="dialog_title_flashlight">Mga Tampok ng Flashlight:</string>
     <string name="dialog_message">

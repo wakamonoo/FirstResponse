@@ -15,7 +15,7 @@ import android.widget.Toast
 
 class FlashlightActivity : BaseActivity() {
     private lateinit var flashlightManager: FlashlightManager
-    private var mediaPlayer: MediaPlayer? = null // MediaPlayer for alarm sound
+    private var mediaPlayer: MediaPlayer? = null // MediaPlayer for whistle sound
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +30,7 @@ class FlashlightActivity : BaseActivity() {
         setSupportActionBar(toolbar)
 
         // Set the title for the Toolbar
-        supportActionBar?.title = "FLASHLIGHT"  // Replace with your desired title
+        supportActionBar?.title = "FLASHLIGHT"
         toolbar.setTitleTextColor(ContextCompat.getColor(this, R.color.red))
 
         // Show back button on the Toolbar
@@ -82,7 +82,7 @@ class FlashlightActivity : BaseActivity() {
             }
         }
 
-        // New Button for SOS with Alarm
+        // SOS with Alarm Button
         findViewById<Button>(R.id.btn_flashlight_alarm).setOnClickListener {
             if (isCameraPermissionGranted()) {
                 flashlightManager.sosWithAlarm() // Start SOS with alarm sound
@@ -91,9 +91,15 @@ class FlashlightActivity : BaseActivity() {
             }
         }
 
+        // Stop Flashlight Button
         findViewById<Button>(R.id.btn_flashlight_stop).setOnClickListener {
             flashlightManager.stopFlashing()
-            stopAlarm() // Stop alarm when stopping the flashlight
+            stopMedia() // Stop any ongoing alarm or whistle
+        }
+
+        // Whistle Feature Button
+        findViewById<Button>(R.id.btn_flashlight_whistle).setOnClickListener {
+            playWhistle()
         }
 
         // Show instructions to the user
@@ -111,32 +117,37 @@ class FlashlightActivity : BaseActivity() {
     private fun showInstructions() {
         val dialogView = layoutInflater.inflate(R.layout.dialog_flashlight_instructions, null)
 
-        // Find the TextView for the message
         val dialogMessage: TextView = dialogView.findViewById(R.id.dialog_message)
+        val instructionTitle = getString(R.string.dialog_title_flashlight)
+        dialogMessage.text = getString(R.string.dialog_message)
 
-        // Set the title and message for the dialog
-        val instructionTitle = getString(R.string.dialog_title_flashlight) // Assuming you create this string resource
-        dialogMessage.text = getString(R.string.dialog_message) // Your existing message
-
-        // Create the dialog
         val alertDialog = AlertDialog.Builder(this)
-            .setTitle(instructionTitle) // Set the instruction title
-            .setView(dialogView) // Use the custom dialog layout
+            .setTitle(instructionTitle)
+            .setView(dialogView)
             .setCancelable(true)
-            .create() // Create the dialog without showing it yet
+            .create()
 
-        // Find the OK button and set a click listener
         val dialogButton = dialogView.findViewById<Button>(R.id.dialog_button)
         dialogButton.setOnClickListener {
-            alertDialog.dismiss() // Dismiss the dialog when the button is clicked
+            alertDialog.dismiss()
         }
 
-        alertDialog.show() // Now show the dialog
+        alertDialog.show()
     }
 
+    private fun playWhistle() {
+        // Stop any existing media before starting
+        stopMedia()
 
-    // Function to stop the alarm sound
-    private fun stopAlarm() {
+        // Initialize MediaPlayer and start playing in a loop
+        mediaPlayer = MediaPlayer.create(this, R.raw.whistle_sound).apply {
+            isLooping = true // Set looping to true
+            start()
+        }
+    }
+
+    private fun stopMedia() {
+        // Stop and release the MediaPlayer
         mediaPlayer?.stop()
         mediaPlayer?.release()
         mediaPlayer = null
@@ -144,7 +155,7 @@ class FlashlightActivity : BaseActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        flashlightManager.stopFlashing() // Ensure the flashlight is turned off when the activity is destroyed
-        stopAlarm() // Stop alarm when activity is destroyed
+        flashlightManager.stopFlashing()
+        stopMedia()
     }
 }
