@@ -1,0 +1,30 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@popperjs/core": "^2.11.6",
+        "@vitejs/plugin-vue": "^4.5.0",
+        "axios": "^1.7.4",
+        "bootstrap": "^5.2.3",
+        "laravel-vite-plugin": "^1.0.0",
+        "sass": "^1.56.1",
+        "vite": "^5.0.0",
+        "vue": "^3.4.38",
+        "vue-router": "^4.4.3"
+    },
+    "dependencies": {
+        "@mdi/font": "^7.4.47",
+        "aos": "^2.3.4",
+        "leaflet": "^1.9.4",
+        "pinia": "^2.2.2",
+        "swiper": "^11.1.10",
+        "vue-writer": "^2.0.2",
+        "vue3-marquee": "^4.2.1",
+        "vuejs3-datepicker": "^1.0.19",
+        "vuetify": "^3.7.6"
+    }
+}

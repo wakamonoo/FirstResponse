@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "841194477365",
+      "project_id": "firstresponseapp-b0184",
+      "storage_bucket": "firstresponseapp-b0184.firebasestorage.app"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:841194477365:android:7f825e8f022183fd785e7c",
+          "android_client_info": {
+            "package_name": "com.example.android.firstresponse"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyARNN_mpfEecjLwPxoM9wegv-0VYKY4JQ0"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
